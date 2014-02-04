@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+	<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+	
     <title>CSA Management Service</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="justified-nav.css" rel="stylesheet">
+    <link href="css/justified-nav.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -28,6 +29,7 @@
   <body>
 
     <div class="container">
+	
       <div class="masthead">
         <h3 class="text-muted">Your Farm Name</h3>
         <ul class="nav nav-justified">
