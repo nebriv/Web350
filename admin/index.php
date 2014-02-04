@@ -40,6 +40,10 @@
           <a class="navbar-brand" href="#">Your Farm Name - Manage</a>
         </div>
         <div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-left">
+				<li><a href="#">View Website</a></li>
+			</ul>
+		
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Settings</a></li>
