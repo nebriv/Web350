@@ -38,12 +38,10 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">Your Farm Name - Manage</a>
-		  <span class="navbar-brand glyphicon glyphicon-align-justify"><a href="http://csa.nebriv.com">View Website</a></span>
-	      
         </div>
         <div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-left">
-
+				<li><a href="http://csa.nebriv.com">View Website</a></li>
 			</ul>
 		
           <ul class="nav navbar-nav navbar-right">
