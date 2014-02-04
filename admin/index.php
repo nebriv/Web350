@@ -41,6 +41,7 @@
         </div>
         <div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-left">
+				<li>-</li>
 				<li><a href="#">View Website</a></li>
 			</ul>
 		
