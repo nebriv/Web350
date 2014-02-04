@@ -10,14 +10,8 @@
 	
     <title>CSA Management Service</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/justified-nav.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,6 +31,23 @@
           <li><a href="#">Produce/Shop</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
+		<ul class="nav navbar-nav navbar-right">
+        <li><a href="register.php">Sign Up</a></li>
+								<li class="divider-vertical"></li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+									<div class="dropdown-menu" style="padding: 15px; padding-bottom: 10px;">
+										<form name="login" action="login.php" method="post" accept-charset="UTF-8">
+											<input id="user_username" style="margin-bottom: 15px;" type="text" name="username" placeholder="Username" size="30" />
+											<input id="user_password" style="margin-bottom: 15px;" type="password" name="password" placeholder="Password" size="30" />
+											<input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="rememberme" value="1" />
+											<label class="string optional" for="urememberme"> Remember me</label>
+											<input type="hidden" name="referer" value="'.$pagename.'">
+											<input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+										</form>
+									</div>
+								</li>
+      </ul>
       </div>
 
       <div class="jumbotron">
@@ -62,10 +73,10 @@
       </div>
 	  
       <div class="footer">
-        <p>&copy; 2014  -  Proudly powered by CSA Managing System</p>
+        <p>&copy; 2014  -  Proudly powered by <a href="#">CSA Managing Systems</a></p>
       </div>
 
-    </div> <!-- /container -->
+    </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
