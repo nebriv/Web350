@@ -40,7 +40,7 @@
       </div>
 
       <div class="jumbotron">
-        <h1>Welcome to our farm's CSA share management system!</h1>
+        <h1>Your Farm Name Welcomes You</h1>
         <p class="lead">From this website you will be able to sign up to receive your very own share of locally grown crops!</p>
         <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
       </div>
