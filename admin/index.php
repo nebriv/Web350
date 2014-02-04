@@ -41,7 +41,7 @@
         </div>
         <div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-left">
-				<li><span style="vertical-align: middle;" class="glyphicon glyphicon-align-justify"></span></li>
+				<li class="divider"></li>
 				<li><a href="http://csa.nebriv.com">View Website</a></li>
 			</ul>
 		
