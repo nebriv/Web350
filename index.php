@@ -30,7 +30,6 @@
 			<li class="active"><a href="#">Home</a></li>
 			<li><a href="#">Produce/Shop</a></li>
 			<li><a href="#">Contact Us</a></li>
-			<li>|</li>
 			<li><a href="register.php">Sign Up</a></li>
 			<li class="dropdown">
 				<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
