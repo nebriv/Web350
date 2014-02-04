@@ -26,7 +26,7 @@
 	
       <div class="masthead">
         <h3 class="text-muted">Your Farm Name</h3>
-		<ul class="nav navbar-nav navbar-right">
+		<ul class="pull-right">
 			<li><a href="register.php">Sign Up</a></li>
 				<li class="divider-vertical"></li>
 				<li class="dropdown">
