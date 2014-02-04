@@ -22,34 +22,32 @@
 
   <body>
 
-    <div class="container">
-	
-      <div class="masthead">
-        <h3 class="text-muted">Your Farm Name</h3>
-		<ul class="pull-right">
-			<li><a href="register.php">Sign Up</a></li>
+	<div class="container">
+
+	<div class="masthead">
+		<h3 class="text-muted">Your Farm Name</h3>
+		<ul class="nav nav-justified">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Produce/Shop</a></li>
+			<li><a href="#">Contact Us</a></li>
+			<ul class="navbar-right">
+				<li><a href="register.php">Sign Up</a></li>
 				<li class="divider-vertical"></li>
 				<li class="dropdown">
-					<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-					<div class="dropdown-menu" style="padding: 15px; padding-bottom: 10px;">
-						<form name="login" action="login.php" method="post" accept-charset="UTF-8">
-							<input id="user_username" style="margin-bottom: 15px;" type="text" name="username" placeholder="Username" size="30" />
-							<input id="user_password" style="margin-bottom: 15px;" type="password" name="password" placeholder="Password" size="30" />
-							<input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="rememberme" value="1" />
-							<label class="string optional" for="urememberme"> Remember me</label>
-							<input type="hidden" name="referer" value="'.$pagename.'">
-							<input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
-						</form>
-					</div>
+				<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+				<div class="dropdown-menu" style="padding: 15px; padding-bottom: 10px;">
+				<form name="login" action="login.php" method="post" accept-charset="UTF-8">
+				<input id="user_username" style="margin-bottom: 15px;" type="text" name="username" placeholder="Username" size="30" />
+				<input id="user_password" style="margin-bottom: 15px;" type="password" name="password" placeholder="Password" size="30" />
+				<input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="rememberme" value="1" />
+				<label class="string optional" for="urememberme"> Remember me</label>
+				<input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+				</form>
+				</div>
 				</li>
-		  </ul>
-        <ul class="nav nav-justified">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Produce/Shop</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-
-      </div>
+			</ul>
+		</ul>
+	</div>
 
       <div class="jumbotron">
         <h1>Your Farm Name Welcomes You</h1>
