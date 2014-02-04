@@ -41,7 +41,7 @@
         </div>
         <div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-left">
-				<li>|</li>
+				<li style="border-right: 1px solid #ccc;"></li>
 				<li><a href="csa.nebriv.com">View Website</a></li>
 			</ul>
 		
