@@ -1,0 +1,9 @@
+Database Info:
+
+username: web350
+password: P6xpznvLcM29JtYw
+
+
+Database Name: CSA
+database Host: mysql.nebriv.com
+
