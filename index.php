@@ -25,7 +25,7 @@
 	<div class="container">
 
 	<div class="masthead">
-		<h3 class="text-muted"><Your Farm Name></h3>
+		<h3 class="text-muted">&lt;Your Farm Name&gt;</h3>
 		<ul class="nav nav-justified">
 			<li class="active"><a href="#">Home</a></li>
 			<li><a href="#">Produce/Shop</a></li>
@@ -47,7 +47,7 @@
 	</div>
 
       <div class="jumbotron">
-        <h1><Your Farm Name> Welcomes You</h1>
+        <h1>&lt;Your Farm Name&gt; Welcomes You</h1>
         <p class="lead">From this website you will be able to sign up to receive your very own share of locally grown crops!</p>
         <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
       </div>
