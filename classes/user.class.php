@@ -54,7 +54,6 @@ class User {
 				->get('Sessions');
 			
 			if (count($results) > 0){
-				$this = $user;
 				return $this;
 			}else{
 				return False;
