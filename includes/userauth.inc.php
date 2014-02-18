@@ -11,13 +11,13 @@ function checkSession(){
 			->get('Sessions');
 		
 		if (count($results) > 0){
-			return True;
+			return "True";
 		}else{
-			return False;
+			return "False";
 		}
 
 	}else{
-		return False;
+		return "False";
 	}
 }
 
