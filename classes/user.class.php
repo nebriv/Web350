@@ -2,9 +2,8 @@
 
 class User {
 
-	public $db = buildDBObject();
-
 	function __construct($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"){
+		
 		$this->userID = $id;
 		$this->userName = $newusername;
 		$this->email = $newemail;
@@ -45,6 +44,7 @@ class User {
 	}
 
 	function getSessionContent(){
+		$db = buildDBObject();
 		if (isset($_SESSION['user'])){
 			$user = unserialize($_SESSION['user']);
 			
@@ -93,6 +93,7 @@ class User {
 	}
 
 	function registerUser($newusername, $newpassword, $newemail, $newfirstname, $newlastname){
+		$db = buildDBObject();
 		$params = array($newusername, $newemail);
 		$results = $db->rawQuery("SELECT UserID FROM Users WHERE Username = ? OR Email = ?", $params);
 
