@@ -66,8 +66,6 @@ class MysqliDb
     {
         if($port == NULL)
             $port = ini_get('mysqli.default_port');
-        echo $port;
-        echo $password;
         $this->_mysqli = new mysqli($host, $username, $password, $db, $port)
             or die('There was a problem connecting to the database');
 
