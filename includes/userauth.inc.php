@@ -12,7 +12,7 @@ function checkSession(){
 
 		$results = $db
 			->where('SessionContent', $user->sessionContent)
-			->where('UserID', $user->UserID)
+			->where('UserID', $user->userID)
 			->get('Sessions');
 		
 		if (count($results) > 0){
