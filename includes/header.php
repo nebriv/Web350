@@ -1,6 +1,6 @@
 <?php
-require_once('../classes/dbcon.class.php');
-require_once('../classes/user.class.php');
+require_once("classes/dbcon.class.php");
+require_once("classes/user.class.php");
 require_once('../config.php');
 session_start();
 
