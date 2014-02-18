@@ -1,22 +1,23 @@
-<<<<<<< HEAD
+<?php
+require_once('../classes/dbcon.class.php');
+require_once('../classes/user.class.php');
+require_once('../config.php')
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 	
     <title>CSA Management Service</title>
-=======
-<?php
-include('includes/header.php');
->>>>>>> UserAuth
 
-checkSession();
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/justified-nav.css" rel="stylesheet">
 
-<<<<<<< HEAD
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -29,7 +30,7 @@ checkSession();
 	<div class="container">
 
 	<div class="masthead">
-		<h3 class="text-muted">&lt;Your Farm Name&gt;</h3>
+		<h3 class="text-muted">Your Farm Name</h3>
 		<ul class="nav nav-justified">
 			<li class="active"><a href="#">Home</a></li>
 			<li><a href="#">Produce/Shop</a></li>
@@ -49,34 +50,3 @@ checkSession();
 			</li>
 		</ul>
 	</div>
-=======
-?>
->>>>>>> UserAuth
-
-      <div class="jumbotron">
-        <h1>&lt;Your Farm Name&gt; Welcomes You</h1>
-        <p class="lead">From this website you will be able to sign up to receive your very own share of locally grown crops!</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>What is Community Supported Agriculture?</h2>
-			<p>Community Supported Agriculture is a alternative model for producing and distributing food and other produce throughout a local area. Members are able to subscribe to receive scheduled shipments or pick-up of food tailored to their needs.</p>
-        </div>
-        <div class="col-lg-4">
-          <h2>What is this management system?</h2>
-          <p>This management system allows us to quickly and easily update what produce we have available on a weekly basis, and also allows you to modify your orders whenever you would like. By utilizing this system we are able to efficiently and accurately build out your order and get it to you within reasonable time!</p>
-       </div>
-        <div class="col-lg-4">
-          <h2>How can I contribute?</h2>
-          <p>If you are a local farmer and would like to contribute to this CSA please send us an email!</p>
-          <p><a class="btn btn-primary" href="#" role="button">Contact Us! &raquo;</a></p>
-        </div>
-      </div>
-	  
-<?php
-
-include('includes/footer.php');
-
-?>

@@ -1,3 +1,8 @@
+<?php
+require_once('include/main.class.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
