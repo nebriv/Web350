@@ -1,5 +1,10 @@
 <?php
 
+function buildSession(){
+	$user = new User("nebriv", "1", "123");
+	$user->saveSession();
+}
+
 function checkSession(){
 	if (isset($_SESSION['user'])){
 		$user = unserialize($_SESSION['user']);

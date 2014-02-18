@@ -1,6 +1,8 @@
 <?php
 include('includes/header.php');
 
+buildSession("nebriv", "1", "123");
+
 echo checkSession();
 
 ?>
