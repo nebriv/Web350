@@ -1,5 +1,4 @@
 <?php
-echo $_SERVER['DOCUMENT_ROOT'];
 require_once($_SERVER['DOCUMENT_ROOT']."/classes/dbcon.class.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/classes/user.class.php");
 require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');

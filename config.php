@@ -16,7 +16,7 @@ function handleException($exception){
 set_exception_handler('handleException');
 
 function buildDBObject(){
-	$db = new Mysqlidb('mysql.nebriv.com', 'web350', 'P6xpznvLcM29JtYw', 'CSA', 3307);
+	$db = new Mysqlidb('mysql.nebriv.com', 'web350', 'P6xpznvLcM29JtYw', 'CSA', '3307');
 	return $db;
 }
 
