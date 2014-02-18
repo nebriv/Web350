@@ -1,19 +1,24 @@
 <?php
 
 function checkSession(){
-	#if (isset($_SESSION['user'])){
-		#$user = unserialize($_SESSION['user']);
+	if (isset($_SESSION['user'])){
+		$user = unserialize($_SESSION['user']);
 		$db = buildDBObject();
 
 		$results = $db
-			->where('UserID', '2')
+			->where('SessionContent', $user->sessionContent)
+			->where('UserID', $user->UserID)
 			->get('Sessions');
-			#
-			#->where('SessionContent', $user->sessionContent)
-		print_r($results);
-	#}else{
-	#	return false;
-	#}
+		
+		if (count($results) > 0){
+			return True;
+		}else{
+			return False;
+		}
+
+	}else{
+		return False;
+	}
 }
 
 ?>

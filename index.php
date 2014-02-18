@@ -1,7 +1,7 @@
 <?php
 include('includes/header.php');
 
-checkSession();
+echo checkSession();
 
 ?>
 
