@@ -1,7 +1,8 @@
 <?php
-require_once("classes/dbcon.class.php");
-require_once("classes/user.class.php");
-require_once('../config.php');
+echo $_SERVER['DOCUMENT_ROOT'];
+require_once($_SERVER['DOCUMENT_ROOT']."/classes/dbcon.class.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/classes/user.class.php");
+require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');
 session_start();
 
 ?>
