@@ -2,7 +2,7 @@
 
 class User {
 
-	$this->$db = buildDBObject();
+	public $db = buildDBObject();
 
 	function __construct($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"){
 		$this->userID = $id;
