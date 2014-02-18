@@ -6,8 +6,9 @@ function checkSession(){
 		$db = buildDBObject();
 
 		$results = $db
+			->where('UserID', '1')
 			->get('Sessions');
-			#->where('UserID', $user->UserID)
+			#
 			#->where('SessionContent', $user->sessionContent)
 		print_r($results);
 	#}else{
