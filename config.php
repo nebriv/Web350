@@ -1,9 +1,7 @@
 <?php
 date_default_timezone_set("America/New_York");
 
-define("DB_DSN", "mysql:host=mysql.nebriv.com:3307;dbname=CSA");
-define("DB_USERNAME", "web350");
-define("DB_PASSWORD", "P6xpznvLcM29JtYw");
+
 
 define("CLASS_PATH", "classes");
 define("TEMPLATE_PATH", "templates");
@@ -16,7 +14,7 @@ function handleException($exception){
 set_exception_handler('handleException');
 
 function buildDBObject(){
-	$db = new Mysqlidb('mysql.nebriv.com', 'web350', 'P6xpznvLcM29JtYw', 'CSA', '3307');
+	$db = new Mysqlidb('127.0.0.1', 'web350', 'P6xpznvLcM29JtYw', 'CSA', '3307');
 	return $db;
 }
 
