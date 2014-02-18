@@ -15,6 +15,8 @@ function checkSession(){
 			->where('UserID', $user->userID)
 			->get('Sessions');
 		
+		$db = NULL;
+
 		if (count($results) > 0){
 			return "True";
 		}else{
