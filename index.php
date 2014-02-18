@@ -1,7 +1,9 @@
 <?php
 include('includes/header.php');
 
-buildSession("nebriv", "1", "123");
+$user = new User(1, 'nebriv', 'nebriv@gmail.com', 'Ben', 'Virgilio', "Admin");
+
+echo $user->getID();
 
 echo checkSession();
 

@@ -5,6 +5,10 @@ function buildSession(){
 	$user->saveSession();
 }
 
+function checkCredentials($username, $password){
+
+}
+
 function checkSession(){
 	if (isset($_SESSION['user'])){
 		$user = unserialize($_SESSION['user']);
@@ -18,13 +22,13 @@ function checkSession(){
 		$db = NULL;
 
 		if (count($results) > 0){
-			return "True";
+			return True;
 		}else{
-			return "False";
+			return False;
 		}
 
 	}else{
-		return "False";
+		return False;
 	}
 }
 

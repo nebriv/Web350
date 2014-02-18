@@ -19,7 +19,6 @@ function buildDBObject(){
 }
 
 #Include other functions
-include_once('includes/userauth.inc.php');
 
 
 ?>
