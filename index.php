@@ -7,7 +7,7 @@ echo $user->getID();
 
 $user->buildSession(); 
 
-echo $user->getSessionContent();
+echo $user->checkSession();
 
 ?>
 
