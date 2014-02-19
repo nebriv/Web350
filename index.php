@@ -2,7 +2,7 @@
 include('includes/header.php');
 
 $user = new User();
-$user->registerUser("nebriv2", "pass", "nebriv+csa@gmail.com", "ben", "virgilio");
+//$user->registerUser("nebriv2", "pass", "nebriv+csa@gmail.com", "ben", "virgilio");
 //$user->buildSession();
 echo $user->checkCredentials("nebriv2", "pass");
 ?>

@@ -98,7 +98,7 @@ class User {
 		$results = $db
 			->where('Username', $username)
 			->get('Users');
-
+		print_r($results);
 		if (count($results) > 0){
 			$id = $results['UserID'];
 			echo $id;
