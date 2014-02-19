@@ -148,7 +148,7 @@ class User {
 					$data = array(
 					    'UserID' => $this->UserID,
 					    'PasswordHash' => $hash,
-					    'AccountEnable' => 0,
+					    'AccountEnable' => Null,
 					);
 					$id = $db->insert('User_Auth', $data);
 					if ($id){
