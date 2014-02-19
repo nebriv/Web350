@@ -3,11 +3,9 @@ include('includes/header.php');
 
 $user = new User(1, 'nebriv', 'nebriv@gmail.com', 'Ben', 'Virgilio', "Admin");
 
-echo $user->getID();
-
 $user->buildSession(); 
 
-echo $user->checkSession();
+$user->registerUser("nebriv2", "pass", "nebriv+csa@gmail.com", "ben", "virgilio");
 
 ?>
 
