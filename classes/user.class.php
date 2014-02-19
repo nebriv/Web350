@@ -97,6 +97,12 @@ class User {
 		}
 	}
 
+	function getAccountStatus($username = NULL){
+		if ($username == NULL){
+			$username = $this->userName;
+		}
+	}
+
 	function checkCredentials($username = NULL, $password){
 		$db = buildDBObject();
 

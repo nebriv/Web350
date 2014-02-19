@@ -316,6 +316,7 @@ class MysqliDb
             if ($hasTableData) {
                 $pos = strpos($this->_query, 'UPDATE');
                 if ($pos !== false) {
+                    $this->_paramTypeList = "";
                     foreach ($tableData as $prop => $value) {
                         // determines what data type the item is, for binding purposes.
                         $this->_paramTypeList .= $this->_determineType($value);
