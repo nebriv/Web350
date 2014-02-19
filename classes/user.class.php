@@ -52,7 +52,6 @@ class User {
 			
 			$results = $db
 				->where('SessionContent', $session)
-				->where('UserID', $this->userID)
 				->where('IPAddress', $this->userIP)
 				->get('Sessions');
 			
@@ -65,6 +64,16 @@ class User {
 		}else{
 			return False;
 		}
+	}
+
+	function buildObject(){
+		$db = buildDBObject();
+		$session = $_SESSION['user'];
+		
+		$results = $db
+			->where('SessionContent', $session)
+			->where('IPAddress', $this->userIP)
+			->get('Sessions');
 	}
 
 	function buildSession(){
@@ -98,7 +107,6 @@ class User {
 		$results = $db
 			->where('Username', $username)
 			->get('Users');
-		print_r($results);
 
 		$results = $results[0];
 
