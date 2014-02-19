@@ -118,7 +118,7 @@ class User {
 			$results2 = $results2[0];
 			if (password_verify($password, $results2['PasswordHash'])){
 				$data = array (
-					'LastLogin' => $MySQLTimeStamp;
+					'LastLogin' => $MySQLTimeStamp,
 					)
 				$db->where('UserID', $id);
 				$db->update('Users_Auth', $data
