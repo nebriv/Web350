@@ -143,7 +143,7 @@ class User {
 				$this->UserID = $user['UserID'];
 				echo $this->UserID;
 				$hash = password_hash($newpassword, PASSWORD_DEFAULT);
-				
+				echo $hash;
 				if ($hash){
 					$data = array(
 					    'UserID' => $this->UserID,
