@@ -136,9 +136,11 @@ class User {
 			$id = $db->insert('Users', $data);
 			if($id){
 
-				$db->where ("Username", $newusername);
-				$user = $db->getOne ("Users");
+				$user = $db
+					->where("Username", $newusername)
+					->get("Users");
 				$this->UserID = $user['UserID'];
+				echo $this->UserID;
 				$hash = password_hash($newpassword);
 				if ($hash){
 					$data = array(
