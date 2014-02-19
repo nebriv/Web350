@@ -104,10 +104,10 @@ class User {
 
 		if (count($results) > 0){
 			$id = $results['UserID'];
-			echo $id;
 			$results2 = $db
 				->where("UserID", $id)
 				->get("User_Auth");
+			$results2 = $results2[0];
 			if (password_verify($password, $results2['PasswordHash'])){
 				return True;
 			}else{
