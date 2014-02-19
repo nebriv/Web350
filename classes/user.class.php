@@ -150,6 +150,8 @@ class User {
 					echo "Inserting into auth";
 					$id = $db->insert('User_Auth', $data);
 					echo "done inserting";
+					print_r($id);
+					echo $id;
 					if ($id){
 						echo "Successfully made user";
 					}else{
