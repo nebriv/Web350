@@ -329,6 +329,7 @@ class MysqliDb
 
             //Prepair the where portion of the query
             $this->_query .= ' WHERE ';
+            $this->_whereTypeList = "";
             foreach ($this->_where as $column => $value) {
                 // Determines what data type the where column is, for binding purposes.
                 $this->_whereTypeList .= $this->_determineType($value);
