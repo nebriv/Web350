@@ -142,7 +142,8 @@ class User {
 				$user = $user[0];
 				$this->UserID = $user['UserID'];
 				echo $this->UserID;
-				$hash = password_hash($newpassword);
+				$hash = password_hash($newpassword, PASSWORD_DEFAULT);
+				
 				if ($hash){
 					$data = array(
 					    'UserID' => $this->UserID,
@@ -150,6 +151,9 @@ class User {
 					    'AccountEnable' => 0,
 					);
 					$id = $db->insert('User_Auth', $data);
+					if ($id){
+						echo "Successfully made user";
+					}
 				}else{
 					echo "Error hashing password";
 				}
