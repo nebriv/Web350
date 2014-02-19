@@ -148,15 +148,13 @@ class User {
 					    'UserID' => $this->UserID,
 					    'PasswordHash' => $hash,
 					);
-					echo "Inserting into auth";
+
 					$id = $db->insert('User_Auth', $data);
-					echo "done inserting";
-					print_r($id);
-					echo $id;
+
 					if ($id){
 						echo "Successfully made user";
 					}else{
-						"Error making user2";
+						echo "Error making user2";
 					}
 				}else{
 					echo "Error hashing password";
