@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set("America/New_York");
 
-
+$MySQLTimeStamp = date("Y-m-d H:i:s");
 
 define("CLASS_PATH", "classes");
 define("TEMPLATE_PATH", "templates");
