@@ -10,13 +10,9 @@ class User {
 		$this->firstName = $newfirstname;
 		$this->lastName = $newlastname;
 		$this->userRoles = $newrole;
-		$this->userIP = $_SERVER['Remote_ADDR'];
+		$this->userIP = $_SERVER['REMOTE_ADDR'];
 
 		$db = buildDBObject();
-
-
-
-		$this->setSessionContent();
 	}
 
 	function __destruct(){
