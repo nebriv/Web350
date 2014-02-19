@@ -147,7 +147,9 @@ class User {
 					    'UserID' => $this->UserID,
 					    'PasswordHash' => $hash,
 					);
+					echo "Inserting into auth";
 					$id = $db->insert('User_Auth', $data);
+					echo "done inserting";
 					if ($id){
 						echo "Successfully made user";
 					}else{
