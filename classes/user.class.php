@@ -140,6 +140,7 @@ class User {
 				$user = $db
 					->where("Username", $newusername)
 					->get("Users");
+				print_r($user);
 				$user = $user[0];
 				$this->UserID = $user['UserID'];
 				echo $this->UserID;
