@@ -47,7 +47,7 @@ class MysqliDb
      *
      * @var array
      */
-    protected $_paramTypeList;
+    protected $_paramTypeList = Null;
     /**
      * Dynamic array that holds a combination of where condition/table data value types and parameter referances
      *
