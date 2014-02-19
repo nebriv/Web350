@@ -121,7 +121,7 @@ class User {
 					'LastLogin' => $MySQLTimeStamp,
 					);
 				$db->where('UserID', $id);
-				$db->update('Users_Auth', $data
+				$db->update('Users_Auth', $data);
 				return True;
 			}else{
 				return False;
