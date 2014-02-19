@@ -127,11 +127,11 @@ class User {
 			$this->lastName = $newlastname;
 
 			$data = array(
-			    'UserID' => NULL,
-			    'Username' => $newusername,
-			    'Email' => $newemail,
-			    'FirstName' => $newfirstname,
-			    'LastName' => $newlastname,
+			    'UserID' => "50",
+			    'Username' => "Me",
+			    'Email' => "email",
+			    'FirstName' => "test",
+			    'LastName' => "name",
 			);
 			$id = $db->insert('Users', $data);
 			echo "<br /><br />";
@@ -149,7 +149,7 @@ class User {
 				echo "<br />";
 				if ($hash){
 					$data = array(
-					    'UserID' => $this->UserID,
+					    'UserID' => "50",
 					    'PasswordHash' => $hash,
 					);
 					$id = $db->insert('User_Auth', $data);
