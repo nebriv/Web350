@@ -134,6 +134,7 @@ class User {
 			    'LastName' => $newlastname,
 			);
 			$id = $db->insert('Users', $data);
+			echo $id;
 			if($id){
 
 				$user = $db
