@@ -19,6 +19,10 @@ class User {
 		$db = NULL;
 	}
 
+	function getFirstName(){
+		return $this->firstName;
+	}
+
 	function getUsername(){
 		//Returns the Username or Null if it's not set.
 		if (isset($this->userName)){
