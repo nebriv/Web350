@@ -5,6 +5,8 @@ $user = new User(1, 'nebriv', 'nebriv@gmail.com', 'Ben', 'Virgilio', "Admin");
 
 echo $user->getID();
 
+$user->buildSession(); 
+
 echo $user->getSessionContent();
 
 ?>

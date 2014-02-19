@@ -10,6 +10,12 @@ class User {
 		$this->firstName = $newfirstname;
 		$this->lastName = $newlastname;
 		$this->userRoles = $newrole;
+		$this->userIP = $_SERVER['Remote_ADDR'];
+
+		$db = buildDBObject();
+
+
+
 		$this->setSessionContent();
 	}
 
@@ -46,11 +52,12 @@ class User {
 	function getSessionContent(){
 		$db = buildDBObject();
 		if (isset($_SESSION['user'])){
-			$user = unserialize($_SESSION['user']);
+			$session = $_SESSION['user'];
 			
 			$results = $db
-				->where('SessionContent', $user->sessionContent)
-				->where('UserID', $user->userID)
+				->where('SessionContent', $session)
+				->where('UserID', $this->userID)
+				->where('IPAddress', $this->userIP)
 				->get('Sessions');
 			
 			if (count($results) > 0){
@@ -64,8 +71,23 @@ class User {
 		}
 	}
 
-	function setSessionContent(){
-		$_SESSION['user'] = serialize($this);
+	function buildSession(){
+		$this->sessionToken = sha1(bin2hex(openssl_random_pseudo_bytes(16)));
+		$this->sessionContent = sha1($this->sessionToken.$this->userIP);
+
+		$db = buildDBObject();
+
+		$data = array(
+			'SessionID' => NULL,
+		    'UserID' => $this->userID,
+		    'SessionContent' => $this->sessionContent,
+		    'IPAddress' => $this->userIP,
+		    'LastActive' => NULL,
+		    'Token' => $this->sessionToken,
+		);
+		$id = $db->insert('Sessions', $data);
+
+		$_SESSION['user'] = $this->sessionContent;
 	}
 
 	function checkCredentials($username = NULL, $password){
