@@ -68,8 +68,12 @@ class User {
 		$_SESSION['user'] = serialize($this);
 	}
 
-	function checkCredentials($username = $this->userName, $password){
+	function checkCredentials($username = NULL, $password){
 		$db = buildDBObject();
+
+		if ($username == NULL){
+			$username = $this->userName;
+		}
 
 		$results = $db
 			->where('Username', $username)
