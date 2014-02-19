@@ -139,6 +139,7 @@ class User {
 				$user = $db
 					->where("Username", $newusername)
 					->get("Users");
+				$user = $user[0];
 				$this->UserID = $user['UserID'];
 				echo $this->UserID;
 				$hash = password_hash($newpassword);
