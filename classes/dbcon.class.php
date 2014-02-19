@@ -47,7 +47,7 @@ class MysqliDb
      *
      * @var array
      */
-    protected $_paramTypeList = Null;
+    protected $_paramTypeList;
     /**
      * Dynamic array that holds a combination of where condition/table data value types and parameter referances
      *
@@ -350,9 +350,10 @@ class MysqliDb
                 $num = count($keys);
 
                 // wrap values in quotes
+                $this->_paramTypeList = "";
                 foreach ($values as $key => $val) {
                     $values[$key] = "'{$val}'";
-                    $this->_paramTypeList .= $this->_determineType($val);
+                    $this->_paramTypeList += $this->_determineType($val);
                 }
 
                 $this->_query .= '(' . implode($keys, ', ') . ')';
