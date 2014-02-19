@@ -9,7 +9,7 @@ class User {
 		$this->email = $newemail;
 		$this->firstName = $newfirstname;
 		$this->lastName = $newlastname;
-		$this->userRoles = newrole;
+		$this->userRoles = $newrole;
 		setSessionContent();
 	}
 
