@@ -10,7 +10,7 @@ class User {
 		$this->firstName = $newfirstname;
 		$this->lastName = $newlastname;
 		$this->userRoles = $newrole;
-		setSessionContent();
+		$this->setSessionContent();
 	}
 
 	function __destruct(){
