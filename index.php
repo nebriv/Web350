@@ -1,12 +1,9 @@
 <?php
 include('includes/header.php');
 
-$user = new User(1, 'nebriv', 'nebriv@gmail.com', 'Ben', 'Virgilio', "Admin");
-
-$user->buildSession(); 
-
+$user = new User();
 $user->registerUser("nebriv2", "pass", "nebriv+csa@gmail.com", "ben", "virgilio");
-
+$user->buildSession(); 
 ?>
 
       <div class="jumbotron">

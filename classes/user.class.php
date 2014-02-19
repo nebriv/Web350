@@ -135,7 +135,6 @@ class User {
 			);
 			$id = $db->insert('Users', $data);
 			if($id){
-				$db->reset();
 
 				$db->where ("Username", $newusername);
 				$user = $db->getOne ("Users");
