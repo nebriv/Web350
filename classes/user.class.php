@@ -134,6 +134,7 @@ class User {
 			    'LastName' => $newlastname,
 			);
 			$id = $db->insert('Users', $data);
+			echo "<br /><br />";
 			if($id){
 
 				$user = $db
@@ -143,7 +144,9 @@ class User {
 				$this->UserID = $user['UserID'];
 				echo $this->UserID;
 				$hash = password_hash($newpassword, PASSWORD_DEFAULT);
+				echo "<br />";
 				echo $hash;
+				echo "<br />";
 				if ($hash){
 					$data = array(
 					    'UserID' => $this->UserID,
