@@ -68,8 +68,11 @@ class User {
 	}
 
 	function buildSession(){
+		echo "Bulding Session";
 		$this->sessionToken = sha1(bin2hex(openssl_random_pseudo_bytes(16)));
 		$this->sessionContent = sha1($this->sessionToken.$this->userIP);
+
+		echo $this->sessionContent;
 
 		$db = buildDBObject();
 
@@ -81,9 +84,13 @@ class User {
 		    'LastActive' => NULL,
 		    'Token' => $this->sessionToken,
 		);
-		$id = $db->insert('Sessions', $data);
 
-		$_SESSION['user'] = $this->sessionContent;
+		$result = $db->insert('Sessions', $data);
+		echo "Inserted data";
+		if ($result){
+			$_SESSION['user'] = $this->sessionContent;
+			echo "built session";
+		}
 	}
 
 	function checkCredentials($username = NULL, $password){
