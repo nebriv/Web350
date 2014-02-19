@@ -350,10 +350,10 @@ class MysqliDb
                 $num = count($keys);
 
                 // wrap values in quotes
-                //$this->_paramTypeList = "";
+                $this->_paramTypeList = "";
                 foreach ($values as $key => $val) {
                     $values[$key] = "'{$val}'";
-                    $this->_paramTypeList += $this->_determineType($val);
+                    $this->_paramTypeList .= $this->_determineType($val);
                 }
 
                 $this->_query .= '(' . implode($keys, ', ') . ')';
