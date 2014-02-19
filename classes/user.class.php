@@ -127,11 +127,11 @@ class User {
 			$this->lastName = $newlastname;
 
 			$data = array(
-			    'UserID' => "50",
-			    'Username' => "Me",
-			    'Email' => "email",
-			    'FirstName' => "test",
-			    'LastName' => "name",
+			    'UserID' => NULL,
+			    'Username' => $newusername,
+			    'Email' => $newemail,
+			    'FirstName' => $newfirstname,
+			    'LastName' => $newlastname,
 			);
 			$id = $db->insert('Users', $data);
 			echo "<br /><br />";
@@ -140,7 +140,6 @@ class User {
 				$user = $db
 					->where("Username", $newusername)
 					->get("Users");
-				print_r($user);
 				$user = $user[0];
 				$this->UserID = $user['UserID'];
 				echo $this->UserID;
@@ -150,7 +149,7 @@ class User {
 				echo "<br />";
 				if ($hash){
 					$data = array(
-					    'UserID' => "50",
+					    'UserID' => $this->UserID,
 					    'PasswordHash' => $hash,
 					);
 					$id = $db->insert('User_Auth', $data);
