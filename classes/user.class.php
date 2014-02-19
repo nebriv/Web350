@@ -45,7 +45,7 @@ class User {
 		$this->userID = $newid;
 	}
 
-	function getSessionContent(){
+	function checkSession(){
 		$db = buildDBObject();
 		if (isset($_SESSION['user'])){
 			$session = $_SESSION['user'];
@@ -57,7 +57,7 @@ class User {
 				->get('Sessions');
 			
 			if (count($results) > 0){
-				return $this;
+				return True;
 			}else{
 				return False;
 			}
@@ -68,11 +68,8 @@ class User {
 	}
 
 	function buildSession(){
-		echo "Bulding Session";
 		$this->sessionToken = sha1(bin2hex(openssl_random_pseudo_bytes(16)));
 		$this->sessionContent = sha1($this->sessionToken.$this->userIP);
-
-		echo $this->sessionContent;
 
 		$db = buildDBObject();
 
@@ -86,10 +83,8 @@ class User {
 		);
 
 		$result = $db->insert('Sessions', $data);
-		echo "Inserted data";
 		if ($result){
 			$_SESSION['user'] = $this->sessionContent;
-			echo "built session";
 		}
 	}
 
