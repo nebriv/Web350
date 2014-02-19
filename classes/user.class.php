@@ -121,7 +121,7 @@ class User {
 					'LastLogin' => date("Y-m-d H:i:s"),
 					);
 				$db->where('UserID', $id);
-				$db->update('Users_Auth', $data);
+				$db->update('User_Auth', $data);
 				return True;
 			}else{
 				return False;
