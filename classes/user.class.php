@@ -134,7 +134,6 @@ class User {
 			    'LastName' => $newlastname,
 			);
 			$id = $db->insert('Users', $data);
-			echo "<br /><br />";
 			if($id){
 
 				$user = $db
@@ -142,11 +141,7 @@ class User {
 					->get("Users");
 				$user = $user[0];
 				$this->UserID = $user['UserID'];
-				echo $this->UserID;
 				$hash = password_hash($newpassword, PASSWORD_DEFAULT);
-				echo "<br />";
-				echo $hash;
-				echo "<br />";
 				if ($hash){
 					$data = array(
 					    'UserID' => $this->UserID,
@@ -155,6 +150,8 @@ class User {
 					$id = $db->insert('User_Auth', $data);
 					if ($id){
 						echo "Successfully made user";
+					}else{
+						"Error making user2";
 					}
 				}else{
 					echo "Error hashing password";
