@@ -2,8 +2,8 @@
 include('includes/header.php');
 
 $user = new User();
-//$user->registerUser("nebriv2", "pass", "nebriv+csa@gmail.com", "ben", "virgilio");
-//$user->buildSession();
+//$user->registerUser($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"));
+$user->buildSession();
 $user->checkCredentials("nebriv2", "p5ass");
 ?>
 
