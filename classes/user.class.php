@@ -77,6 +77,7 @@ class User {
 
 		$db->where("UserID", $userid);
 		$user = $db->get("Users", 1);
+		print_r($user);
 		$user = $user[0];
 		$this->userID = $user["UserID"];
 		$this->userName = $user["Username"];
