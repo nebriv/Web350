@@ -158,26 +158,30 @@ class User {
 			->where('Username', $username)
 			->get('Users');
 
-		$results = $results[0];
+		if (count($results) == 0){
+			return False;
+		}else{
+			$results = $results[0];
 
-		if (count($results) > 0){
-			$id = $results['UserID'];
-			$results2 = $db
-				->where("UserID", $id)
-				->get("User_Auth");
-			$results2 = $results2[0];
-			if (password_verify($password, $results2['PasswordHash'])){
-				$data = array (
-					'LastLogin' => date("Y-m-d H:i:s"),
-					);
-				$db->where('UserID', $id);
-				$db->update('User_Auth', $data);
-				return $id;
+			if (count($results) > 0){
+				$id = $results['UserID'];
+				$results2 = $db
+					->where("UserID", $id)
+					->get("User_Auth");
+				$results2 = $results2[0];
+				if (password_verify($password, $results2['PasswordHash'])){
+					$data = array (
+						'LastLogin' => date("Y-m-d H:i:s"),
+						);
+					$db->where('UserID', $id);
+					$db->update('User_Auth', $data);
+					return $id;
+				}else{
+					return False;
+				}
 			}else{
 				return False;
 			}
-		}else{
-			return False;
 		}
 	}
 
