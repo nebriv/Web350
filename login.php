@@ -1,7 +1,7 @@
 <?php
 include('includes/header.php');
 
-if (isset($_POST['user_username']) && isset($_POST['user_password'])){
+if (isset($_POST['username']) && isset($_POST['password'])){
   echo "ok!";
 }else{
   echo "<form name='login' action='login.php' method='post' accept-charset='UTF-8'>
