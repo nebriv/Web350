@@ -72,12 +72,7 @@ class User {
 
 	function buildObject(){
 		$db = buildDBObject();
-		$session = $_SESSION['user'];
-		
-		$results = $db
-			->where('SessionContent', $session)
-			->where('IPAddress', $this->userIP)
-			->get('Sessions');
+
 	}
 
 	function buildSession(){

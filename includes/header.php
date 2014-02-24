@@ -3,7 +3,12 @@ require_once($_SERVER['DOCUMENT_ROOT']."/classes/dbcon.class.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/classes/user.class.php");
 require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');
 session_start();
-
+$user = new User();
+//$user->registerUser($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"));
+$user->buildSession();
+if ($user->checkCredentials("nebriv2", "pass")){
+  
+}
 ?>
 
 <!DOCTYPE html>

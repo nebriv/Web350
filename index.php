@@ -1,10 +1,6 @@
 <?php
 include('includes/header.php');
 
-$user = new User();
-//$user->registerUser($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"));
-$user->buildSession();
-echo $user->checkCredentials("nebriv2", "p5ass");
 ?>
 
       <div class="jumbotron">
