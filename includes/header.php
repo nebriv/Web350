@@ -45,8 +45,6 @@ if ($user->checkCredentials("nebriv2", "pass")){
 			<li><a href='#'>My Cart</a></li>
 			<?php
 
-			$user = new User();
-
 			if ($user->checkSession()){
 
 			echo "
