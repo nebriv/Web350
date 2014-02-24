@@ -8,7 +8,7 @@ $user = new User();
 if ($user->checkCredentials("nebriv2", "pass")){
 
 	$user->buildObject("nebriv2");
-	echo $user->getFirstName(); 
+
 	$user->buildSession();
 }
 ?>
@@ -53,7 +53,7 @@ if ($user->checkCredentials("nebriv2", "pass")){
 				
 				<li class='dropdown'>
 					<a class='dropdown-toggle' href='#' data-toggle='dropdown'>Welcome Back, ";
-					 echo $user->getFirstName(); 
+					 echo $user->getFirstName();
 			echo "	<strong class='caret'></strong></a>
 					<div class='dropdown-menu' style='padding: 15px; padding-bottom: 10px;'>
 						<form name='login' action='login.php' method='post' accept-charset='UTF-8'>

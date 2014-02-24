@@ -20,8 +20,6 @@ class User {
 	}
 
 	function getFirstName(){
-		echo "Getting firstname";
-		echo $this->firstName;
 		return $this->firstName;
 	}
 
