@@ -1,6 +1,8 @@
 <?php
 include('includes/header.php');
 
+echo $user->checkSession();
+
 ?>
 
       <div class="jumbotron">
