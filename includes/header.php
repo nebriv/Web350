@@ -73,7 +73,7 @@ if ($user->checkSession()){
 						<input class='btn btn-primary' style='clear: left; width: 100%; height: 32px; font-size: 13px;' type='submit' name='commit' value='Sign In' />
 						</form>
 						<hr>
-						<h4>Don't have an account? <a href='register.php'>Click here to make one</a></h4>
+						<h5>Don't have an account? <a href='register.php'>Click here to make one</a></h5>
 					</div>
 				</li>";
 			}
