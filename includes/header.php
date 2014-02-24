@@ -40,7 +40,7 @@ if ($user->checkCredentials("nebriv2", "pass")){
 			<li class="active"><a href="#">Home</a></li>
 			<li><a href="#">Produce/Shop</a></li>
 			<li><a href="#">Contact Us</a></li>
-
+			<li><a href='#'>My Cart</a></li>
 			<?php
 
 			$user = new User();
@@ -48,10 +48,10 @@ if ($user->checkCredentials("nebriv2", "pass")){
 			if ($user->checkSession()){
 
 			echo "
-				<li><a href='register.php'>Sign Up</a></li>
+				
 				<li class='dropdown'>
 					<a class='dropdown-toggle' href='#' data-toggle='dropdown'>Welcome Back, ";
-					 echo $user->getFirstName; 
+					 echo $user->getFirstName(); 
 			echo "	<strong class='caret'></strong></a>
 					<div class='dropdown-menu' style='padding: 15px; padding-bottom: 10px;'>
 						<form name='login' action='login.php' method='post' accept-charset='UTF-8'>
@@ -65,9 +65,8 @@ if ($user->checkCredentials("nebriv2", "pass")){
 				</li>";
 			}else{
 				echo "
-				<li><a href='register.php'>Sign Up</a></li>
 				<li class='dropdown'>
-					<a class='dropdown-toggle' href='#' data-toggle='dropdown'>Sign In <strong class='caret'></strong></a>
+					<a class='dropdown-toggle' href='#' data-toggle='dropdown'>Sign In/Up <strong class='caret'></strong></a>
 					<div class='dropdown-menu' style='padding: 15px; padding-bottom: 10px;'>
 						<form name='login' action='login.php' method='post' accept-charset='UTF-8'>
 						<input id='user_username' style='margin-bottom: 15px;' type='text' name='username' placeholder='Username' size='30' />
