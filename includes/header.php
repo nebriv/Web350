@@ -56,10 +56,12 @@ if ($user->checkSession()){
 								<h3 class='panel-title'>Your Account</h3>
 							</div>
 							<div class='panel-body'>
+							<ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
 								<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>View Orders</a></li>
 							</div>
 							<li role='presentation' class='divider'></li>
 								<a href='logout.php'><button type='button' class='btn btn-block btn-danger'>Logout</button></a>
+							</ul>
 						</div>
 					</div>
 				</li>";
