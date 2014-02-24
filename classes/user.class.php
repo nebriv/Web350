@@ -83,6 +83,7 @@ class User {
 		$this->firstName = $user["FirstName"];
 		echo "Set Firstname";
 		echo $user["FirstName"];
+		echo $this->firstName;
 		$this->lastName = $user["LastName"];
 
 		$cols = Array("RoleID");
