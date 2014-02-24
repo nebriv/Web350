@@ -82,9 +82,6 @@ class User {
 		$this->firstName = $user["FirstName"];
 		$this->lastName = $user["LastName"];
 
-		$db->where("UserID", $this->userID);
-		$user_auth = $db->get("User_Auth");
-
 		$cols = Array("RoleID");
 		$roles = $db->get("User_Role", null, $cols);
 
@@ -95,6 +92,9 @@ class User {
 				array_push($this->userRoles, $role);
 			}
 		}
+
+		$db->where("UserID", $this->userID);
+		$user_auth = $db->get("User_Auth");
 
 		$this->activeEnabled = $user_auth["AccountEnabled"];
 		$this->lastLogin = $user_auth["LastLogin"];
