@@ -74,8 +74,8 @@ class User {
 		$db = buildDBObject();
 
 		$db->where("Username", $username);
-		$user = $db->getOne("Users");
-
+		$user = $db->get("Users", 1);
+		$user = $user[0];
 		$this->userID = $user["UserID"];
 		$this->userName = $user["Username"];
 		$this->email = $user["Email"];
