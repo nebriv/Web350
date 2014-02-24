@@ -70,8 +70,37 @@ class User {
 		}
 	}
 
-	function buildObject(){
+	function buildObject($username){
 		$db = buildDBObject();
+
+		$db->where("Username", $username);
+		$user = $db->getOne("Users");
+
+		$this->userID = $user["UserID"];
+		$this->userName = $user["Username"];
+		$this->email = $user["Email"];
+		$this->firstName = $user["FirstName"];
+		$this->lastName = $user["LastName"];
+
+		$db->where("UserID", $this->userID);
+		$user_auth = $db->get("User_Auth");
+
+		$cols = Array("RoleID");
+		$roles = $db->get("User_Role", null, $cols);
+
+		if (empty($roles)){
+			$this->userRoles = Array("Guest");
+		}else{
+			foreach ($roles as $role){
+				array_push($this->userRoles, $role);
+			}
+		}
+
+		$this->activeEnabled = $user_auth["AccountEnabled"];
+		$this->lastLogin = $user_auth["LastLogin"];
+		$this->emailToken = $user_auth['EmailToken'];
+		$this->resetToken = $user_auth["ResetToken"];
+
 
 	}
 
