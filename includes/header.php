@@ -5,7 +5,14 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');
 session_start();
 $user = new User();
 //$user->registerUser($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"));
+if ($user->checkCredentials("nebriv2", "pass")){
 
+  $user->buildObject("nebriv2");
+
+  $user->buildSession();
+
+  echo $user->checkSession();
+}
 ?>
 
 <!DOCTYPE html>

@@ -61,7 +61,8 @@ class User {
 				->get('Sessions');
 			
 			if (count($results) > 0){
-				return True;
+				$results = $results[0];
+				return $results['UserID'];
 			}else{
 				return False;
 			}

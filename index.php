@@ -1,11 +1,6 @@
 <?php
 include('includes/header.php');
-if ($user->checkCredentials("nebriv2", "pass")){
 
-  $user->buildObject("nebriv2");
-
-  $user->buildSession();
-}
 ?>
 
       <div class="jumbotron">
