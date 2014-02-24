@@ -12,22 +12,26 @@ if (isset($_POST['username']) && isset($_POST['password'])){
     }
   }else{
     echo "Invalid Username or Password";
-      echo "<form name='login' action='login.php' method='post' accept-charset='UTF-8'>
-            <input id='user_username' style='margin-bottom: 15px;' type='text' name='username' placeholder='Username' size='30' />
-            <input id='user_password' style='margin-bottom: 15px;' type='password' name='password' placeholder='Password' size='30' />
-            <input id='user_remember_me' style='float: left; margin-right: 10px;' type='checkbox' name='rememberme' value='1' />
-            <label class='string optional' for='user_remember_me'> Remember me</label>
-            <input class='btn btn-primary' style='clear: left; width: 100%; height: 32px; font-size: 13px;' type='submit' name='commit' value='Sign In' />
-            </form>";
-  }
+    echo "      <form action='login.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
+          <h2 class='form-signin-heading'>Please sign in</h2>
+          <input name='username' type='email' class='form-control' placeholder='Email address' required autofocus>
+          <input name='password' type='password' class='form-control' placeholder='Password' required>
+          <label class='checkbox'>
+            <input type='checkbox' value='remember-me'> Remember me
+          </label>
+          <button class='btn btn-lg btn-primary btn-block' type='submit'>Sign in</button>
+        </form>";
+    }
 }else{
-  echo "<form name='login' action='login.php' method='post' accept-charset='UTF-8'>
-            <input id='user_username' style='margin-bottom: 15px;' type='text' name='username' placeholder='Username' size='30' />
-            <input id='user_password' style='margin-bottom: 15px;' type='password' name='password' placeholder='Password' size='30' />
-            <input id='user_remember_me' style='float: left; margin-right: 10px;' type='checkbox' name='rememberme' value='1' />
-            <label class='string optional' for='user_remember_me'> Remember me</label>
-            <input class='btn btn-primary' style='clear: left; width: 100%; height: 32px; font-size: 13px;' type='submit' name='commit' value='Sign In' />
-            </form>";
+  echo "      <form action='login.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
+        <h2 class='form-signin-heading'>Please sign in</h2>
+        <input name='username' type='email' class='form-control' placeholder='Email address' required autofocus>
+        <input name='password' type='password' class='form-control' placeholder='Password' required>
+        <label class='checkbox'>
+          <input type='checkbox' value='remember-me'> Remember me
+        </label>
+        <button class='btn btn-lg btn-primary btn-block' type='submit'>Sign in</button>
+      </form>";
 }
 
 
