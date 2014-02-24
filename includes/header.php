@@ -51,7 +51,7 @@ if ($user->checkSession()){
 					 echo ucfirst($user->getFirstName());
 			echo "<strong class='caret'></strong></a>
 					<ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
-						<li role='presentation'><a role='menuitem'>Your Account</li>
+						<li role='presentation'>Your Account</li>
 						<li role='presentation' class='divider'></li>
 						<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>View Orders</a></li>
 						<li role='presentation' class='divider'></li>
