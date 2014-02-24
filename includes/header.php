@@ -72,6 +72,8 @@ if ($user->checkSession()){
 						<label class='string optional' for='user_remember_me'> Remember me</label>
 						<input class='btn btn-primary' style='clear: left; width: 100%; height: 32px; font-size: 13px;' type='submit' name='commit' value='Sign In' />
 						</form>
+						<hr>
+						<h4>Don't have an account? <a href='register.php'>Click here to make one</a></h4>
 					</div>
 				</li>";
 			}
