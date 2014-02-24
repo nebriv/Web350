@@ -53,13 +53,16 @@ if ($user->checkCredentials("nebriv2", "pass")){
 					<a class='dropdown-toggle' href='#' data-toggle='dropdown'>Hello, ";
 					 echo ucfirst($user->getFirstName());
 			echo "<strong class='caret'></strong></a>
-					<div class='dropdown-menu' style='padding: 15px; padding-bottom: 10px;'>
+					<div class='dropdown-menu' style='padding: 10px; padding-bottom: 10px;'>
 						<div class='panel panel-default'>
 							<div class='panel-heading'>
 								<h3 class='panel-title'>Your Account</h3>
 							</div>
 							<div class='panel-body'>
 								Account Info
+							</div>
+							</div class='panel-footer'>
+								<a href='logout.php'><button type='button' class='btn btn-default'>Logout</button></a>
 							</div>
 						</div>
 					</div>
