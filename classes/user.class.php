@@ -115,8 +115,6 @@ class User {
 		$db->where('SessionContent', $_SESSION['user']);
 		if ($db->update('Sessions', $data)){
 			$_SESSION['user'] = Null;
-			echo "You've been logged out.";
-			#header( 'Location: http://csa.nebriv.com' ) ;
 		}else{
 			echo "Error logging you out";
 		}

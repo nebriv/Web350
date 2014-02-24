@@ -5,7 +5,9 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');
 session_start();
 $user = new User();
 //$user->registerUser($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"));
-$user->buildObject($user->checkSession());
+if ($user->checkSession()){
+	$user->buildObject($user->checkSession());
+}
 ?>
 
 <!DOCTYPE html>
