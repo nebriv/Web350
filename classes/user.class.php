@@ -95,6 +95,7 @@ class User {
 
 		$db->where("UserID", $this->userID);
 		$user_auth = $db->get("User_Auth");
+		$user_auth = $user_auth[0];
 
 		$this->activeEnabled = $user_auth["AccountEnabled"];
 		$this->lastLogin = $user_auth["LastLogin"];
