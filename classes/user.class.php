@@ -72,10 +72,10 @@ class User {
 		}
 	}
 
-	function buildObject($username){
+	function buildObject($userid){
 		$db = buildDBObject();
 
-		$db->where("Username", $username);
+		$db->where("UserID", $userid);
 		$user = $db->get("Users", 1);
 		$user = $user[0];
 		$this->userID = $user["UserID"];
