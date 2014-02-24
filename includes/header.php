@@ -56,7 +56,7 @@ if ($user->checkSession()){
 								<h3 class='panel-title'>Your Account</h3>
 							</div>
 							<div class='panel-body'>
-								Account Info
+								<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>View Orders</a></li>
 							</div>
 							<div class='panel-footer'>
 								<a href='logout.php'><button type='button' class='btn btn-block btn-danger'>Logout</button></a>
