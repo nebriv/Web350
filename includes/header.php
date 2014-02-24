@@ -6,8 +6,6 @@ session_start();
 $user = new User();
 //$user->registerUser($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"));
 $user->buildObject("nebriv2");
-
-}
 ?>
 
 <!DOCTYPE html>
