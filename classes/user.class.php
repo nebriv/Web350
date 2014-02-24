@@ -20,6 +20,8 @@ class User {
 	}
 
 	function getFirstName(){
+		echo "Getting firstname";
+		echo $this->firstName;
 		return $this->firstName;
 	}
 
@@ -79,11 +81,7 @@ class User {
 		$this->userID = $user["UserID"];
 		$this->userName = $user["Username"];
 		$this->email = $user["Email"];
-		echo "Setting firstname";
 		$this->firstName = $user["FirstName"];
-		echo "Set Firstname";
-		echo $user["FirstName"];
-		echo $this->firstName;
 		$this->lastName = $user["LastName"];
 
 		$cols = Array("RoleID");

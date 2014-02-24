@@ -6,7 +6,9 @@ session_start();
 $user = new User();
 //$user->registerUser($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"));
 if ($user->checkCredentials("nebriv2", "pass")){
+
 	$user->buildObject("nebriv2");
+	echo $user->getFirstName(); 
 	$user->buildSession();
 }
 ?>
