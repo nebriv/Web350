@@ -58,9 +58,8 @@ if ($user->checkSession()){
 							<div class='panel-body'>
 								<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>View Orders</a></li>
 							</div>
-							<div class='panel-footer'>
+							<li role='presentation' class='divider'></li>
 								<a href='logout.php'><button type='button' class='btn btn-block btn-danger'>Logout</button></a>
-							</div>
 						</div>
 					</div>
 				</li>";
