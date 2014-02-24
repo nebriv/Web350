@@ -51,18 +51,11 @@ if ($user->checkSession()){
 					 echo ucfirst($user->getFirstName());
 			echo "<strong class='caret'></strong></a>
 					<div class='dropdown-menu' style='padding: 10px; padding-bottom: 10px;'>
-						<div class='panel panel-default'>
-							<div class='panel-heading'>
-								<h3 class='panel-title'>Your Account</h3>
-							</div>
-							<div class='panel-body'>
 							<ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
 								<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>View Orders</a></li>
-							</div>
-							<li role='presentation' class='divider'></li>
-								<a href='logout.php'><button type='button' class='btn btn-block btn-danger'>Logout</button></a>
+								<li role='presentation' class='divider'></li>
+								<li role='presentation'><a role='menuitem' tabindex='-1' href='logout.php'>Logout</a></li>
 							</ul>
-						</div>
 					</div>
 				</li>";
 			}else{
