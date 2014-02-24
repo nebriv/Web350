@@ -57,6 +57,7 @@ class User {
 			$results = $db
 				->where('SessionContent', $session)
 				->where('IPAddress', $this->userIP)
+				->where('LoggedOut', '0')
 				->get('Sessions');
 			
 			if (count($results) > 0){
@@ -103,6 +104,20 @@ class User {
 		$this->resetToken = $user_auth["ResetToken"];
 
 
+	}
+
+	function destroySession(){
+		$db = buildDBObject();
+		$data = array (
+		    'LoggedOut' => '1'
+		);
+		$db->where('SessionContent', $_SESSION['user']);
+		if ($db->update('Sessions', $data)){
+			$_SESSION['user'] = Null;
+			header( 'Location: http://csa.nebriv.com' ) ;
+		}else{
+			echo "Error logging you out";
+		}
 	}
 
 	function buildSession(){
