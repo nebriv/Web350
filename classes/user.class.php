@@ -74,7 +74,7 @@ class User {
 
 	function buildObject($userid){
 		$db = buildDBObject();
-
+		echo $userid;
 		$db->where("UserID", $userid);
 		$user = $db->get("Users", 1);
 		print_r($user);
