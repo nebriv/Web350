@@ -50,9 +50,9 @@ if ($user->checkCredentials("nebriv2", "pass")){
 			echo "
 				
 				<li class='dropdown'>
-					<a class='dropdown-toggle' href='#' data-toggle='dropdown'>";
+					<a class='dropdown-toggle' href='#' data-toggle='dropdown'>Hello, ";
 					 echo ucfirst($user->getFirstName());
-			echo "	<strong class='caret'></strong></a>
+			echo "<strong class='caret'></strong></a>
 					<div class='dropdown-menu' style='padding: 15px; padding-bottom: 10px;'>
 						<form name='login' action='login.php' method='post' accept-charset='UTF-8'>
 						<input id='user_username' style='margin-bottom: 15px;' type='text' name='username' placeholder='Username' size='30' />
