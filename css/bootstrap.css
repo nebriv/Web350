@@ -3113,7 +3113,8 @@ input[type="button"].btn-block {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
+  font-weight: thick;
+  font-size: 15px;
   line-height: 1.428571429;
   color: #999999;
 }
