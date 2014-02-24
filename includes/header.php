@@ -53,9 +53,9 @@ if ($user->checkSession()){
 					<ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
 							 <li role='presentation' class='dropdown-header'>Your Account</li>
 							<li role='presentation' class='divider'></li>
-							<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Your Current Subscriptions</a></li>
-							<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Your Order History</a></li>
-							<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>Your Account Settings</a></li>
+							<li role='presentation'><a role='menuitem' tabindex='-1' href='subscriptions.php'>Your Current Subscriptions</a></li>
+							<li role='presentation'><a role='menuitem' tabindex='-1' href='orderhistory.php'>Your Order History</a></li>
+							<li role='presentation'><a role='menuitem' tabindex='-1' href='settings.php'>Your Account Settings</a></li>
 							<li role='presentation' class='divider'></li>
 							<li role='presentation'><a role='menuitem' tabindex='-1' href='logout.php'>Logout</a></li>
 					</ul>
