@@ -77,34 +77,34 @@ class User {
 		echo $userid;
 		$db->where("UserID", $userid);
 		$user = $db->get("Users", 1);
-		print_r($user);
-		$user = $user[0];
-		$this->userID = $user["UserID"];
-		$this->userName = $user["Username"];
-		$this->email = $user["Email"];
-		$this->firstName = $user["FirstName"];
-		$this->lastName = $user["LastName"];
+		if (!empty($user)){
+			$user = $user[0];
+			$this->userID = $user["UserID"];
+			$this->userName = $user["Username"];
+			$this->email = $user["Email"];
+			$this->firstName = $user["FirstName"];
+			$this->lastName = $user["LastName"];
 
-		$cols = Array("RoleID");
-		$roles = $db->get("User_Role", null, $cols);
+			$cols = Array("RoleID");
+			$roles = $db->get("User_Role", null, $cols);
 
-		if (empty($roles)){
-			$this->userRoles = Array("Guest");
-		}else{
-			foreach ($roles as $role){
-				array_push($this->userRoles, $role);
+			if (empty($roles)){
+				$this->userRoles = Array("Guest");
+			}else{
+				foreach ($roles as $role){
+					array_push($this->userRoles, $role);
+				}
 			}
+
+			$db->where("UserID", $this->userID);
+			$user_auth = $db->get("User_Auth");
+			$user_auth = $user_auth[0];
+
+			$this->activeEnabled = $user_auth["AccountEnabled"];
+			$this->lastLogin = $user_auth["LastLogin"];
+			$this->emailToken = $user_auth['EmailToken'];
+			$this->resetToken = $user_auth["ResetToken"];
 		}
-
-		$db->where("UserID", $this->userID);
-		$user_auth = $db->get("User_Auth");
-		$user_auth = $user_auth[0];
-
-		$this->activeEnabled = $user_auth["AccountEnabled"];
-		$this->lastLogin = $user_auth["LastLogin"];
-		$this->emailToken = $user_auth['EmailToken'];
-		$this->resetToken = $user_auth["ResetToken"];
-
 
 	}
 
