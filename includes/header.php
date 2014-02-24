@@ -50,13 +50,11 @@ if ($user->checkSession()){
 					<a class='dropdown-toggle' href='#' data-toggle='dropdown'>Hello, ";
 					 echo ucfirst($user->getFirstName());
 			echo "<strong class='caret'></strong></a>
-					<div class='dropdown-menu' style='padding: 10px; padding-bottom: 10px;'>
-							<ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
-								<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>View Orders</a></li>
-								<li role='presentation' class='divider'></li>
-								<li role='presentation'><a role='menuitem' tabindex='-1' href='logout.php'>Logout</a></li>
-							</ul>
-					</div>
+					<ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
+						<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>View Orders</a></li>
+						<li role='presentation' class='divider'></li>
+						<li role='presentation'><a role='menuitem' tabindex='-1' href='logout.php'>Logout</a></li>
+					</ul>
 				</li>";
 			}else{
 				echo "
