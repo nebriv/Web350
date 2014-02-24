@@ -5,12 +5,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');
 session_start();
 $user = new User();
 //$user->registerUser($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"));
-if ($user->checkCredentials("nebriv2", "pass")){
 
-	$user->buildObject("nebriv2");
-
-	$user->buildSession();
-}
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +32,7 @@ if ($user->checkCredentials("nebriv2", "pass")){
 	<div class="container">
 
 	<div class="masthead">
-		<h3 class="text-muted">Your Farm Name</h3>
+		<h3 class="text-muted"><a href="index.php">Your Farm Name</a></h3>
 		<ul class="nav nav-justified">
 			<li class="active"><a href="#">Home</a></li>
 			<li><a href="#">Produce/Shop</a></li>
