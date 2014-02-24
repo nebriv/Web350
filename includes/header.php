@@ -50,7 +50,7 @@ if ($user->checkSession()){
 					<a class='dropdown-toggle' href='#' data-toggle='dropdown'>Hello, ";
 					 echo ucfirst($user->getFirstName());
 			echo "<strong class='caret'></strong></a>
-					<ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>
+					<ul class='dropdown-menu center-block' role='menu' aria-labelledby='dropdownMenu1'>
 						<li role='presentation'>Your Account</li>
 						<li role='presentation' class='divider'></li>
 						<li role='presentation'><a role='menuitem' tabindex='-1' href='#'>View Orders</a></li>
