@@ -61,7 +61,7 @@ if ($user->checkCredentials("nebriv2", "pass")){
 							<div class='panel-body'>
 								Account Info
 							</div>
-							</div class='panel-footer'>
+							<div class='panel-footer'>
 								<a href='logout.php'><button type='button' class='btn btn-default'>Logout</button></a>
 							</div>
 						</div>
