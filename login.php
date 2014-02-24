@@ -2,7 +2,15 @@
 include('includes/header.php');
 
 if (isset($_POST['username']) && isset($_POST['password'])){
-  echo "ok!";
+  if ($user->checkCredentials($_POST['username'], $_POST['password'])){
+    $user->buildObject($user->checkCredentials($_POST['username'], $_POST['password']));
+    $user->buildSession();
+    if (isset($_POST['referer'])){
+      header( 'Location: '.$_POST['referer'] ) ;
+    }else{
+      header( 'Location: http://csa.nebriv.com' ) ;
+    }
+  }
 }else{
   echo "<form name='login' action='login.php' method='post' accept-charset='UTF-8'>
             <input id='user_username' style='margin-bottom: 15px;' type='text' name='username' placeholder='Username' size='30' />
@@ -12,7 +20,6 @@ if (isset($_POST['username']) && isset($_POST['password'])){
             <input class='btn btn-primary' style='clear: left; width: 100%; height: 32px; font-size: 13px;' type='submit' name='commit' value='Sign In' />
             </form>";
 }
-
 
 
 include('includes/footer.php');

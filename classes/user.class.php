@@ -172,7 +172,7 @@ class User {
 					);
 				$db->where('UserID', $id);
 				$db->update('User_Auth', $data);
-				return True;
+				return $id;
 			}else{
 				return False;
 			}
