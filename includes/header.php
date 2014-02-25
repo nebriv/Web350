@@ -57,7 +57,7 @@ if ($user->checkSession()){
 							<li role='presentation'><a role='menuitem' tabindex='-1' href='orderhistory.php'>Your Order History</a></li>
 							<li role='presentation'><a role='menuitem' tabindex='-1' href='settings.php'>Your Account Settings</a></li>
 							";
-							if ($user->checkPerms(2, false)){
+							if ($user->checkPerms(2)){
 								echo "<li role='presentation' class='divider'></li>
 								<li role='presentation' class='dropdown-header'>Site Administration</li>
 								<li role='presentation'><a role='menuitem' tabindex='-1' href='subscriptions.php'>Site Settings</a></li>
