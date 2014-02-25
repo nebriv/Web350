@@ -19,12 +19,16 @@ class User {
 		$db = NULL;
 	}
 
-	function checkPerms($desiredaccess){
+	function checkPerms($desiredaccess, $strict = true){
 		if (in_array($desiredaccess, $this->userRoles)){
 			return True;
 		}else{
-			if ($desiredaccess >= min($this->userRoles)){
-				return True;
+			if ($strict != true){
+				if ($desiredaccess >= min($this->userRoles)){
+					return True;
+				}else{
+					return False;
+				}
 			}else{
 				return False;
 			}
@@ -119,8 +123,7 @@ class User {
 				$this->userRoles = Array("Guest");
 			}else{
 				foreach ($roles as $role){
-					print_r($role);
-					array_push($this->userRoles, $role);
+					array_push($this->userRoles, $role['RoleID']);
 				}
 			}
 
