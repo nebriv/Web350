@@ -19,6 +19,18 @@ class User {
 		$db = NULL;
 	}
 
+	function checkPerms($desiredaccess){
+		if in_array($desiredaccess, $this->userRoles){
+			return True;
+		}else{
+			if ($desiredaccess >= min($this->userRoles)){
+				return True;
+			}else{
+				return False;
+			}
+		}
+	}
+
 	function getFirstName(){
 		return $this->firstName;
 	}

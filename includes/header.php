@@ -56,6 +56,14 @@ if ($user->checkSession()){
 							<li role='presentation'><a role='menuitem' tabindex='-1' href='subscriptions.php'>Your Current Subscriptions</a></li>
 							<li role='presentation'><a role='menuitem' tabindex='-1' href='orderhistory.php'>Your Order History</a></li>
 							<li role='presentation'><a role='menuitem' tabindex='-1' href='settings.php'>Your Account Settings</a></li>
+							";
+							if ($user->checkPerms(1)){
+								echo "<li role='presentation' class='divider'></li>
+								<li role='presentation' class='dropdown-header'>Site Administration</li>
+								<li role='presentation'><a role='menuitem' tabindex='-1' href='subscriptions.php'>Site Settings</a></li>
+								<li role='presentation'><a role='menuitem' tabindex='-1' href='subscriptions.php'>View/Print Orders</a></li>";
+							}
+			echo "
 							<li role='presentation' class='divider'></li>
 							<li role='presentation'><a role='menuitem' tabindex='-1' href='logout.php'>Logout</a></li>
 					</ul>
