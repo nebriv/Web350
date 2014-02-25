@@ -123,8 +123,7 @@ class User {
 				$this->userRoles = Array("Guest");
 			}else{
 				foreach ($roles as $role){
-					echo $role['RoleID'];
-					//array_push($this->userRoles, $role['RoleID']);
+					array_push($this->userRoles, $role['RoleID']);
 				}
 			}
 
