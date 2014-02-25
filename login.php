@@ -5,13 +5,15 @@ if (isset($_POST['username']) && isset($_POST['password'])){
   if ($user->checkCredentials($_POST['username'], $_POST['password'])){
     $user->buildObject($user->checkCredentials($_POST['username'], $_POST['password']));
     if (isset($_POST['rememberme'])) {
-      echo "REMEMBER ME!";
-    }
-    $user->buildSession();
-    if (isset($_POST['referer'])){
-      #header( 'Location: '.$_POST['referer'] ) ;
+      $user->buildCookie();
     }else{
-      #header( 'Location: http://csa.nebriv.com' ) ;
+      $user->buildSession();
+    }
+    
+    if (isset($_POST['referer'])){
+      header( 'Location: '.$_POST['referer'] ) ;
+    }else{
+      header( 'Location: http://csa.nebriv.com' ) ;
     }
   }else{
     
