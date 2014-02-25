@@ -20,7 +20,7 @@ class User {
 	}
 
 	function checkPerms($desiredaccess){
-		if in_array($desiredaccess, $this->userRoles){
+		if (in_array($desiredaccess, $this->userRoles)){
 			return True;
 		}else{
 			if ($desiredaccess >= min($this->userRoles)){
