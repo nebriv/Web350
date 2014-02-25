@@ -4,7 +4,7 @@ include('includes/header.php');
 if (isset($_POST['username']) && isset($_POST['password'])){
   if ($user->checkCredentials($_POST['username'], $_POST['password'])){
     $user->buildObject($user->checkCredentials($_POST['username'], $_POST['password']));
-    if ($_POST['rememberme'] == "remember-me"){
+    if (isset($_POST['rememberme'])) {
       echo "REMEMBER ME!";
     }
     $user->buildSession();
