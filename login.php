@@ -14,7 +14,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
     
     echo "      <form action='login.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
           <h2 class='form-signin-heading'>Please sign in</h2>
-          <div class='alert alert-danger'>Invalid Username or Password</div>
+          <div class='alert alert-danger'>Invalid Username or Password<br /><small><a href='reset.php'>Forgot Password?</a> / <a href='register.php'>Don't have an account?</a></div>
           <input name='username' class='form-control' placeholder='Username' required autofocus>
           <input name='password' type='password' class='form-control' placeholder='Password' required>
           <label class='checkbox'>
