@@ -122,6 +122,7 @@ class User {
 			if (empty($roles)){
 				$this->userRoles = Array("Guest");
 			}else{
+				$this->userRoles = array();
 				foreach ($roles as $role){
 					array_push($this->userRoles, $role['RoleID']);
 				}
