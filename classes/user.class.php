@@ -118,13 +118,13 @@ class User {
 
 			$cols = Array("RoleID");
 			$roles = $db->get("User_Role", null, $cols);
-			print_r($roles);
+			//print_r($roles);
 			if (empty($roles)){
 				$this->userRoles = Array("Guest");
 			}else{
 				foreach ($roles as $role){
-					//print_r($role);
-					array_push($this->userRoles, $role['RoleID']);
+					echo $role['RoleID'];
+					//array_push($this->userRoles, $role['RoleID']);
 				}
 			}
 
