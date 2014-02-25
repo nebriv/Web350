@@ -119,6 +119,7 @@ class User {
 				$this->userRoles = Array("Guest");
 			}else{
 				foreach ($roles as $role){
+					echo $role;
 					array_push($this->userRoles, $role);
 				}
 			}
