@@ -4,6 +4,9 @@ include('includes/header.php');
 if (isset($_POST['username']) && isset($_POST['password'])){
   if ($user->checkCredentials($_POST['username'], $_POST['password'])){
     $user->buildObject($user->checkCredentials($_POST['username'], $_POST['password']));
+    if ($_POST['rememberme'] == "remember-me"){
+      echo "REMEMBER ME!";
+    }
     $user->buildSession();
     if (isset($_POST['referer'])){
       header( 'Location: '.$_POST['referer'] ) ;
@@ -18,7 +21,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
           <input name='username' class='form-control' placeholder='Username' required autofocus>
           <input name='password' type='password' class='form-control' placeholder='Password' required>
           <label class='checkbox'>
-            <input type='checkbox' value='remember-me'> Remember me
+            <input type='checkbox' name='rememberme' value='remember-me'> Remember me
           </label>
           <button class='btn btn-lg btn-primary btn-block' type='submit'>Sign in</button>
         </form>";
@@ -29,7 +32,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
         <input name='username' class='form-control' placeholder='Username' required autofocus>
         <input name='password' type='password' class='form-control' placeholder='Password' required>
         <label class='checkbox'>
-          <input type='checkbox' value='remember-me'> Remember me
+          <input type='checkbox' name='rememberme' value='remember-me'> Remember me
         </label>
         <button class='btn btn-lg btn-primary btn-block' type='submit'>Sign in</button>
       </form>";

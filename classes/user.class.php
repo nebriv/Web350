@@ -58,6 +58,7 @@ class User {
 				->where('SessionContent', $session)
 				->where('IPAddress', $this->userIP)
 				->where('LoggedOut', '0')
+				->where('Type', 'Session')
 				->get('Sessions');
 			
 			if (count($results) > 0){
@@ -66,7 +67,22 @@ class User {
 			}else{
 				return False;
 			}
-
+		}elseif(isset($_COOKIE['CSA'])){
+			$session = $_COOKIE['CSA'];
+			
+			$results = $db
+				->where('SessionContent', $session)
+				->where('IPAddress', $this->userIP)
+				->where('LoggedOut', '0')
+				->where('Type', 'Cookie')
+				->get('Sessions');
+			
+			if (count($results) > 0){
+				$results = $results[0];
+				return $results['UserID'];
+			}else{
+				return False;
+			}
 		}else{
 			return False;
 		}
@@ -133,11 +149,36 @@ class User {
 		    'IPAddress' => $this->userIP,
 		    'LastActive' => NULL,
 		    'Token' => $this->sessionToken,
+		    'Type' => "Session"
 		);
 
 		$result = $db->insert('Sessions', $data);
 		if ($result){
 			$_SESSION['user'] = $this->sessionContent;
+			return True;
+		}
+	}
+
+	function buildCookie(){
+		$this->sessionToken = sha1(bin2hex(openssl_random_pseudo_bytes(16)));
+		$this->sessionContent = sha1($this->sessionToken.$this->userIP);
+
+		$db = buildDBObject();
+
+		$data = array(
+			'SessionID' => NULL,
+		    'UserID' => $this->userID,
+		    'SessionContent' => $this->sessionContent,
+		    'IPAddress' => $this->userIP,
+		    'LastActive' => NULL,
+		    'Token' => $this->sessionToken,
+		    'Type' => "Cookie"
+		);
+
+		$result = $db->insert('Sessions', $data);
+		if ($result){
+			setcookie("CSA", $this->sessionContent, time()+60*60*24*7, "/", "csa.nebriv.com");
+			return True;
 		}
 	}
 
