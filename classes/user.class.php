@@ -118,7 +118,7 @@ class User {
 
 			$cols = Array("RoleID");
 			$roles = $db->get("User_Role", null, $cols);
-
+			print_r($roles);
 			if (empty($roles)){
 				$this->userRoles = Array("Guest");
 			}else{
