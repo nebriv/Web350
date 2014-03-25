@@ -40,7 +40,6 @@ class logger {
 		    'EventDescription' => $description,
 		    'Severity' => $severity,
 		);
-		print_r($data);
 		$id = $db->insert('EventIDs', $data);
 		echo $db->getLastError();
 		if ($id){
