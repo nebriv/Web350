@@ -24,8 +24,30 @@ class logger {
 		}
 	}
 
-	function createEvent($name, $group, $description, $severity){
+	function getGroupID($groupname){
+		$db->where('GroupName', $groupname);
+		$results = $db->get("EventGroup");
+		return $results[0]['GroupID'];
+	}
 
+	function createEvent($name, $group, $description, $severity){
+		$db = buildDBObject();
+		$data = array(
+		    'EventID' => NULL,
+		    'EventName' => $name,
+		    'GroupID' => $group,
+		    'EventDescription' => $description,
+		    'Severity' => $severity,
+		);
+
+		$id = $db->insert('EventIDs', $data);
+		if ($id){
+			$db->where('EventName', $name);
+			$results = $db->get("EventIDs");
+			return $results[0]['EventID'];
+		}else{
+			return false;
+		}
 	}
 
 	function auth($severity = "warn"){

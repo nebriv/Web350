@@ -2,8 +2,8 @@
 include('includes/header.php');
 
 $log = new logger();
-
-$result = $log->createGroup("Authentication", "Contains logs regarding authentication messages");
+nt($name, $group, $description, $severity){
+$result = $log->createEvent("Login Successful", "Authentication", "The user has successfully authenticated themselves in the system", "info");
 echo $result;
 ?>
 
