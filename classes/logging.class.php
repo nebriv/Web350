@@ -61,7 +61,7 @@ class logger {
 		}
 	}
 
-	function auth($type, $user = "Not Logged In", $notes = "None"){
+	function auth($type, $user = 0, $notes = "None"){
 		$db = buildDBObject();
 		if ($type == "success"){
 			$data = array(
