@@ -218,6 +218,7 @@ class User {
 			->get('Roles');
 		$results = $results[0];
 		echo print_r($results);
+		echo $results['RoleID'];
 	}
 
 	function checkCredentials($username = NULL, $password){
