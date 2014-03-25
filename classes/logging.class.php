@@ -72,6 +72,7 @@ class logger {
 				$userid = $user->getID();
 			}
 		}
+		echo $userid;
 		if ($type == "success"){
 			$data = array(
 			    'LogID' => NULL,
@@ -118,6 +119,7 @@ class logger {
 				return False;
 			}
 		}elseif ($type == "logoutfailure"){
+
 			$data = array(
 			    'LogID' => NULL,
 			    'EventID' => $this->getEventID("Logout Failed"),
