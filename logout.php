@@ -11,6 +11,7 @@ if ($user->checkSession()){
 
   #header( 'Location: http://csa.nebriv.com' ) ;
 }else{
+  echo $log->auth("logoutsuccess", $user);
   echo "You are not logged in";
 }
 
