@@ -74,6 +74,8 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
 </div>
 
 <?php
+}else{
+  echo "not ok!";
 }
 ?>
 
