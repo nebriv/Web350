@@ -46,7 +46,7 @@ class logger {
 			$results = $db->get("EventIDs");
 			return $results[0]['EventID'];
 		}else{
-			return False;
+			return "False";
 		}
 	}
 
