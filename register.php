@@ -3,7 +3,7 @@ include('includes/header.php');
 if (isset($_SERVER['HTTP_REFERER'])){
 	$referer = $_SERVER['HTTP_REFERER'];
 }else{
-	$referer = "url";
+	$referer = "http://csa.nebriv.com/index.php";
 }
 echo $referer;
 ?>
@@ -24,10 +24,10 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
     $result = $user->registerUser($username, $password1, $email, $firstname, $lastname);
     if ($result == "Successfully made user"){
         $ID = $user->getID();
-        echo "<div class='alert alert-success'>Sucessfully Made Account!</div>";
+        //echo "<div class='alert alert-success'>Sucessfully Made Account!</div>";
 		$user->buildObject($user->checkCredentials($username, $password1));
         $user->buildSession();
-		$user->getRoleID("Farmer");
+		header("Location: $referer");
     }elseif ($result == "Error making user2"){
 
     }elseif ($result == "Error hashing password"){
