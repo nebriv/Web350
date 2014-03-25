@@ -217,8 +217,7 @@ class User {
 		$results = $db
 			->get('Roles');
 		$results = $results[0];
-		echo print_r($results);
-		echo $results['RoleID'];
+		return $results['RoleID'];
 	}
 
 	function checkCredentials($username = NULL, $password){
@@ -278,7 +277,6 @@ class User {
 			    'LastName' => $newlastname,
 			);
 			$id = $db->insert('Users', $data);
-			echo $id;
 			if($id){
 				$user = $db
 					->where("Username", $newusername)
@@ -298,7 +296,12 @@ class User {
 							'UserID' => $this->UserID,
 							'RoleID' => $this->getRoleID("Guest")
 						);
-						return "Successfully made user";
+						$id = $db->insert('User_Role', $data);
+						if ($id){
+							return "Successfully made user";
+						}else{
+							return "Error giving user a role";
+						}
 					}else{
 						return "Error making user2";
 					}
