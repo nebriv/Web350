@@ -88,6 +88,21 @@ class logger {
 			}else{
 				return False;
 			}
+		}elseif ($type == "logoutsuccess"){
+			$data = array(
+			    'LogID' => NULL,
+			    'EventID' => $this->getEventID("Logout Successful"),
+			    'Timestamp' => date("Y-m-d H:i:s"),
+			    'UserID' => $user->getID(),
+			    'IP' => $_SERVER['REMOTE_ADDR'],
+			    'Notes' => $notes,
+			);
+			$id = $db->insert('AuditLog', $data);
+			if ($id){
+				return True;
+			}else{
+				return False;
+			}
 		}
 	}
 

@@ -2,7 +2,7 @@
 include('includes/header.php');
 
 $log = new logger();
-$log->createEvent("Logout Successful", "Authentication", "The user successfully terminated their current session.", "info");
+//$log->createEvent("Logout Successful", "Authentication", "The user successfully terminated their current session.", "info");
 ?>
 
       <div class="jumbotron">
