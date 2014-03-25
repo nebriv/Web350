@@ -13,7 +13,7 @@ class logger {
 		    'GroupDescription' => $description,
 		);
 
-		$id = $db->insert('EventGroup', $data)
+		$id = $db->insert('EventGroup', $data);
 		if ($id){
 			$db->where('GroupName', $name);
 			$results = $db->get("EventGroup")
