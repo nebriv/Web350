@@ -22,7 +22,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
 		$user->buildObject($user->checkCredentials($username, $password1));
         $user->buildSession();
 		$user->getRoleID("Farmer");
-		//echo "<script>location.reload(forceGet)</script>";
+		echo "<script>location.reload(forceGet)</script>";
     }elseif ($result == "Error making user2"){
 
     }elseif ($result == "Error hashing password"){
