@@ -21,13 +21,13 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
         echo "<div class='alert alert-success'>Sucessfully Made Account!</div>";
         echo $ID;
         $user->buildSession();
-    }elseif ($result == "Error making user2"{
+    }elseif ($result == "Error making user2"){
 
-    }elseif ($result == "Error hashing password"{
+    }elseif ($result == "Error hashing password"){
 
-    }elseif ($result == "Error making user"{
+    }elseif ($result == "Error making user"){
 
-    }elseif ($result == "This user already exists"{
+    }elseif ($result == "This user already exists"){
       echo "<div class='alert alert-danger'>Sorry this user already exists! <a href='reset.php'>Forgot password?</a></div>";
     }
   }
