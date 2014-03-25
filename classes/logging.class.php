@@ -16,7 +16,7 @@ class logger {
 		$id = $db->insert('EventGroup', $data);
 		if ($id){
 			$db->where('GroupName', $name);
-			$results = $db->get("EventGroup")
+			$results = $db->get("EventGroup");
 			return $results[0]['GroupID'];
 		}else{
 			return false;
