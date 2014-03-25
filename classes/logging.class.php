@@ -25,6 +25,7 @@ class logger {
 	}
 
 	function getGroupID($groupname){
+		$db = buildDBObject();
 		$db->where('GroupName', $groupname);
 		$results = $db->get("EventGroup");
 		return $results[0]['GroupID'];
