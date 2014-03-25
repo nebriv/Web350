@@ -15,7 +15,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
   if ($password1 != $password2){
     echo "<div class='alert alert-danger'>Passwords do not match!!!</div>";
   }else{
-    $result = $user->registerUser($username, $password1, $email, $firstname, $lastname));
+    $result = $user->registerUser($username, $password1, $email, $firstname, $lastname);
     if ($result == "Successfully made user"){
         $ID = $user->getID();
         echo "<div class='alert alert-success'>Sucessfully Made Account!</div>";
