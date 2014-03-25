@@ -1,5 +1,5 @@
 <?php
-require_once('include/main.class.php');
+require_once('../include/main.class.php');
 
 ?>
 
