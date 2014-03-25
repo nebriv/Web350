@@ -81,7 +81,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
   <div class="col-md-4">
   </div>
   <div class="col-md-4"
-     <form action='register.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
+     <form name='register' action='register.php' method='post'>
       <div class="form-group">
         <label for="Email">Email address</label>
         <input type="email" class="form-control" id="Email" placeholder="Enter email">
