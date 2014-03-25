@@ -61,14 +61,23 @@ class logger {
 		}
 	}
 
-	function auth($type, $user = 0, $notes = "None"){
+	function auth($type, $user, $notes = "None"){
 		$db = buildDBObject();
+		if (!is_object($user)){
+			$userid = 0;
+		}else{
+			if ($user->getID() == Null){
+				$userid = 0;
+			}else{
+				$userid = $user->getID();
+			}
+		}
 		if ($type == "success"){
 			$data = array(
 			    'LogID' => NULL,
 			    'EventID' => $this->getEventID("Login Successful"),
 			    'Timestamp' => date("Y-m-d H:i:s"),
-			    'UserID' => $user->getID(),
+			    'UserID' => $userid,
 			    'IP' => $_SERVER['REMOTE_ADDR'],
 			    'Notes' => $notes,
 			);
@@ -83,7 +92,7 @@ class logger {
 			    'LogID' => NULL,
 			    'EventID' => $this->getEventID("Login Failed"),
 			    'Timestamp' => date("Y-m-d H:i:s"),
-			    'UserID' => $user->getID(),
+			    'UserID' => $userid,
 			    'IP' => $_SERVER['REMOTE_ADDR'],
 			    'Notes' => $notes,
 			);
@@ -98,7 +107,7 @@ class logger {
 			    'LogID' => NULL,
 			    'EventID' => $this->getEventID("Logout Successful"),
 			    'Timestamp' => date("Y-m-d H:i:s"),
-			    'UserID' => $user->getID(),
+			    'UserID' => $userid,
 			    'IP' => $_SERVER['REMOTE_ADDR'],
 			    'Notes' => $notes,
 			);
@@ -113,7 +122,7 @@ class logger {
 			    'LogID' => NULL,
 			    'EventID' => $this->getEventID("Logout Failed"),
 			    'Timestamp' => date("Y-m-d H:i:s"),
-			    'UserID' => $user->getID(),
+			    'UserID' => $userid,
 			    'IP' => $_SERVER['REMOTE_ADDR'],
 			    'Notes' => $notes,
 			);
