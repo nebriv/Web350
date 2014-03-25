@@ -1,10 +1,10 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/classes/dbcon.class.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/classes/user.class.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/classes/logging.class.php");
 require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');
 session_start();
 $user = new User();
-//$user->registerUser($id = NULL, $newusername = NULL, $newemail = NULL, $newfirstname = NULL, $newlastname = NULL, $newrole = "Guest"));
 if ($user->checkSession()){
 	$user->buildObject($user->checkSession());
 }
@@ -60,7 +60,7 @@ if ($user->checkSession()){
 							if ($user->checkPerms(1)){
 								echo "<li role='presentation' class='divider'></li>
 								<li role='presentation' class='dropdown-header'>Site Administration</li>
-								<li role='presentation'><a role='menuitem' tabindex='-1' href='subscriptions.php'>Site Settings</a></li>
+								<li role='presentation'><a role='menuitem' tabindex='-1' href='admin/settings.php'>Site Settings</a></li>
 								<li role='presentation'><a role='menuitem' tabindex='-1' href='subscriptions.php'>View/Print Orders</a></li>";
 							}
 			echo "

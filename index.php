@@ -1,7 +1,10 @@
 <?php
 include('includes/header.php');
 
+$log = new logger();
 
+$result = $log->createGroup("Authentication", "Contains logs regarding authentication messages");
+echo $result;
 ?>
 
       <div class="jumbotron">
