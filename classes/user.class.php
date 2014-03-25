@@ -294,8 +294,8 @@ class User {
 						$data = array(
 							'UserRoleID' => NULL,
 							'UserID' => $this->UserID,
-							'RoleID' => $this->getRoleID("Guest");
-					);
+							'RoleID' => $this->getRoleID("Guest")
+						);
 						return "Successfully made user";
 					}else{
 						return "Error making user2";
