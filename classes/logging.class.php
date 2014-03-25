@@ -40,7 +40,7 @@ class logger {
 		    'EventDescription' => $description,
 		    'Severity' => $severity,
 		);
-
+		print_r($data);
 		$id = $db->insert('EventIDs', $data);
 		if ($id){
 			$db->where('EventName', $name);
