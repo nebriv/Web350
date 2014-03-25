@@ -180,6 +180,7 @@ class User {
 			$_SESSION['user'] = $this->sessionContent;
 			return True;
 		}else{
+			echo "FAILED";
 			return False;
 		}
 	}
