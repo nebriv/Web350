@@ -173,7 +173,6 @@ class User {
 		);
 
 		$result = $db->insert('Sessions', $data);
-		echo $result;
 		if ($result){
 			$_SESSION['user'] = $this->sessionContent;
 			return True;
