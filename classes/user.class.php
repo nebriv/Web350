@@ -174,7 +174,9 @@ class User {
 		);
 
 		$result = $db->insert('Sessions', $data);
+		echo $result;
 		if ($result){
+			echo "INSERTED!";
 			$_SESSION['user'] = $this->sessionContent;
 			return True;
 		}else{
