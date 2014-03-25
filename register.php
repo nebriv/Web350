@@ -3,7 +3,7 @@ include('includes/header.php');
 ?>
 <h2>Registration</h2>
 <?php
-if (isset($_POST['Email']) && isset($_POST['userName'])){
+if (isset($_POST['Email'])){
   echo "Ok!";
   $email = $_POST['Email'];
   $username = $_POST['userName'];
