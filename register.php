@@ -88,15 +88,15 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
       </div>
       <div class="form-group">
         <label for="userName">Username</label>
-        <input type="email" class="form-control" id="userName" placeholder="Enter username">
+        <input class="form-control" id="userName" placeholder="Enter username">
       </div>
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input type="email" class="form-control" id="firstName" placeholder="Enter first name">
+        <input  class="form-control" id="firstName" placeholder="Enter first name">
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input type="email" class="form-control" id="lastName" placeholder="Enter last name">
+        <input class="form-control" id="lastName" placeholder="Enter last name">
       </div>
 
       <div class="form-group">
