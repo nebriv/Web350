@@ -42,7 +42,7 @@ class logger {
 		);
 		print_r($data);
 		$id = $db->insert('EventIDs', $data);
-		echo $db->getLastError()
+		echo $db->getLastError();
 		if ($id){
 			$db->where('EventName', $name);
 			$results = $db->get("EventIDs");
