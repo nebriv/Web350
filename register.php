@@ -75,49 +75,55 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
 
 <?php
 }else{
-  echo "not ok!";
-}
-?>
 
-
-
-<div class="row">
-  <div class="col-md-4">
+echo "
+<div class='row'>
+  <div class='col-md-4'>
   </div>
-  <div class="col-md-4">
+  <div class='col-md-4'>
      <form action='register.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
-      <div class="form-group">
-        <label for="Email">Email address</label>
-        <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter email">
+      <div class='form-group'>
+        <label for='Email'>Email address</label>
+        <input type='email' class='form-control' id='Email' name='Email' placeholder='Enter email'>
       </div>
-      <div class="form-group">
-        <label for="userName">Username</label>
-        <input class="form-control" id="userName" name="userName" placeholder="Enter username">
+      <div class='form-group'>
+        <label for='userName'>Username</label>
+        <input class='form-control' id='userName' name='userName' placeholder='Enter username'>
       </div>
-      <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input class="form-control" id="firstName" name="firstName" placeholder="Enter first name">
+      <div class='form-group'>
+        <label for='firstName'>First Name</label>
+        <input class='form-control' id='firstName' name='firstName' placeholder='Enter first name'>
       </div>
-      <div class="form-group">
-        <label for="lastName">Last Name</label>
-        <input class="form-control" id="lastName" name="lastName" placeholder="Enter last name">
+      <div class='form-group'>
+        <label for='lastName'>Last Name</label>
+        <input class='form-control' id='lastName' name='lastName' placeholder='Enter last name'>
       </div>
 
-      <div class="form-group">
-        <label for="Password1">Password</label>
-        <input type="password" class="form-control" id="Password1" name="Password1" placeholder="Password">
+      <div class='form-group'>
+        <label for='Password1'>Password</label>
+        <input type='password' class='form-control' id='Password1' name='Password1' placeholder='Password'>
       </div>
-      <div class="form-group">
-        <label for="Password2">Password Again</label>
-        <input type="password" class="form-control" id="Password2" name="Password2" placeholder="Password">
+      <div class='form-group'>
+        <label for='Password2'>Password Again</label>
+        <input type='password' class='form-control' id='Password2' name='Password2' placeholder='Password'>
       </div>
 
       <button class='btn btn-lg btn-primary btn-block' type='submit'>Submit</button>
     </form>
   </div>
-  <div class="col-md-4">
+  <div class='col-md-4'>
   </div>
 </div>
+"
+
+
+
+}
+?>
+
+
+
+
 	  
 <?php
 
