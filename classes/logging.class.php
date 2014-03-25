@@ -35,7 +35,7 @@ class logger {
 		$data = array(
 		    'EventID' => NULL,
 		    'EventName' => $name,
-		    'GroupID' => getGroupID($group),
+		    'GroupID' => $this->getGroupID($group),
 		    'EventDescription' => $description,
 		    'Severity' => $severity,
 		);
