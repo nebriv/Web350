@@ -38,23 +38,23 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
   <div class="row">
   <div class="col-md-4">
   </div>
-  <div class="col-md-4"
+  <div class="col-md-4">
      <form action='register.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
       <div class="form-group">
         <label for="Email">Email address</label>
-        <input type="email" class="form-control" id="Email" placeholder="Enter email">
+        <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter email">
       </div>
       <div class="form-group">
         <label for="userName">Username</label>
-        <input type="email" class="form-control" id="userName" placeholder="Enter username">
+        <input class="form-control" id="userName" name="userName" placeholder="Enter username">
       </div>
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input type="email" class="form-control" id="firstName" placeholder="Enter first name">
+        <input class="form-control" id="firstName" placeholder="Enter first name">
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input type="email" class="form-control" id="lastName" placeholder="Enter last name">
+        <input class="form-control" id="lastName" placeholder="Enter last name">
       </div>
 
       <div class="form-group">
