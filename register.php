@@ -14,7 +14,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
   $username = $_POST['userName'];
   $password1 = $_POST['Password1'];
   $password2 = $_POST['Password2'];
-
+	$referer2 = $_POST['referer'];
   $firstname = $_POST['firstName'];
   $lastname = $_POST['lastName'];
 
@@ -27,7 +27,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
         //echo "<div class='alert alert-success'>Sucessfully Made Account!</div>";
 		$user->buildObject($user->checkCredentials($username, $password1));
         $user->buildSession();
-		header("Location: $referer");
+		header("Location: $referer2");
     }elseif ($result == "Error making user2"){
 
     }elseif ($result == "Error hashing password"){
@@ -70,7 +70,9 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
         <label for="Password2">Password Again</label>
         <input type="password" class="form-control" id="Password2" name="Password2" placeholder="Password">
       </div>
-
+		<?php
+			echo "<input type='hidden' name='referer' id='referer' value='$referer'>";
+		?>
       <button class='btn btn-lg btn-primary btn-block' type='submit'>Submit</button>
     </form>
   </div>
@@ -112,7 +114,8 @@ echo "
         <label for='Password2'>Password Again</label>
         <input type='password' class='form-control' id='Password2' name='Password2' placeholder='Password'>
       </div>
-
+";
+			echo "<input type='hidden' name='referer' id='referer' value='$referer'>
       <button class='btn btn-lg btn-primary btn-block' type='submit'>Submit</button>
     </form>
   </div>
