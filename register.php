@@ -88,11 +88,11 @@ if (isset($_POST['Email'])){
      <form name='register' action='register.php' method='post'>
       <div class="form-group">
         <label for="Email">Email address</label>
-        <input type="email" class="form-control" id="Email" placeholder="Enter email">
+        <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter email">
       </div>
       <div class="form-group">
         <label for="userName">Username</label>
-        <input class="form-control" id="userName" placeholder="Enter username">
+        <input class="form-control" id="userName" name="userName" placeholder="Enter username">
       </div>
       <div class="form-group">
         <label for="firstName">First Name</label>
