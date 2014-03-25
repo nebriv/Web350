@@ -19,11 +19,8 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
     if ($result == "Successfully made user"){
         $ID = $user->getID();
         echo "<div class='alert alert-success'>Sucessfully Made Account!</div>";
-        echo $ID;
-        $result = $user->buildObject($ID);
-        echo $result;
-        $result = $user->buildSession();
-        echo $result;
+		$user->buildObject($user->checkCredentials($_POST['username'], $_POST['password']));
+        $user->buildSession();
     }elseif ($result == "Error making user2"){
 
     }elseif ($result == "Error hashing password"){
