@@ -20,7 +20,8 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
         $ID = $user->getID();
         echo "<div class='alert alert-success'>Sucessfully Made Account!</div>";
         echo $ID;
-        $user->buildObject($ID);
+        $result = $user->buildObject($ID);
+        echo $result;
         $result = $user->buildSession();
         echo $result;
     }elseif ($result == "Error making user2"){

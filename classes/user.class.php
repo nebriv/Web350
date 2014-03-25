@@ -136,6 +136,9 @@ class User {
 			$this->lastLogin = $user_auth["LastLogin"];
 			$this->emailToken = $user_auth['EmailToken'];
 			$this->resetToken = $user_auth["ResetToken"];
+			return True;
+		}else{
+			return False;
 		}
 
 	}
@@ -154,6 +157,7 @@ class User {
 	}
 
 	function buildSession(){
+		echo "BUILDING SESSION";
 		$this->sessionToken = sha1(bin2hex(openssl_random_pseudo_bytes(16)));
 		$this->sessionContent = sha1($this->sessionToken.$this->userIP);
 
