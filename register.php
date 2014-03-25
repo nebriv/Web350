@@ -4,7 +4,6 @@ include('includes/header.php');
 <h2>Registration</h2>
 <?php
 if (isset($_POST['Email']) && isset($_POST['userName'])){
-  echo "Ok!";
   $email = $_POST['Email'];
   $username = $_POST['userName'];
   $password1 = $_POST['Password1'];
@@ -16,7 +15,6 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
   if ($password1 != $password2){
     echo "<div class='alert alert-danger'>Passwords do not match!!!</div>";
   }else{
-    echo "Ok2!";
     $result = $user->registerUser($username, $password1, $email, $firstname, $lastname);
     if ($result == "Successfully made user"){
         $ID = $user->getID();
