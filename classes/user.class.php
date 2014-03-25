@@ -173,6 +173,8 @@ class User {
 		if ($result){
 			$_SESSION['user'] = $this->sessionContent;
 			return True;
+		}else{
+			return False;
 		}
 	}
 
