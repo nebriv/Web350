@@ -3,7 +3,7 @@ include('includes/header.php');
 ?>
 <h2>Registration</h2>
 <?php
-if (isset($_POST['Email'])){
+if (isset($_POST['Email']) && isset($_POST['userName'])){
   echo "Ok!";
   $email = $_POST['Email'];
   $username = $_POST['userName'];
@@ -50,20 +50,20 @@ if (isset($_POST['Email'])){
       </div>
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input class="form-control" id="firstName" placeholder="Enter first name">
+        <input class="form-control" id="firstName" name="firstName" placeholder="Enter first name">
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input class="form-control" id="lastName" placeholder="Enter last name">
+        <input class="form-control" id="lastName" name="lastName" placeholder="Enter last name">
       </div>
 
       <div class="form-group">
         <label for="Password1">Password</label>
-        <input type="password" class="form-control" id="Password1" placeholder="Password">
+        <input type="password" class="form-control" id="Password1" name="Password1" placeholder="Password">
       </div>
       <div class="form-group">
         <label for="Password2">Password Again</label>
-        <input type="password" class="form-control" id="Password2" placeholder="Password">
+        <input type="password" class="form-control" id="Password2" name="Password2" placeholder="Password">
       </div>
 
       <button class='btn btn-lg btn-primary btn-block' type='submit'>Submit</button>
@@ -85,7 +85,7 @@ if (isset($_POST['Email'])){
   <div class="col-md-4">
   </div>
   <div class="col-md-4">
-     <form name='register' action='register.php' method='post'>
+     <form action='register.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
       <div class="form-group">
         <label for="Email">Email address</label>
         <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter email">
@@ -96,21 +96,22 @@ if (isset($_POST['Email'])){
       </div>
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input  class="form-control" id="firstName" placeholder="Enter first name">
+        <input class="form-control" id="firstName" name="firstName" placeholder="Enter first name">
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input class="form-control" id="lastName" placeholder="Enter last name">
+        <input class="form-control" id="lastName" name="lastName" placeholder="Enter last name">
       </div>
 
       <div class="form-group">
         <label for="Password1">Password</label>
-        <input type="password" class="form-control" id="Password1" placeholder="Password">
+        <input type="password" class="form-control" id="Password1" name="Password1" placeholder="Password">
       </div>
       <div class="form-group">
         <label for="Password2">Password Again</label>
-        <input type="password" class="form-control" id="Password2" placeholder="Password">
+        <input type="password" class="form-control" id="Password2" name="Password2" placeholder="Password">
       </div>
+
       <button class='btn btn-lg btn-primary btn-block' type='submit'>Submit</button>
     </form>
   </div>
