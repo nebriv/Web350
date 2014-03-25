@@ -7,6 +7,7 @@ class logger {
 	}
 
 	function createGroup($name, $description){
+		$db = buildDBObject();
 		$data = array(
 		    'GroupID' => NULL,
 		    'GroupName' => $name,
