@@ -216,6 +216,7 @@ class User {
 		$db->where('RoleName', $role);
 		$results = $db
 			->get('Roles');
+		$results = $results[0];
 		echo print_r($results);
 	}
 
