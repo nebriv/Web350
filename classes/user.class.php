@@ -280,19 +280,19 @@ class User {
 					$id = $db->insert('User_Auth', $data);
 
 					if ($id){
-						echo "Successfully made user";
+						return "Successfully made user";
 					}else{
-						echo "Error making user2";
+						return "Error making user2";
 					}
 				}else{
-					echo "Error hashing password";
+					return "Error hashing password";
 				}
 
 			}else{
-				echo "Error making user";
+				return "Error making user";
 			}
 		}else{
-			echo "This user already exists";
+			return "This user already exists";
 		}
 	}
 

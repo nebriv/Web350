@@ -1,23 +1,58 @@
 <?php
 include('includes/header.php');
-
-
 ?>
+<h2>Registration</h2>
+<?php
+if (isset($_POST['Email']) && isset($_POST['userName'])){
+  $email = $_POST['Email'];
+  $username = $_POST['userName'];
+  $password1 = $_POST['Password1'];
+  $password2 = $_POST['Password2'];
 
-<h2> Registration </h2>
+  $firstname = $_POST['firstName'];
+  $lastname = $_POST['lastName'];
 
-<div class="row">
+  if ($password1 != $password2){
+    echo "<div class='alert alert-danger'>Passwords do not match!!!</div>";
+  }else{
+    $result = $user->registerUser($username, $password1, $email, $firstname, $lastname));
+    if ($result == "Successfully made user"){
+        $ID = $user->getID();
+        echo "<div class='alert alert-success'>Sucessfully Made Account!</div>";
+        echo $ID;
+        $user->buildSession();
+    }elseif ($result == "Error making user2"{
+
+    }elseif ($result == "Error hashing password"{
+
+    }elseif ($result == "Error making user"{
+
+    }elseif ($result == "This user already exists"{
+      echo "<div class='alert alert-danger'>Sorry this user already exists! <a href='reset.php'>Forgot password?</a></div>";
+    }
+  }
+  ?>
+
+  <div class="row">
   <div class="col-md-4">
   </div>
   <div class="col-md-4"
-    <form role="form">
+     <form action='register.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
       <div class="form-group">
         <label for="Email">Email address</label>
         <input type="email" class="form-control" id="Email" placeholder="Enter email">
       </div>
       <div class="form-group">
         <label for="userName">Username</label>
-        <input type="email" class="form-control" id="userName" placeholder="Enter email">
+        <input type="email" class="form-control" id="userName" placeholder="Enter username">
+      </div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="email" class="form-control" id="firstName" placeholder="Enter first name">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="email" class="form-control" id="lastName" placeholder="Enter last name">
       </div>
 
       <div class="form-group">
@@ -25,7 +60,51 @@ include('includes/header.php');
         <input type="password" class="form-control" id="Password1" placeholder="Password">
       </div>
       <div class="form-group">
-        <label for="Password2">Password</label>
+        <label for="Password2">Password Again</label>
+        <input type="password" class="form-control" id="Password2" placeholder="Password">
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>
+
+<?php
+}
+?>
+
+
+
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4"
+     <form action='register.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
+      <div class="form-group">
+        <label for="Email">Email address</label>
+        <input type="email" class="form-control" id="Email" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="userName">Username</label>
+        <input type="email" class="form-control" id="userName" placeholder="Enter username">
+      </div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="email" class="form-control" id="firstName" placeholder="Enter first name">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="email" class="form-control" id="lastName" placeholder="Enter last name">
+      </div>
+
+      <div class="form-group">
+        <label for="Password1">Password</label>
+        <input type="password" class="form-control" id="Password1" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="Password2">Password Again</label>
         <input type="password" class="form-control" id="Password2" placeholder="Password">
       </div>
 
