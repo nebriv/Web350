@@ -157,7 +157,6 @@ class User {
 	}
 
 	function buildSession(){
-		echo "BUILDING SESSION";
 		$this->sessionToken = sha1(bin2hex(openssl_random_pseudo_bytes(16)));
 		$this->sessionContent = sha1($this->sessionToken.$this->userIP);
 
@@ -176,11 +175,9 @@ class User {
 		$result = $db->insert('Sessions', $data);
 		echo $result;
 		if ($result){
-			echo "INSERTED!";
 			$_SESSION['user'] = $this->sessionContent;
 			return True;
 		}else{
-			echo "FAILED";
 			return False;
 		}
 	}
