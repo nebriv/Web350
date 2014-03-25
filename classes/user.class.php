@@ -173,7 +173,6 @@ class User {
 		);
 
 		$result = $db->insert('Sessions', $data);
-		echo $result;
 		if ($result){
 			$_SESSION['user'] = $this->sessionContent;
 			return True;
@@ -209,6 +208,15 @@ class User {
 		if ($username == NULL){
 			$username = $this->userName;
 		}
+	}
+	
+	function getRoleID($role){
+		$db = buildDBObject();
+		$db->where('RoleName', $role);
+		$results = $db
+			->get('Roles');
+		$results = $results[0];
+		return $results['RoleID'];
 	}
 
 	function checkCredentials($username = NULL, $password){
@@ -268,9 +276,7 @@ class User {
 			    'LastName' => $newlastname,
 			);
 			$id = $db->insert('Users', $data);
-			echo $id;
 			if($id){
-
 				$user = $db
 					->where("Username", $newusername)
 					->get("Users");
@@ -282,11 +288,19 @@ class User {
 					    'UserID' => $this->UserID,
 					    'PasswordHash' => $hash,
 					);
-
 					$id = $db->insert('User_Auth', $data);
-
 					if ($id){
-						return "Successfully made user";
+						$data = array(
+							'UserRoleID' => NULL,
+							'UserID' => $this->UserID,
+							'RoleID' => $this->getRoleID("Guest")
+						);
+						$id = $db->insert('User_Role', $data);
+						if ($id){
+							return "Successfully made user";
+						}else{
+							return "Error giving user a role";
+						}
 					}else{
 						return "Error making user2";
 					}
@@ -302,7 +316,7 @@ class User {
 		}
 	}
 
-
+	
 
 }
 

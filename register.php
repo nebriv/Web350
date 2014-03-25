@@ -21,6 +21,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
         echo "<div class='alert alert-success'>Sucessfully Made Account!</div>";
 		$user->buildObject($user->checkCredentials($username, $password1));
         $user->buildSession();
+		$user->getRoleID("Farmer");
 		echo "<script>location.reload(forceGet)</script>";
     }elseif ($result == "Error making user2"){
 
