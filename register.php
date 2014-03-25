@@ -37,7 +37,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
   <div class="col-md-4">
   </div>
   <div class="col-md-4"
-     <form action='register.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
+     <form action='register.php' method='post' accept-charset='UTF-8' role='form'>
       <div class="form-group">
         <label for="Email">Email address</label>
         <input type="email" class="form-control" id="Email" placeholder="Enter email">
@@ -64,7 +64,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
         <input type="password" class="form-control" id="Password2" placeholder="Password">
       </div>
 
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" value="Register" class="btn btn-success" id="submit" />
     </form>
   </div>
   <div class="col-md-4">
@@ -81,7 +81,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
   <div class="col-md-4">
   </div>
   <div class="col-md-4"
-     <form action='register.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
+     <form action='register.php' method='post' accept-charset='UTF-8' role='form'>
       <div class="form-group">
         <label for="Email">Email address</label>
         <input type="email" class="form-control" id="Email" placeholder="Enter email">
@@ -108,7 +108,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
         <input type="password" class="form-control" id="Password2" placeholder="Password">
       </div>
 
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" value="Register" class="btn btn-success" id="submit" />
     </form>
   </div>
   <div class="col-md-4">
