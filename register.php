@@ -71,7 +71,7 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
         <input type="password" class="form-control" id="Password2" name="Password2" placeholder="Password">
       </div>
 		<?php
-			echo "<input type='hidden' name='referer' id='referer' value='$referer'>";
+			echo "<input type='hidden' name='referer' id='referer' value='$referer2'>";
 		?>
       <button class='btn btn-lg btn-primary btn-block' type='submit'>Submit</button>
     </form>
