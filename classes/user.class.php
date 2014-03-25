@@ -214,7 +214,7 @@ class User {
 	function getRoleID($role){
 		$db = buildDBObject();
 		$results = $db
-			->where('Role', $role)
+			->where('RoleName', $role)
 			->get('Roles');
 		echo $results['RoleName'];
 	}
