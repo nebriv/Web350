@@ -2,7 +2,6 @@
 include('includes/header.php');
 
 $log = new logger();
-nt($name, $group, $description, $severity){
 $result = $log->createEvent("Login Successful", "Authentication", "The user has successfully authenticated themselves in the system", "info");
 echo $result;
 ?>
