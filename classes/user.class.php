@@ -216,7 +216,7 @@ class User {
 		$db->where('RoleName', $role);
 		$results = $db
 			->get('Roles');
-		echo $results['RoleName'];
+		echo print_r($results);
 	}
 
 	function checkCredentials($username = NULL, $password){
