@@ -32,9 +32,14 @@ class logger {
 	}
 	function getEventID($eventname){
 		$db = buildDBObject();
-		$db->where('EventName', $groupname);
+		$db->where('EventName', $eventname);
 		$results = $db->get("EventIDs");
-		return $results[0]['EventID'];
+		if ($results){
+			return $results[0]['EventID'];
+		}else{
+			return False;
+		}
+		
 	}
 
 	function createEvent($name, $group, $description, $severity){
