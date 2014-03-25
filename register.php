@@ -1,5 +1,11 @@
 <?php
 include('includes/header.php');
+if (isset($_SERVER['HTTP_REFERER'])){
+	$referer = $_SERVER['HTTP_REFERER'];
+}else{
+	$referer = "url";
+}
+echo $referer;
 ?>
 <h2>Registration</h2>
 <?php
@@ -22,7 +28,6 @@ if (isset($_POST['Email']) && isset($_POST['userName'])){
 		$user->buildObject($user->checkCredentials($username, $password1));
         $user->buildSession();
 		$user->getRoleID("Farmer");
-		echo "<script>location.reload(forceGet)</script>";
     }elseif ($result == "Error making user2"){
 
     }elseif ($result == "Error hashing password"){
