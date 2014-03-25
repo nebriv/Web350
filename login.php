@@ -10,14 +10,15 @@ if (isset($_POST['username']) && isset($_POST['password'])){
     }else{
       $user->buildSession();
     }
-    
+    $log->auth("success", $user);
     if (isset($_POST['referer'])){
-      header( 'Location: '.$_POST['referer'] ) ;
+      #header( 'Location: '.$_POST['referer'] ) ;
     }else{
-      header( 'Location: http://csa.nebriv.com' ) ;
+      #header( 'Location: http://csa.nebriv.com' ) ;
     }
   }else{
-    echo $log->auth("success", $user);
+    
+    echo $log->auth("failure", $user);
     echo "      <form action='login.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
           <h2 class='form-signin-heading'>Please sign in</h2>
           <div class='alert alert-danger'>Invalid Username or Password<br /><small><a href='reset.php'>Forgot Password?</a> / <a href='register.php'>Don't have an account?</a></div>
@@ -30,7 +31,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
         </form>";
     }
 }else{
-  echo $log->auth("failure", $user);
+  
   echo "      <form action='login.php' method='post' accept-charset='UTF-8' class='form-signin' role='form'>
         <h2 class='form-signin-heading'>Please sign in</h2>
         <input name='username' class='form-control' placeholder='Username' required autofocus>
