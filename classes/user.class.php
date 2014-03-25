@@ -210,6 +210,14 @@ class User {
 			$username = $this->userName;
 		}
 	}
+	
+	function getRoleID($role){
+		$db = buildDBObject();
+		$results = $db
+			->where('Role', $role)
+			->get('Roles');
+		echo $results['RoleName'];
+	}
 
 	function checkCredentials($username = NULL, $password){
 		$db = buildDBObject();
@@ -270,7 +278,6 @@ class User {
 			$id = $db->insert('Users', $data);
 			echo $id;
 			if($id){
-
 				$user = $db
 					->where("Username", $newusername)
 					->get("Users");
@@ -282,10 +289,13 @@ class User {
 					    'UserID' => $this->UserID,
 					    'PasswordHash' => $hash,
 					);
-
 					$id = $db->insert('User_Auth', $data);
-
 					if ($id){
+						$data = array(
+							'UserRoleID' => NULL,
+							'UserID' => $this->UserID,
+							'RoleID' => $this->getRoleID("Guest");
+					);
 						return "Successfully made user";
 					}else{
 						return "Error making user2";
@@ -302,7 +312,7 @@ class User {
 		}
 	}
 
-
+	
 
 }
 
