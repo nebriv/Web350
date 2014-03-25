@@ -2,8 +2,6 @@
 include('includes/header.php');
 
 $log = new logger();
-$result = $log->createEvent("Login Failed", "Authentication", "The user failed logging in", "warn");
-echo $result;
 ?>
 
       <div class="jumbotron">

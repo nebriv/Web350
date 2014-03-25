@@ -30,6 +30,12 @@ class logger {
 		$results = $db->get("EventGroup");
 		return $results[0]['GroupID'];
 	}
+	function getEventID($eventname){
+		$db = buildDBObject();
+		$db->where('EventName', $groupname);
+		$results = $db->get("EventIDs");
+		return $results[0]['EventID'];
+	}
 
 	function createEvent($name, $group, $description, $severity){
 		$db = buildDBObject();
@@ -41,18 +47,48 @@ class logger {
 		    'Severity' => $severity,
 		);
 		$id = $db->insert('EventIDs', $data);
-		echo $db->getLastError();
 		if ($id){
 			$db->where('EventName', $name);
 			$results = $db->get("EventIDs");
 			return $results[0]['EventID'];
 		}else{
-			echo $db->getLastError();
+			return False;
 		}
 	}
 
-	function auth($severity = "warn"){
-
+	function auth($type, $user, $notes = "None"){
+		$db = buildDBObject();
+		if ($type == "success"){
+			$data = array(
+			    'LogID' => NULL,
+			    'EventID' => $this->getEventID("Login Successful"),
+			    'Timestamp' => date("Y-m-d H:i:s"),
+			    'UserID' => $user->getID(),
+			    'IP' => $_SERVER['REMOTE_ADDR'],
+			    'Notes' => $notes,
+			);
+			$id = $db->insert('AuditLog', $data);
+			if ($id){
+				return True;
+			}else{
+				return False;
+			}
+		}elseif ($type == "failure"){
+			$data = array(
+			    'LogID' => NULL,
+			    'EventID' => $this->getEventID("Login Failed"),
+			    'Timestamp' => date("Y-m-d H:i:s"),
+			    'UserID' => $user->getID(),
+			    'IP' => $_SERVER['REMOTE_ADDR'],
+			    'Notes' => $notes,
+			);
+			$id = $db->insert('AuditLog', $data);
+			if ($id){
+				return True;
+			}else{
+				return False;
+			}
+		}
 	}
 
 
