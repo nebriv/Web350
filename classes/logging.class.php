@@ -111,7 +111,7 @@ class logger {
 		}elseif ($type == "logoutfailure"){
 			$data = array(
 			    'LogID' => NULL,
-			    'EventID' => $this->getEventID("Logout Successful"),
+			    'EventID' => $this->getEventID("Logout Failed"),
 			    'Timestamp' => date("Y-m-d H:i:s"),
 			    'UserID' => $user->getID(),
 			    'IP' => $_SERVER['REMOTE_ADDR'],
