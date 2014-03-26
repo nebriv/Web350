@@ -24,7 +24,8 @@ include('includes/header.php');
                 </textarea>
             </div>
           </div>
-
+          <div class="row">
+            <div class="well col-md-4"><h4>Backup/Restore Settings</h4>
             <div class="radio">
               <label>
                 <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
