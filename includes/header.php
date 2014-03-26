@@ -5,6 +5,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/classes/logging.class.php");
 require_once($_SERVER['DOCUMENT_ROOT'].'/config.php');
 session_start();
 $user = new User();
+$site = new Site();
 if ($user->checkSession()){
 	$user->buildObject($user->checkSession());
 }
@@ -34,7 +35,7 @@ if ($user->checkSession()){
 	<div class="container">
 
 	<div class="masthead">
-		<h3 class="text-muted"><a href="index.php">Your Farm Name</a></h3>
+		<h3 class="text-muted"><a href="index.php"><?php echo $site->siteName(); ?></a></h3>
 		<ul class="nav nav-justified">
 			<li class="active"><a href="#">Home</a></li>
 			<li><a href="#">Produce/Shop</a></li>

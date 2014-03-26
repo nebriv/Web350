@@ -3,6 +3,7 @@ require_once('../classes/main.class.php');
 
 session_start();
 $user = new User();
+$site = new Site();
 if ($user->checkSession()){
 	$user->buildObject($user->checkSession());
 	if (!$user->checkPerms(2, false)){
@@ -61,9 +62,9 @@ if ($user->checkSession()){
 		
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="settings.php">Settings</a></li>
+            <li><a href="account.php">Profile</a></li>
+            <li><a href="help.php">Help</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -82,15 +83,9 @@ if ($user->checkSession()){
             <li><a href="#">Export</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
+            <li><a href="perms.php">Users and Groups</a></li>
+            <li><a href="products.php">Product Management</a></li>
+            <li><a href="farms.php">Farm Management</a></li>
+            <li><a href="settings.php">Site Settings</a></li>
           </ul>
         </div>
