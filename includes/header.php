@@ -91,6 +91,3 @@ if ($user->checkSession()){
 			?>
 		</ul>
 	</div>
-	<?php
-
-}
