@@ -25,7 +25,7 @@ $site = new Site();
 	<div class='container'>
   	<div class='jumbotron'>
       <h1>Sorry! We are currently undergoing some maintenance!</h1>
-      <p><?php echo $site->maintenanceEnabled; ?></p>
+      <p><?php echo $site->maintenanceEnabled(); ?></p>
     </div>
   </div>
 
