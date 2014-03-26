@@ -12,9 +12,9 @@ if (isset($_POST['username']) && isset($_POST['password'])){
     }
     $log->auth("success", $user);
     if (isset($_POST['referer'])){
-      #header( 'Location: '.$_POST['referer'] ) ;
+      header( 'Location: '.$_POST['referer'] ) ;
     }else{
-      #header( 'Location: http://csa.nebriv.com' ) ;
+      header( 'Location: http://csa.nebriv.com' ) ;
     }
   }else{
     
