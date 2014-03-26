@@ -5,7 +5,6 @@ class Site {
 	function __construct(){
 		$db = buildDBObject();
 		$info = $db->get('Site_Settings');
-		print_r($info);
 		$info = $info[0];
 		$sitename = $info["SiteName"];
 		$MaintenanceMode = $info["MaintenanceMode"];
