@@ -18,7 +18,21 @@
   </head>
   <body>
 	<div class='container'>
-	<div class='jumbotron'>
-  <h1>Sorry! We are currently undergoing some maintenance!</h1>
-  <p>"; echo $site->maintenanceEnabled; echo "</p>
-</div>
+  	<div class='jumbotron'>
+      <h1>Sorry! We are currently undergoing some maintenance!</h1>
+      <p><?php echo $site->maintenanceEnabled; ?></p>
+    </div>
+  </div>
+
+      <div class="footer">
+        <p>&copy; 2014  -  Proudly powered by <a href="#">CSA Managing Systems</a></p>
+      </div>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
