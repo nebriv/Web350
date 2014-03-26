@@ -12,13 +12,13 @@ include('includes/header.php');
                 <form class="form-horizontal" role="form">
                   <div class="form-group">
                     <label for="siteName" class="col-sm-3 control-label">Site Name</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-9">
                       <input class="form-control" id="siteName" value='<?php echo $site->siteName(); ?>'>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                    <div class="col-sm-10">
+                    <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
                       <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
                     </div>
                   </div>
