@@ -30,14 +30,17 @@ include('includes/header.php');
                 <div class="radio">
                   <label>
                     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                    Option one is this and that&mdash;be sure to include why it's great
+                    Backup Database
                   </label>
                 </div>
                 <div class="radio">
                   <label>
                     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    Option two can be something else and selecting it will deselect option one
+                    Restore Database
                   </label>
+                      <label for="exampleInputFile">Database File Upload</label>
+                      <input type="file" id="exampleInputFile">
+                      <p class="help-block">Upload your .SQL file here to restore the database.</p>
                 </div>
               </div>
           </div>
