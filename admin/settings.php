@@ -11,32 +11,36 @@ include('includes/header.php');
 
           <h3 class="sub-header">Administration Settings</h3>
           <div class="row">
-            <div class="well col-md-4"><h4>Maintenance Mode</h4>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" value="">
-                  Enable Maintenance Mode
-                </label>
+            <div class="col-md-1">
+              <div class="well col-md-4"><h4>Maintenance Mode</h4>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Enable Maintenance Mode
+                  </label>
+                </div>
+                  
+                  <textarea class="form-control" rows="3">
+                  <?php echo $site->MaintenanceModeMessage(); ?>
+                  </textarea>
               </div>
-                
-                <textarea class="form-control" rows="3">
-                <?php echo $site->MaintenanceModeMessage(); ?>
-                </textarea>
             </div>
           </div>
           <div class="row">
-            <div class="well col-md-4"><h4>Backup/Restore Settings</h4>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                  Option one is this and that&mdash;be sure to include why it's great
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                  Option two can be something else and selecting it will deselect option one
-                </label>
+            <div class="col-md-1">
+              <div class="well col-md-4"><h4>Backup/Restore Settings</h4>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    Option one is this and that&mdash;be sure to include why it's great
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Option two can be something else and selecting it will deselect option one
+                  </label>
+                </div>
               </div>
             </div>
           </div>
