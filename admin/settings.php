@@ -18,10 +18,8 @@ include('includes/header.php');
                 Enable Maintenance Mode
               </label>
             </div>
-            <label>
-              Maintenance Mode Message
-              <textarea class="form-control" rows="3"></textarea>
-            </label>
+              
+              <textarea class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?></textarea>
           </div>
 
             <div class="radio">

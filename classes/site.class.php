@@ -17,6 +17,10 @@ class Site {
 		return $this->sitename;
 	}
 
+	function MaintenanceModeMessage(){
+		return $this->MaintenanceMessage;
+	}
+
 	function maintenanceEnabled(){
 		if ($this->MaintenanceMode){
 			return $this->MaintenanceMessage;
