@@ -1,3 +1,8 @@
+ <?php
+
+ }
+
+ ?>
       <div class="footer">
         <p>&copy; 2014  -  Proudly powered by <a href="#">CSA Managing Systems</a></p>
       </div>
