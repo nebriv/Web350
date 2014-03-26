@@ -11,7 +11,7 @@ include('includes/header.php');
 
           <h3 class="sub-header">Administration Settings</h3>
           <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-1"></div>
               <div class="well col-md-4"><h4>Maintenance Mode</h4>
                 <div class="checkbox">
                   <label>
@@ -27,7 +27,7 @@ include('includes/header.php');
             </div>
           </div>
           <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-1"></div>
               <div class="well col-md-4"><h4>Backup/Restore Settings</h4>
                 <div class="radio">
                   <label>
@@ -42,7 +42,6 @@ include('includes/header.php');
                   </label>
                 </div>
               </div>
-            </div>
           </div>
 
 
