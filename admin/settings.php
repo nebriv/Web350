@@ -11,16 +11,18 @@ include('includes/header.php');
 
           <h3 class="sub-header">Administration Settings</h3>
 
-
-          <div class="checkbox">
+          <div class="well"><h4>Maintenance Mode</h4>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+                Enable Maintenance Mode
+              </label>
+            </div>
             <label>
-              <input type="checkbox" value="">
-              Enable Maintenance Mode
+              Maintenance Mode Message
+              <textarea class="form-control" rows="3"></textarea>
             </label>
           </div>
-          <label>Maintenance Mode Message
-            <textarea class="form-control" rows="3"></textarea>
-          </label>
 
             <div class="radio">
               <label>
