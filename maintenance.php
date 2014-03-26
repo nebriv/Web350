@@ -1,3 +1,8 @@
+<?php
+require_once('classes/main.class.php');
+$site = new Site();
+?>
+
 <!DOCTYPE html>
 <html lang='en'>
   <head>
