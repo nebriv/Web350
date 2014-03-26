@@ -53,7 +53,7 @@ if ($user->checkSession()){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Your Farm Name - Manage</a>
+          <a class="navbar-brand" href="#"><?php echo $site->siteName(); ?> - Management</a>
         </div>
         <div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-left">
