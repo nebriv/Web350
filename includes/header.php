@@ -6,7 +6,7 @@ $site = new Site();
 
 if ($site->maintenanceEnabled()){
 	header( 'Location: http://csa.nebriv.com/maintenance.php' );
-}else{
+}
 
 if ($user->checkSession()){
 	$user->buildObject($user->checkSession());
@@ -22,8 +22,8 @@ if ($user->checkSession()){
 	
     <title>CSA Management Service</title>
 
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/justified-nav.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/justified-nav.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

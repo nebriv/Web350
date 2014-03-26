@@ -1,6 +1,9 @@
 <?php
 require_once('classes/main.class.php');
 $site = new Site();
+if (!$site->maintenanceEnabled()){
+  header( 'Location: http://csa.nebriv.com/' );
+}
 ?>
 
 <!DOCTYPE html>
@@ -12,8 +15,7 @@ $site = new Site();
 	
     <title>CSA Management Service</title>
 
-    <link href='css/bootstrap.css' rel='stylesheet'>
-    <link href='css/justified-nav.css' rel='stylesheet'>
+    <link href='../css/bootstrap.css' rel='stylesheet'>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -38,6 +40,6 @@ $site = new Site();
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>
