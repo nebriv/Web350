@@ -38,9 +38,11 @@ include('includes/header.php');
                     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
                     Restore Database
                   </label>
+                  <div class="form-group">
                       <label for="exampleInputFile">Database File Upload</label>
                       <input type="file" id="exampleInputFile">
                       <p class="help-block">Upload your .SQL file here to restore the database.</p>
+                    </div>
                 </div>
               </div>
           </div>
