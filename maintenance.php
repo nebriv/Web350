@@ -26,7 +26,7 @@ if (!$site->maintenanceEnabled()){
   <body>
 	<div class='container'>
   	<div class='jumbotron'>
-      <h3>Sorry! We are currently undergoing some maintenance!</h3>
+      <h2>Sorry! We are currently undergoing some maintenance!</h2>
       <p><?php echo $site->maintenanceEnabled(); ?></p>
     </div>
   </div>
@@ -34,8 +34,6 @@ if (!$site->maintenanceEnabled()){
       <div class="footer">
         <p>&copy; 2014  -  Proudly powered by <a href="#">CSA Managing Systems</a></p>
       </div>
-
-    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
