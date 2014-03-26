@@ -25,7 +25,6 @@ include('includes/header.php');
                   </textarea>
               </div>
             </div>
-          </div>
           <div class="row">
             <div class="col-md-1"></div>
               <div class="well col-md-4"><h4>Backup/Restore Settings</h4>
@@ -43,6 +42,7 @@ include('includes/header.php');
                 </div>
               </div>
           </div>
+        </div>
 
 
         </div>
