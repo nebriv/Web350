@@ -11,7 +11,7 @@ include('includes/header.php');
 
           <h3 class="sub-header">Administration Settings</h3>
           <div class="row">
-            <div class="col-sm-1"></div>
+            <div class="col-md-1"></div>
               <div class="well col-md-4"><h4>Maintenance Mode</h4>
                 <div class="checkbox">
                   <label>
@@ -20,8 +20,7 @@ include('includes/header.php');
                   </label>
                 </div>
                   
-                  <textarea class="form-control" rows="3">
-                  <?php echo $site->MaintenanceModeMessage(); ?>
+                  <textarea class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?>
                   </textarea>
               </div>
             </div>
