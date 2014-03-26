@@ -13,6 +13,7 @@ class Site {
 	}
 
 	function siteName(){
+		echo $this->sitename;
 		return $this->sitename;
 	}
 
