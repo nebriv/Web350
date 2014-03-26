@@ -1,5 +1,5 @@
 <?php
-require_once('../classes/main.class.php');
+require_once('classes/main.class.php');
 
 session_start();
 $user = new User();
