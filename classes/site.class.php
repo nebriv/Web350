@@ -1,6 +1,6 @@
 <?php
 
-class site {
+class Site {
 
 	function __construct(){
 		$db = buildDBObject();
