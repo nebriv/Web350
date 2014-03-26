@@ -11,9 +11,9 @@ include('includes/header.php');
               <div class="col-md-4">
                 <form class="form-horizontal" role="form">
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Site Name</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder=<?php echo "'$site->siteName()'"; ?>>
                     </div>
                   </div>
                   <div class="form-group">
