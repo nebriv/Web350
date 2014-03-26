@@ -26,7 +26,7 @@ if (!$site->maintenanceEnabled()){
   <body>
 	<div class='container'>
   	<div class='jumbotron'>
-      <h1>Sorry! We are currently undergoing some maintenance!</h1>
+      <h3>Sorry! We are currently undergoing some maintenance!</h3>
       <p><?php echo $site->maintenanceEnabled(); ?></p>
     </div>
   </div>
