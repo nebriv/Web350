@@ -12,8 +12,8 @@ $site = new Site();
 	
     <title>CSA Management Service</title>
 
-    <link href='../css/bootstrap.css' rel='stylesheet'>
-    <link href='../css/justified-nav.css' rel='stylesheet'>
+    <link href='css/bootstrap.css' rel='stylesheet'>
+    <link href='css/justified-nav.css' rel='stylesheet'>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
