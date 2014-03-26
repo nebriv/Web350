@@ -8,7 +8,7 @@ include('includes/header.php');
           <h3 class="sub-header">Basic Settings</h3>
           <div class="row">
             <div class="col-md-1"></div>
-              <div class="well col-md-4">
+              <div class="col-md-4">
                 <form class="form-horizontal" role="form">
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
