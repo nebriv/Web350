@@ -6,14 +6,13 @@ class Site {
 		$db = buildDBObject();
 		$info = $db->get('Site_Settings');
 		$info = $info[0];
-		$sitename = $info["SiteName"];
-		$MaintenanceMode = $info["MaintenanceMode"];
-		$RegistrationOpen = $info["RegistrationOpen"];
-		$RegistrationOpen = $info["RegistrationOpen"];
+		$this->sitename = $info["SiteName"];
+		$this->MaintenanceMode = $info["MaintenanceMode"];
+		$this->RegistrationOpen = $info["RegistrationOpen"];
+		$this->RegistrationOpen = $info["RegistrationOpen"];
 	}
 
 	function siteName(){
-		echo $this->sitename;
 		return $this->sitename;
 	}
 
