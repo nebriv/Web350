@@ -19,7 +19,7 @@ include('includes/header.php');
               </label>
             </div>
               
-              <textarea class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?></textarea>
+              <textarea class="form-control" rows="3" cols="70"><?php echo $site->MaintenanceModeMessage(); ?></textarea>
           </div>
 
             <div class="radio">
