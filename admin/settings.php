@@ -11,7 +11,7 @@ include('includes/header.php');
 
           <h3 class="sub-header">Administration Settings</h3>
           <div class="row">
-            <div class="col-md-1"></div>
+            <div class="col-sm-1"></div>
               <div class="well col-md-4"><h4>Maintenance Mode</h4>
                 <div class="checkbox">
                   <label>
