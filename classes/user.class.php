@@ -20,7 +20,6 @@ class User {
 	}
 
 	function checkPerms($desiredaccess, $strict = true){
-		print_r($this->userRoles);
 		if (in_array($desiredaccess, $this->userRoles)){
 			return True;
 		}else{
