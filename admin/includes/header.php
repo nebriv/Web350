@@ -53,7 +53,7 @@ if ($user->checkSession()){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><?php echo $site->siteName(); ?> - Manage</a>
+          <a class="navbar-brand" href="index.php"><?php echo $site->siteName(); ?> - Manage</a>
         </div>
         <div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-left">
@@ -86,6 +86,7 @@ if ($user->checkSession()){
             <li><a href="perms.php">Users and Groups</a></li>
             <li><a href="products.php">Product Management</a></li>
             <li><a href="farms.php">Farm Management</a></li>
+            <li><a href="theme.php">Look and Feel</a></li>
             <li><a href="settings.php">Site Settings</a></li>
           </ul>
         </div>
