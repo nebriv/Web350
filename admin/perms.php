@@ -13,13 +13,15 @@ include('includes/header.php');
                 <th>Name</th>
                 <th>Email</th>
                 <th>Role</th>
+                <th>Edit?</th>
               </tr>
               <tr>
                 <td><input type="checkbox" value=""></td>
                 <td>Nebriv</td>
                 <td>Ben V</td>
-                <th>nebriv@gmail.com</th>
-                <th>Site Administrator</th>
+                <td>nebriv@gmail.com</td>
+                <td>Site Administrator</td>
+                <td><a href="#">Edit</a></td>
               </tr>
             </table>
           </div>
