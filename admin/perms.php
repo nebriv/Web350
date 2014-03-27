@@ -21,7 +21,7 @@ include('includes/header.php');
                 $cols = Array ("UserID, Username");
                 $users = $db->get('Users', null, $cols); //contains an array of all users 
                 foreach ($users as $user){
-                  if $user['']
+                  
                   print_r($user);
                 }
 
