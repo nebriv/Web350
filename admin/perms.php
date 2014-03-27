@@ -23,6 +23,7 @@ include('includes/header.php');
                   if ($user['UserID'] != 0){
                     $row = new User();
                     $row->buildObject($user['UserID']);
+                    echo $row->getFirstName();
                     echo $row->getRolesAsStrings();
                   }
                   
