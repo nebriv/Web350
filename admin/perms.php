@@ -13,8 +13,20 @@ include('includes/header.php');
                 <th>Name</th>
                 <th>Email</th>
                 <th>Role</th>
-                <th>Edit?</th>
+                <th>Edit</th>
               </tr>
+              <?php
+                $db = buildDBObject();
+                $userIDs = [];
+                $cols = Array ("UserID");
+                $users = $db->get('users', null, $cols); //contains an array of all users 
+                foreach ($users as $user){
+                  print_r($user);
+                }
+
+              ?>
+
+
               <tr>
                 <td><input type="checkbox" value=""></td>
                 <td>Nebriv</td>
