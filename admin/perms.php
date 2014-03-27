@@ -24,6 +24,7 @@ include('includes/header.php');
                     $row = new User();
                     $row->buildObject($user['UserID']);
                     echo $row->getFirstName();
+                    echo $row->getEmail();
                     echo $row->getRolesAsStrings();
                   }
                   
