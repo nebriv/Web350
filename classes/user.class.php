@@ -44,7 +44,7 @@ class User {
 	}
 
 	function getFullName(){
-		$fullname = $this->firstName . " " . $this->lastName;
+		$fullname = ucfirst($this->firstName) . " " . ucfirst($this->lastName);
 		return $fullname;
 	}
 

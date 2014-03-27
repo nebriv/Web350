@@ -39,16 +39,6 @@ include('includes/header.php');
                 }
 
               ?>
-
-
-              <tr>
-                <td><input type="checkbox" value=""></td>
-                <td>Nebriv</td>
-                <td>Ben V</td>
-                <td>nebriv@gmail.com</td>
-                <td>Site Administrator</td>
-                <td><a href="#">Edit</a></td>
-              </tr>
             </table>
           </div>
 
