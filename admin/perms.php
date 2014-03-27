@@ -18,8 +18,7 @@ include('includes/header.php');
               <?php
                 $db = buildDBObject();
                 $userIDs = [];
-                $cols = Array ("UserID, Username");
-                $users = $db->get('Users', null, $cols); //contains an array of all users 
+                $users = $db->rawQuery('SELECT UserID from Users');
                 foreach ($users as $user){
                   
                   print_r($user);
