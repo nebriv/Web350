@@ -27,22 +27,13 @@ include('includes/header.php');
                     echo "
               <tr>
                 <td><input type='checkbox' value=''></td>
-                <td>Nebriv</td>
-                <td>Ben V</td>
-                <td>$row->getEmail()</td>
-                <td>Site Administrator</td>
+                <td>";echo $row->getUsername(); echo "</td>
+                <td>";echo $row->getFullName(); echo "</td>
+                <td>";echo $row->getEmail(); echo "</td>
+                <td>";echo $row->getRolesAsStrings(); echo "</td>
                 <td><a href='#''>Edit</a></td>
               </tr>
-
-
-
-
                     ";
-
-
-                    echo $row->getFirstName();
-                    echo $row->getEmail();
-                    echo $row->getRolesAsStrings();
                   }
                   
                 }
