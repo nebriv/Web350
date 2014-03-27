@@ -40,7 +40,7 @@ class User {
 	}
 
 	function getEmail(){
-		return $this->email
+		return $this->email;
 	}
 
 	function getRolesAsStrings(){
