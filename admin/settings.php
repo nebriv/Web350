@@ -18,14 +18,13 @@ include('includes/header.php');
                   </div>
 
                   <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default">Sign in</button>
+                    <div class="col-sm-10">
+                      <button type="submit" class="btn btn-default">Save Changes</button>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
-
 
           <h3 class="sub-header">Administration Settings</h3>
           <div class="row">
@@ -37,7 +36,6 @@ include('includes/header.php');
                     Enable Maintenance Mode
                   </label>
                 </div>
-                  
                   <textarea class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?>
                   </textarea>
               </div>
