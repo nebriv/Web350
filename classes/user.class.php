@@ -39,6 +39,15 @@ class User {
 		return $this->firstName;
 	}
 
+	function getLastName(){
+		returh $this->lastName;
+	}
+
+	function getFullName(){
+		$fullname = $this->firstName . " " . $this->lastName;
+		return $fullname;
+	}
+
 	function getEmail(){
 		return $this->email;
 	}
