@@ -11,14 +11,14 @@ include('includes/header.php');
               <div class="col-md-4">
                 <form class="form-horizontal" role="form">
                   <div class="form-group">
-                    <label for="siteName" class="col-sm-3 control-label">Site Name</label>
-                    <div class="col-sm-9">
+                    <label for="siteName" class="col-sm-4 control-label">Site Name</label>
+                    <div class="col-sm-8">
                       <input class="form-control" id="siteName" value='<?php echo $site->siteName(); ?>'>
                     </div>
                   </div>
                  <div class="form-group">
-                    <label for="siteName" class="col-sm-3 control-label">Site URL</label>
-                    <div class="col-sm-9">
+                    <label for="siteName" class="col-sm-4 control-label">Site URL</label>
+                    <div class="col-sm-8">
                       <input class="form-control" id="siteName" value='<?php echo $site->siteURL(); ?>'>
                     </div>
                   </div>
