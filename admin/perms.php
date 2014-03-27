@@ -23,6 +23,23 @@ include('includes/header.php');
                   if ($user['UserID'] != 0){
                     $row = new User();
                     $row->buildObject($user['UserID']);
+
+                    echo "
+              <tr>
+                <td><input type='checkbox' value=''></td>
+                <td>Nebriv</td>
+                <td>Ben V</td>
+                <td>$row->getEmail()</td>
+                <td>Site Administrator</td>
+                <td><a href='#''>Edit</a></td>
+              </tr>
+
+
+
+
+                    ";
+
+
                     echo $row->getFirstName();
                     echo $row->getEmail();
                     echo $row->getRolesAsStrings();
