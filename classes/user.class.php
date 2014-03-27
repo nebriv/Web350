@@ -48,7 +48,7 @@ class User {
 		foreach ($this->userRoles as $role){
 			$theroles += $this->getRoleName($role)." ";
 		}
-		return trim($theroles);
+		return $theroles;
 	}
 
 	function getRoleName($role){
@@ -56,7 +56,6 @@ class User {
 		$db->where('RoleID', $role);
 		$results = $db->get('Roles');
 		$results = $results[0];
-		print_r($results);
 		return $results['RoleName'];
 	}
 
