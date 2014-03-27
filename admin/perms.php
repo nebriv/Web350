@@ -19,7 +19,7 @@ include('includes/header.php');
                 $db = buildDBObject();
                 $userIDs = [];
                 $cols = Array ("UserID");
-                $users = $db->get('users', null, $cols); //contains an array of all users 
+                $users = $db->get('Users', null, $cols); //contains an array of all users 
                 foreach ($users as $user){
                   print_r($user);
                 }
