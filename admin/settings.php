@@ -18,17 +18,6 @@ include('includes/header.php');
                   </div>
 
                   <div class="form-group">
-                    <label for="siteName" class="col-sm-3 control-label">Registration Opened</label>
-                    <div class="col-sm-9">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <button type="submit" class="btn btn-default">Sign in</button>
                     </div>
@@ -53,6 +42,33 @@ include('includes/header.php');
                   </textarea>
               </div>
             </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+              <div class="well col-md-4"><h4>User Registration Settings</h4>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                      Require registration before checkout
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Require user validates email address
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Require Administrator Approval of New User Accounts
+                  </label>
+                </div>
+
+              </div>
+          </div>
+
           <div class="row">
             <div class="col-md-1"></div>
               <div class="well col-md-4"><h4>Backup/Restore Settings</h4>
