@@ -16,21 +16,18 @@ include('includes/header.php');
                       <input class="form-control" id="siteName" value='<?php echo $site->siteName(); ?>'>
                     </div>
                   </div>
+
                   <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+                    <label for="siteName" class="col-sm-3 control-label">Registration Opened</label>
                     <div class="col-sm-9">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox"> Remember me
+                          <input type="checkbox">
                         </label>
                       </div>
                     </div>
                   </div>
+
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <button type="submit" class="btn btn-default">Sign in</button>
