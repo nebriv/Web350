@@ -18,9 +18,10 @@ include('includes/header.php');
               <?php
                 $db = buildDBObject();
                 $userIDs = [];
-                $cols = Array ("UserID");
+                $cols = Array ("UserID, Username");
                 $users = $db->get('Users', null, $cols); //contains an array of all users 
                 foreach ($users as $user){
+                  if $user['']
                   print_r($user);
                 }
 
