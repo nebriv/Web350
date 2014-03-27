@@ -55,6 +55,7 @@ class User {
 		$db = buildDBObject();
 		$db->where('RoleID', $role);
 		$results = $db->get('Roles');
+		print_r($results);
 		return $results[0]['RoleName'];
 	}
 
