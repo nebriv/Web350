@@ -20,8 +20,10 @@ include('includes/header.php');
                 $userIDs = [];
                 $users = $db->rawQuery('SELECT UserID from Users');
                 foreach ($users as $user){
+                  if ($user['UserID'] != 0){
+                    print_r($user);
+                  }
                   
-                  print_r($user);
                 }
 
               ?>
