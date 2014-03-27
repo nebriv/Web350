@@ -1,0 +1,32 @@
+<?php
+include('includes/header.php');
+?>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Users and Permissions</h1>
+
+          <div class="row">
+            <table class="table table-striped">
+              <tr>
+                <th><input type="checkbox" value=""></th>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td>Nebriv</td>
+                <td>Ben V</td>
+                <th>nebriv@gmail.com</th>
+                <th>Site Administrator</th>
+              </tr>
+            </table>
+          </div>
+
+
+        </div>
+
+<?php
+include('includes/footer.php');
+?>
