@@ -38,6 +38,7 @@ include('includes/header.php');
                 </div>
                   <textarea class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?>
                   </textarea>
+              <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
               </div>
             </div>
           <div class="row">
@@ -63,7 +64,7 @@ include('includes/header.php');
                     Require Administrator Approval of New User Accounts
                   </label>
                 </div>
-
+                <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
               </div>
           </div>
 
@@ -87,6 +88,7 @@ include('includes/header.php');
                       <p class="help-block">Upload your .SQL file here to restore the database.</p>
                     </div>
                 </div>
+              <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
               </div>
           </div>
         </div>
