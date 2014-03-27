@@ -21,7 +21,9 @@ include('includes/header.php');
                 $users = $db->rawQuery('SELECT UserID from Users');
                 foreach ($users as $user){
                   if ($user['UserID'] != 0){
-                    print_r($user);
+                    $row = new User();
+                    $row->buildObject($user['UserID']);
+                    echo $row->getRolesAsStrings();
                   }
                   
                 }

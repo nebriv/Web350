@@ -39,6 +39,25 @@ class User {
 		return $this->firstName;
 	}
 
+	function getEmail(){
+		return $this->email
+	}
+
+	function getRolesAsStrings(){
+		$theroles = "";
+		foreach ($this->userRoles as $role){
+			$theroles += $this->getRoleName($role)." ";
+		}
+		return trim($theroles);
+	}
+
+	function getRoleName($role){
+		$db = buildDBObject();
+		$db->where('RoleID', $role);
+		$results = $db->get('Roles');
+		return $results[0]['RoleName'];
+	}
+
 	function getUsername(){
 		//Returns the Username or Null if it's not set.
 		if (isset($this->userName)){
