@@ -40,7 +40,7 @@ class User {
 	}
 
 	function getLastName(){
-		returh $this->lastName;
+		return $this->lastName;
 	}
 
 	function getFullName(){
