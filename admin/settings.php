@@ -16,7 +16,12 @@ include('includes/header.php');
                       <input class="form-control" id="siteName" value='<?php echo $site->siteName(); ?>'>
                     </div>
                   </div>
-
+                 <div class="form-group">
+                    <label for="siteName" class="col-sm-3 control-label">Site URL</label>
+                    <div class="col-sm-9">
+                      <input class="form-control" id="siteName" value='<?php echo $site->siteURL(); ?>'>
+                    </div>
+                  </div>
                   <div class="form-group">
                     <div class="col-sm-10">
                       <button type="submit" class="btn btn-primary">Save Changes</button>

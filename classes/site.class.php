@@ -7,6 +7,7 @@ class Site {
 		$info = $db->get('Site_Settings');
 		$info = $info[0];
 		$this->sitename = $info["SiteName"];
+		$this->siteURL = $info["SiteURL"];
 		$this->MaintenanceMode = $info["MaintenanceMode"];
 		$this->MaintenanceMessage = $info["MaintenanceMessage"];
 		$this->RegistrationOpen = $info["RegistrationOpen"];
@@ -15,6 +16,10 @@ class Site {
 
 	function siteName(){
 		return $this->sitename;
+	}
+
+	function siteURL(){
+		return $this->siteURL;
 	}
 
 	function MaintenanceModeMessage(){
