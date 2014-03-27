@@ -19,7 +19,7 @@ include('includes/header.php');
 
                   <div class="form-group">
                     <div class="col-sm-10">
-                      <button type="submit" class="btn btn-default">Save Changes</button>
+                      <button type="submit" class="btn btn-primary">Save Changes</button>
                     </div>
                   </div>
                 </form>
