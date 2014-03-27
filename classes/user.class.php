@@ -147,6 +147,7 @@ class User {
 			$this->lastName = $user["LastName"];
 
 			$cols = Array("RoleID");
+			$db->where('UserID', $this->userID);
 			$roles = $db->get("User_Role", null, $cols);
 			//print_r($roles);
 			if (empty($roles)){
