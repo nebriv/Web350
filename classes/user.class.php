@@ -46,7 +46,8 @@ class User {
 	function getRolesAsStrings(){
 		$theroles = "";
 		foreach ($this->userRoles as $role){
-			$theroles += $this->getRoleName($role);
+			echo $this->getRoleName($role);
+			$theroles = $theroles . " " .$this->getRoleName($role);
 		}
 		echo $theroles;
 		return $theroles;
