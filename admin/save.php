@@ -17,6 +17,8 @@ if (isset($_POST['what'])){
     }
     if (!empty($data)){
       print_r($data);
+    }else{
+      echo "wat";
     }
   }
 }
