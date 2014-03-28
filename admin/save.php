@@ -16,13 +16,9 @@ if (isset($_GET['what'])){
       $data["siteURL"] = $siteurl;
     }
     if (!empty($data)){
-      print_r($data);
-    }else{
-      echo "wat";
+      if($db->update('users', $data)) echo 'successfully updated'; 
     }
   }
-}else{
-  echo "hello ";
 }
 
 ?>
