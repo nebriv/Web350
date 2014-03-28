@@ -3,7 +3,7 @@ include('includes/header.php');
 ?>
 <script>
   function saveBasic(){
-    doucment.alert("Saving");
+    alert("Saving");
     var siteName = document.getElementById("siteName").value;
     var siteURL = document.getElementById("siteURL").value;
     var xhr;
@@ -16,6 +16,18 @@ include('includes/header.php');
        xhr.open("POST", "save.php", true); 
          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
          xhr.send(data);
+
+      xhr.onreadystatechange = display_data;
+        function display_data() {
+         if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+             document.getElementById("suggestion").innerHTML = xhr.responseText;
+            } else {
+              alert('There was a problem with the request.');
+            }
+           }
+        }
+  
   }
 </script>    
 
