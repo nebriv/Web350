@@ -34,7 +34,7 @@ include('includes/header.php');
           <h1 class="page-header">Site Settings</h1>
 
           <h3 class="sub-header">Basic Settings</h3>
-          <div name="basicMessages"></div>
+          <div name="basicMessages" id="basicMessages"></div>
           <div class="row">
             <div class="col-md-1"></div>
               <div class="col-md-4">
