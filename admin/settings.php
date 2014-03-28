@@ -20,6 +20,7 @@ include('includes/header.php');
     function display_data() {
       alert(xhr.readyState)
       if (xhr.readyState == 4) {
+        alert(xhr.status)
         if (xhr.status == 200) {
           document.getElementById("basicMessages").innerHTML = xhr.responseText;
         } else {
