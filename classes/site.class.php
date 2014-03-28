@@ -24,7 +24,7 @@ class Site {
 		}
 	}
 	function registrationRequired(){
-		if ($this->RegistrationOpen){
+		if ($this->RegistrationRequired){
 			return True;
 		}else{
 			return False;
