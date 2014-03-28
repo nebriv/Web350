@@ -8,7 +8,7 @@ if (isset($_POST['what'])){}
     if (isset($_POST['siteName'])){   
       $sitename = $_POST['siteName'];
       $data = array(
-        "siteName" => $sitename;
+        "siteName" => $sitename,
       )
     }
     if (isset($_POST['siteURL'])){  
