@@ -56,7 +56,7 @@ include('includes/header.php');
 
   function saveRegistration(){
     var registrationRequired = document.getElementById("registrationRequired").value;
-    var maintenanceMessage = document.getElementById("maintenanceMessage").value;
+    var registrationOpen = document.getElementById("registrationOpen").value;
     var AdminApprovalRequired = document.getElementById("AdminApprovalRequired").value;
     
     var xhr;
@@ -65,7 +65,7 @@ include('includes/header.php');
     } else if (window.ActiveXObject) { // IE 8 and older
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    var data = "what=" + "registration" + "&registrationRequired=" + registrationRequired + "&maintenanceMessage=" + maintenanceMessage + "&AdminApprovalRequired=" + AdminApprovalRequired;
+    var data = "what=" + "registration" + "&registrationRequired=" + registrationRequired + "&registrationOpen=" + registrationOpen + "&AdminApprovalRequired=" + AdminApprovalRequired;
     xhr.open("POST", "http://csa.nebriv.com/admin/save.php", true); 
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
     xhr.send(data);
