@@ -66,6 +66,7 @@ include('includes/header.php');
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     var data = "what=" + "registration" + "&registrationRequired=" + registrationRequired + "&registrationOpen=" + registrationOpen + "&AdminApprovalRequired=" + AdminApprovalRequired;
+    alert(data)
     xhr.open("POST", "http://csa.nebriv.com/admin/save.php", true); 
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
     xhr.send(data);
