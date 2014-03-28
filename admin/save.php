@@ -34,6 +34,27 @@ if (isset($_POST['what'])){
       }
     }
   }
+  if ($_POST['what'] == "maintenance"){
+    $db = buildDBObject();
+    if (isset($_POST['maintenanceMode'])){   
+      $maintenanceMode = $_POST['maintenanceMode'];
+      $data = array(
+        "maintenanceMode" => $maintenanceMode,
+      );
+    }
+    if (isset($_POST['maintenanceMessage'])){  
+      $maintenanceMessage = $_POST['maintenanceMessage'];
+      $data["maintenanceMessage"] = $maintenanceMessage;
+    }
+    if (!empty($data)){
+      $db->where('ID', 1);
+      if($db->update('Site_Settings', $data)){
+        echo '<div class="alert alert-success">Settings Saved!</div>';
+      }else{
+        echo '<div class="alert alert-danger">The server encountered an error saving your changes!</div>';
+      }
+    }
+  }
 }
 
 ?>
