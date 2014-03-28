@@ -38,6 +38,7 @@ include('includes/header.php');
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     var data = "what=" + "maintenance" + "&maintenanceMode=" + maintenanceMode + "&maintenanceMessage=" + maintenanceMessage;
+    alert(data)
     xhr.open("POST", "http://csa.nebriv.com/admin/save.php", true); 
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
     xhr.send(data);
@@ -79,7 +80,7 @@ include('includes/header.php');
                   </div>
                   <div class="form-group">
                     <div class="col-sm-10">
-                      <button type="button" class="btn btn-primary" onclick="saveBasic()">Save Changes</button>
+                      <button type="button" class="btn btn-primary" onclick="saveMaintenance()">Save Changes</button>
                     </div>
                   </div>
                 </form>
