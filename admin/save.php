@@ -47,10 +47,13 @@ if (isset($_POST['what'])){
       $data["maintenanceMessage"] = $maintenanceMessage;
     }
     if (!empty($data)){
+
       $db->where('ID', 1);
       if($db->update('Site_Settings', $data)){
+        print_r($data);
         echo '<div class="alert alert-success">Settings Saved!</div>';
       }else{
+        print_r($data);
         echo '<div class="alert alert-danger">The server encountered an error saving your changes!</div>';
       }
     }
