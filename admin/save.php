@@ -64,7 +64,7 @@ if (isset($_POST['what'])){
   if ($_POST['what'] == "registration"){
     $db = buildDBObject();
     if (isset($_POST['registrationRequired'])){   
-      $maintenanceMode = $_POST['registrationRequired'];
+      $registrationRequired = $_POST['registrationRequired'];
       $data = array(
         "registrationRequired" => $registrationRequired,
       );
