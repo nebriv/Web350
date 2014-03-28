@@ -2,17 +2,17 @@
 
 require_once('../classes/main.class.php');
 
-if (isset($_POST['what'])){
-  if ($_POST['what'] == "basic"){
+if (isset($_GET['what'])){
+  if ($_GET['what'] == "basic"){
     $db = buildDBObject();
-    if (isset($_POST['siteName'])){   
-      $sitename = $_POST['siteName'];
+    if (isset($_GET['siteName'])){   
+      $sitename = $_GET['siteName'];
       $data = array(
         "siteName" => $sitename,
       );
     }
-    if (isset($_POST['siteURL'])){  
-      $siteurl = $_POST['siteURL'];
+    if (isset($_GET['siteURL'])){  
+      $siteurl = $_GET'siteURL'];
       $data["siteURL"] = $siteurl;
     }
     if (!empty($data)){
