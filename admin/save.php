@@ -17,7 +17,7 @@ if (isset($_GET['what'])){
     }
     if (!empty($data)){
       $db->where('ID', 1);
-      if($db->update('users', $data)) echo 'successfully updated'; 
+      if($db->update('Site_Settings', $data)) echo 'successfully updated'; 
     }
   }
 }
