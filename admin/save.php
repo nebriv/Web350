@@ -21,4 +21,8 @@ if (isset($_POST['what'])){
       echo "wat";
     }
   }
+}else{
+  echo "hello ";
 }
+
+?>
