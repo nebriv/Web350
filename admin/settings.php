@@ -55,7 +55,7 @@ include('includes/header.php');
                   </div>
                   <div class="form-group">
                     <div class="col-sm-10">
-                      <button type="submit" class="btn btn-primary" onclick="saveBasic()">Save Changes</button>
+                      <button type="button" class="btn btn-primary" onclick="saveBasic()">Save Changes</button>
                     </div>
                   </div>
                 </form>
