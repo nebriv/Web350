@@ -12,16 +12,16 @@ include('includes/header.php');
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     var data = "what=" + "basic" + "&siteName=" + siteName + "&siteURL=" + siteURL;
-    alert(data);
     xhr.open("POST", "save.php", true); 
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
     xhr.send(data);
 
     xhr.onreadystatechange = display_data;
     function display_data() {
+      alert(xhr.readyState)
       if (xhr.readyState == 4) {
         if (xhr.status == 200) {
-          document.getElementById("suggestion").innerHTML = xhr.responseText;
+          document.getElementById("basicMessages").innerHTML = xhr.responseText;
         } else {
           alert('There was a problem with the request.');
         }
