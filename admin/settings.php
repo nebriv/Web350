@@ -149,20 +149,6 @@ include('includes/header.php');
                 <div class="checkbox">
                   <label>
                     <?php
-                      if ($site->registrationRequired()){
-                         echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="1" checked>
-                        Registration Required';
-                      }else{
-                          echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="0">
-                        Registration Required';
-                      }
-                    ?>
-                  </label>
-                </div>
-
-                <div class="checkbox">
-                  <label>
-                    <?php
                       if ($site->registrationOpen()){
                          echo '<input type="checkbox" id="registrationOpen" name="registrationOpen" value="1" checked>
                         Registration Open';
@@ -173,7 +159,19 @@ include('includes/header.php');
                     ?>
                   </label>
                 </div>
-
+                <div class="checkbox">
+                  <label>
+                    <?php
+                      if ($site->registrationRequired()){
+                         echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="1" checked>
+                        Registration Required';
+                      }else{
+                          echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="0">
+                        Registration Required';
+                      }
+                    ?>
+                  </label>
+                </div>
                 <div class="checkbox">
                   <label>
                     <?php
