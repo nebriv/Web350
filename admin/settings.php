@@ -3,6 +3,7 @@ include('includes/header.php');
 ?>
 <script>
   function saveBasic(){
+    doucment.alert("Saving");
     var siteName = document.getElementById("siteName").value;
     var siteURL = document.getElementById("siteURL").value;
     var xhr;
@@ -26,7 +27,7 @@ include('includes/header.php');
           <div class="row">
             <div class="col-md-1"></div>
               <div class="col-md-4">
-                <form action='save.php' method='post' class="form-horizontal" role="form">
+                <form method='post' class="form-horizontal" role="form">
                   <div class="form-group">
                     <label for="siteName" class="col-sm-4 control-label">Site Name</label>
                     <div class="col-sm-8">

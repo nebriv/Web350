@@ -2,6 +2,16 @@
 
 require_once('../classes/main.class.php');
 
+$site = new Site();
+if ($user->checkSession()){
+  $user->buildObject($user->checkSession());
+  if (!$user->checkPerms(2, false)){
+    header( 'Location: http://csa.nebriv.com' );
+  }
+}else{
+  header( 'Location: http://csa.nebriv.com' );
+}
+
 if (isset($_GET['what'])){
   if ($_GET['what'] == "basic"){
     $db = buildDBObject();
