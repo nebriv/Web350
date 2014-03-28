@@ -17,14 +17,14 @@ class Site {
 	}
 
 	function registrationOpen(){
-		if ($this->RegistrationOpen == "1"){
+		if ($this->RegistrationOpen){
 			return True;
 		}else{
 			return False;
 		}
 	}
 	function registrationRequired(){
-		if ($this->RegistrationOpen == "1"){
+		if ($this->RegistrationOpen){
 			return True;
 		}else{
 			return False;
@@ -32,7 +32,7 @@ class Site {
 	}
 
 	function AdminApprovalRequired(){
-		if ($this->AdminApprovalRequired == "1"){
+		if ($this->AdminApprovalRequired){
 			return True;
 		}else{
 			return False;
