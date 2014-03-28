@@ -12,17 +12,17 @@ if ($user->checkSession()){
   header( 'Location: http://csa.nebriv.com' );
 }
 
-if (isset($_GET['what'])){
-  if ($_GET['what'] == "basic"){
+if (isset($_POST['what'])){
+  if ($_POST['what'] == "basic"){
     $db = buildDBObject();
-    if (isset($_GET['siteName'])){   
-      $sitename = $_GET['siteName'];
+    if (isset($_POST['siteName'])){   
+      $sitename = $_POST['siteName'];
       $data = array(
         "siteName" => $sitename,
       );
     }
-    if (isset($_GET['siteURL'])){  
-      $siteurl = $_GET['siteURL'];
+    if (isset($_POST['siteURL'])){  
+      $siteurl = $_POST['siteURL'];
       $data["siteURL"] = $siteurl;
     }
     if (!empty($data)){
