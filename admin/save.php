@@ -9,7 +9,7 @@ if (isset($_POST['what'])){}
       $sitename = $_POST['siteName'];
       $data = array(
         "siteName" => $sitename,
-      )
+      );
     }
     if (isset($_POST['siteURL'])){  
       $siteurl = $_POST['siteURL'];
