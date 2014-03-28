@@ -58,6 +58,39 @@ if (isset($_POST['what'])){
       }
     }
   }
+
+
+
+  if ($_POST['what'] == "registration"){
+    $db = buildDBObject();
+    if (isset($_POST['registrationRequired'])){   
+      $maintenanceMode = $_POST['registrationRequired'];
+      $data = array(
+        "registrationRequired" => $registrationRequired,
+      );
+    }
+    if (isset($_POST['registrationOpen'])){  
+      $registrationOpen = $_POST['registrationOpen'];
+      $data["registrationOpen"] = $registrationOpen;
+    }
+    if (isset($_POST['AdminApprovalRequired'])){  
+      $AdminApprovalRequired = $_POST['AdminApprovalRequired'];
+      $data["AdminApprovalRequired"] = $AdminApprovalRequired;
+    }
+    
+    if (!empty($data)){
+
+      $db->where('ID', 1);
+      if($db->update('Site_Settings', $data)){
+        //print_r($data);
+        echo '<div class="alert alert-success">Settings Saved!</div>';
+      }else{
+        //print_r($data);
+        echo '<div class="alert alert-danger">The server encountered an error saving your changes!</div>';
+      }
+    }
+  }
+
 }
 
 ?>

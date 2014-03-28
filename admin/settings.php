@@ -54,6 +54,34 @@ include('includes/header.php');
     }
   }
 
+  function saveRegistration(){
+    var registrationRequired = document.getElementById("registrationRequired").value;
+    var maintenanceMessage = document.getElementById("maintenanceMessage").value;
+    var AdminApprovalRequired = document.getElementById("AdminApprovalRequired").value;
+    
+    var xhr;
+    if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+        xhr = new XMLHttpRequest();
+    } else if (window.ActiveXObject) { // IE 8 and older
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    var data = "what=" + "registration" + "&registrationRequired=" + registrationRequired + "&maintenanceMessage=" + maintenanceMessage + "&AdminApprovalRequired=" + AdminApprovalRequired;
+    xhr.open("POST", "http://csa.nebriv.com/admin/save.php", true); 
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
+    xhr.send(data);
+
+    xhr.onreadystatechange = display_data;
+    function display_data() {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          document.getElementById("registrationMessages").innerHTML = xhr.responseText;
+        } else {
+          document.getElementById("registrationMessages").innerHTML = xhr.responseText;
+        }
+      }
+    }
+  }
+
 </script>    
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -119,8 +147,6 @@ include('includes/header.php');
               <form method='post' class="form-horizontal" role="form">
                 <div class="checkbox">
                   <label>
-
-
                     <?php
                       if ($site->registrationRequired()){
                          echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="0" checked>
@@ -135,7 +161,6 @@ include('includes/header.php');
 
                 <div class="checkbox">
                   <label>
-
                     <?php
                       if ($site->registrationOpen()){
                          echo '<input type="checkbox" id="registrationOpen" name="registrationOpen" value="0" checked>
@@ -150,8 +175,6 @@ include('includes/header.php');
 
                 <div class="checkbox">
                   <label>
-
-
                     <?php
                       if ($site->AdminApprovalRequired()){
                          echo '<input type="checkbox" id="AdminApprovalRequired" name="AdminApprovalRequired" value="0" checked>
