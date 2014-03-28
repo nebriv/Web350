@@ -125,7 +125,7 @@ include('includes/header.php');
                   <label>
                     <?php
                       if ($site->maintenanceEnabled()){
-                         echo '<input type="checkbox" id="maintenanceMode" name="maintenanceMode" value="0" checked>
+                         echo '<input type="checkbox" id="maintenanceMode" name="maintenanceMode" value="1" checked>
                         Maintenance Mode Enabled';
                       }else{
                           echo '<input type="checkbox" id="maintenanceMode" name="maintenanceMode" value="1">
@@ -150,7 +150,7 @@ include('includes/header.php');
                   <label>
                     <?php
                       if ($site->registrationOpen()){
-                         echo '<input type="checkbox" id="registrationOpen" name="registrationOpen" value="0" checked>
+                         echo '<input type="checkbox" id="registrationOpen" name="registrationOpen" value="1" checked>
                         Registration Open';
                       }else{
                           echo '<input type="checkbox" id="registrationOpen" name="registrationOpen" value="1">
@@ -163,7 +163,7 @@ include('includes/header.php');
                   <label>
                     <?php
                       if ($site->registrationRequired()){
-                         echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="0"" checked>
+                         echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="1"" checked>
                         Registration Required';
                       }else{
                           echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="1">
