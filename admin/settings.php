@@ -176,7 +176,7 @@ include('includes/header.php');
                   <label>
                     <?php
                       if ($site->AdminApprovalRequired()){
-                         echo '<input type="checkbox" id="AdminApprovalRequired" name="AdminApprovalRequired" value="0" checked>
+                         echo '<input type="checkbox" id="AdminApprovalRequired" name="AdminApprovalRequired" value="1" checked>
                         Require Administrator Approval of New User Accounts';
                       }else{
                           echo '<input type="checkbox" id="AdminApprovalRequired" name="AdminApprovalRequired" value="1">
