@@ -80,7 +80,7 @@ include('includes/header.php');
                   </div>
                   <div class="form-group">
                     <div class="col-sm-10">
-                      <button type="button" class="btn btn-primary" onclick="saveMaintenance()">Save Changes</button>
+                      <button type="button" class="btn btn-primary" onclick="saveBasic()">Save Changes</button>
                     </div>
                   </div>
                 </form>
@@ -109,7 +109,7 @@ include('includes/header.php');
                   <textarea name="maintenanceMessage" id="maintenanceMessage" class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?>
                   </textarea>
               <br>
-              <button type="button" class="btn btn-primary btn-sm">Save Changes</button>
+              <button type="button" class="btn btn-primary btn-sm" onclick="saveMaintenance()">Save Changes</button>
               </form>
               </div>
             </div>
