@@ -96,16 +96,16 @@ include('includes/header.php');
                   <label>
                     <?php
                       if ($site->maintenanceEnabled()){
-                         echo '<input type="checkbox" id="maintenanceMode" name="maintenanceMode" value="1" checked>
+                         echo '<input type="checkbox" id="maintenanceMode" name="maintenanceMode" value="0" checked>
                         Maintenance Mode Enabled';
                       }else{
                           echo '<input type="checkbox" id="maintenanceMode" name="maintenanceMode" value="1">
-                        Maintenance Mode';
+                        Maintenance Mode Enabled';
                       }
                       ?>
                   </label>
                 </div>
-                  <textarea name="MaintenanceMessage" id="maintenanceMessage" class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?>
+                  <textarea name="maintenanceMessage" id="maintenanceMessage" class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?>
                   </textarea>
               <br>
               <button type="button" class="btn btn-primary btn-sm">Save Changes</button>
