@@ -91,6 +91,7 @@ include('includes/header.php');
             <div class="col-md-1"></div>
               <div class="well col-md-4"><h4>Maintenance Mode</h4>
               <div name="maintenanceMessages" id="maintenanceMessages"></div>
+              <form method='post' class="form-horizontal" role="form">
                 <div class="checkbox">
                   <label>
                     <?php
@@ -107,7 +108,8 @@ include('includes/header.php');
                   <textarea name="MaintenanceMessage" id="maintenanceMessage" class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?>
                   </textarea>
               <br>
-              <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
+              <button type="button" class="btn btn-primary btn-sm">Save Changes</button>
+              </form>
               </div>
             </div>
           <div class="row">
