@@ -2,7 +2,7 @@
 
 require_once('../classes/main.class.php');
 
-if (isset($_POST['what'])){}
+if (isset($_POST['what'])){
   if ($_POST['what'] == "basic"){
     $db = buildDBObject();
     if (isset($_POST['siteName'])){   
