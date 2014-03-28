@@ -26,8 +26,34 @@ include('includes/header.php');
         }
       }
     }
-  
   }
+
+  function saveMaintenance(){
+    var siteName = document.getElementById("siteName").value;
+    var siteURL = document.getElementById("siteURL").value;
+    var xhr;
+    if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+        xhr = new XMLHttpRequest();
+    } else if (window.ActiveXObject) { // IE 8 and older
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    var data = "what=" + "basic" + "&siteName=" + siteName + "&siteURL=" + siteURL;
+    xhr.open("POST", "http://csa.nebriv.com/admin/save.php", true); 
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
+    xhr.send(data);
+
+    xhr.onreadystatechange = display_data;
+    function display_data() {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          document.getElementById("basicMessages").innerHTML = xhr.responseText;
+        } else {
+          document.getElementById("basicMessages").innerHTML = xhr.responseText;
+        }
+      }
+    }
+  }
+
 </script>    
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -66,11 +92,18 @@ include('includes/header.php');
               <div class="well col-md-4"><h4>Maintenance Mode</h4>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" value="">
-                    Enable Maintenance Mode
+                    <?php
+                      if ($site->maintenanceEnabled()){
+                         echo '<input type="checkbox" id="maintenanceMode" name="maintenanceMode" value="1" checked>
+                        Maintenance Mode Enabled';
+                      }else{
+                          echo '<input type="checkbox" id="maintenanceMode" name="maintenanceMode" value="1">
+                        Maintenance Mode';
+                      }
+                      ?>
                   </label>
                 </div>
-                  <textarea class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?>
+                  <textarea name="MaintenanceMessage" id="MaintenanceMessage" class="form-control" rows="3"><?php echo $site->MaintenanceModeMessage(); ?>
                   </textarea>
               <br>
               <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
