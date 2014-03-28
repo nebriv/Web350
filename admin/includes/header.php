@@ -41,26 +41,6 @@ if ($user->checkSession()){
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
-		<script language = "Javascript">
-			function saveData() {
-				new Ajax.Request('save.php', {
-				method: 'post',
-				parameters: {
-				// $('form_id').serialize(true)
-				first_name: document.getElementById('first_name').value,
-				last_name: document.getElementById('last_name').value,
-				home_town: document.getElementById('home_town').value,
-				age: document.getElementById('age').value,
-				job: document.getElementById('job').value
-				}
-				});
-			}
-		</script>
-
-
-
-
   </head>
 
   <body onunload="saveData()">
