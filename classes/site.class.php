@@ -11,7 +11,32 @@ class Site {
 		$this->MaintenanceMode = $info["MaintenanceMode"];
 		$this->MaintenanceMessage = $info["MaintenanceMessage"];
 		$this->RegistrationOpen = $info["RegistrationOpen"];
-		$this->RegistrationOpen = $info["RegistrationOpen"];
+		$this->RegistrationRequired = $info["RegistrationRequired"];
+		$this->AdminApprovalRequired = $info["AdminApprovalRequired"];
+
+	}
+
+	function registrationOpen(){
+		if ($this->RegistrationOpen == "1"){
+			return True;
+		}else{
+			return False;
+		}
+	}
+	function registrationRequired(){
+		if ($this->RegistrationOpen == "1"){
+			return True;
+		}else{
+			return False;
+		}
+	}
+
+	function AdminApprovalRequired(){
+		if ($this->AdminApprovalRequired == "1"){
+			return True;
+		}else{
+			return False;
+		}		
 	}
 
 	function siteName(){

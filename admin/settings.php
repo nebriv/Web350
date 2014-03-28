@@ -115,28 +115,56 @@ include('includes/header.php');
           <div class="row">
             <div class="col-md-1"></div>
               <div class="well col-md-4"><h4>User Registration Settings</h4>
+              <div name="registrationMessages" id="registrationMessages"></div>
+              <form method='post' class="form-horizontal" role="form">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" value="">
-                      Require registration before checkout
+
+
+                    <?php
+                      if ($site->registrationRequired()){
+                         echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="0" checked>
+                        Registration Required';
+                      }else{
+                          echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="1">
+                        Registration Required';
+                      }
+                    ?>
                   </label>
                 </div>
 
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" value="">
-                    Require user validates email address
+
+                    <?php
+                      if ($site->registrationOpen()){
+                         echo '<input type="checkbox" id="registrationOpen" name="registrationOpen" value="0" checked>
+                        Registration Open';
+                      }else{
+                          echo '<input type="checkbox" id="registrationOpen" name="registrationOpen" value="1">
+                        Registration Open';
+                      }
+                    ?>
                   </label>
                 </div>
 
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" value="">
-                    Require Administrator Approval of New User Accounts
+
+
+                    <?php
+                      if ($site->AdminApprovalRequired()){
+                         echo '<input type="checkbox" id="AdminApprovalRequired" name="AdminApprovalRequired" value="0" checked>
+                        Require Administrator Approval of New User Accounts';
+                      }else{
+                          echo '<input type="checkbox" id="AdminApprovalRequired" name="AdminApprovalRequired" value="1">
+                        Require Administrator Approval of New User Accounts';
+                      }
+                    ?>
                   </label>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
+                <button type="button" class="btn btn-primary btn-sm" onclick="saveRegistration()">Save Changes</button>
               </div>
           </div>
 
