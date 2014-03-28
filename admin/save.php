@@ -2,7 +2,7 @@
 
 require_once('../classes/main.class.php');
 
-$site = new Site();
+/*$site = new Site();
 if ($user->checkSession()){
   $user->buildObject($user->checkSession());
   if (!$user->checkPerms(2, false)){
@@ -10,7 +10,7 @@ if ($user->checkSession()){
   }
 }else{
   header( 'Location: http://csa.nebriv.com' );
-}
+}*/
 
 if (isset($_POST['what'])){
   if ($_POST['what'] == "basic"){

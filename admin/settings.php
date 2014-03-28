@@ -12,7 +12,7 @@ include('includes/header.php');
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     var data = "what=" + "basic" + "&siteName=" + siteName + "&siteURL=" + siteURL;
-    xhr.open("POST", "save.php", true); 
+    xhr.open("POST", "http://csa.nebriv.com/admin/save.php", true); 
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
     xhr.send(data);
 
