@@ -18,13 +18,11 @@ include('includes/header.php');
 
     xhr.onreadystatechange = display_data;
     function display_data() {
-      alert(xhr.readyState)
       if (xhr.readyState == 4) {
-        alert(xhr.status)
         if (xhr.status == 200) {
           document.getElementById("basicMessages").innerHTML = xhr.responseText;
         } else {
-          alert('There was a problem with the request.');
+          document.getElementById("basicMessages").innerHTML = xhr.responseText;
         }
       }
     }
