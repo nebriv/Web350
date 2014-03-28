@@ -12,7 +12,7 @@ if (isset($_GET['what'])){
       );
     }
     if (isset($_GET['siteURL'])){  
-      $siteurl = $_GET'siteURL'];
+      $siteurl = $_GET['siteURL'];
       $data["siteURL"] = $siteurl;
     }
     if (!empty($data)){
