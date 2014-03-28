@@ -1,30 +1,47 @@
 <?php
 include('includes/header.php');
 ?>
+<script>
+  function saveBasic(){
+    var siteName = document.getElementById("siteName").value;
+    var siteURL = document.getElementById("siteURL").value;
+    var xhr;
+    if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+        xhr = new XMLHttpRequest();
+    } else if (window.ActiveXObject) { // IE 8 and older
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    var data = "what=" + "basic" + "&siteName=" + siteName + "&siteURL=" + siteURL;
+       xhr.open("POST", "save.php", true); 
+         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
+         xhr.send(data);
+  }
+</script>    
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Site Settings</h1>
 
           <h3 class="sub-header">Basic Settings</h3>
+          <div name="basicMessages"></div>
           <div class="row">
             <div class="col-md-1"></div>
               <div class="col-md-4">
-                <form class="form-horizontal" role="form">
+                <form action='save.php' method='post' class="form-horizontal" role="form">
                   <div class="form-group">
                     <label for="siteName" class="col-sm-4 control-label">Site Name</label>
                     <div class="col-sm-8">
-                      <input class="form-control" id="siteName" value='<?php echo $site->siteName(); ?>'>
+                      <input class="form-control" id="siteName" name="siteName" value='<?php echo $site->siteName(); ?>'>
                     </div>
                   </div>
                  <div class="form-group">
                     <label for="siteName" class="col-sm-4 control-label">Site URL</label>
                     <div class="col-sm-8">
-                      <input class="form-control" id="siteName" value='<?php echo $site->siteURL(); ?>'>
+                      <input class="form-control" id="siteURL" name="SiteURL" value='<?php echo $site->siteURL(); ?>'>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-sm-10">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
+                      <button type="submit" class="btn btn-primary" onclick="saveBasic()">Save Changes</button>
                     </div>
                   </div>
                 </form>
