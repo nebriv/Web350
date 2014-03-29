@@ -199,6 +199,7 @@ class User {
 			if ($db->update('Sessions', $data)){
 				$_SESSION['user'] = Null;
 				unset($_SESSION);
+				session_destroy();
 			}
 		}else{
 			echo "Error logging you out";
