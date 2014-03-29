@@ -64,25 +64,22 @@ if (isset($_POST['what'])){
 
     $current = $db->get('Site_Settings');
     $current = $current[0];
-    
-    $current["registrationOpen"];
-    $current["AdminApprovalRequired"];
 
     $data = array();
     $changes = False;
     if (isset($_POST['registrationRequired'])){   
       $registrationRequired = $_POST['registrationRequired'];
-      if ($current["registrationRequired"] != $registrationRequired){
+      if ($current["RegistrationRequired"] != $registrationRequired){
         $data = array(
-          "registrationRequired" => $registrationRequired,
+          "RegistrationRequired" => $registrationRequired,
         );
         $changes = True;
       }
     }
     if (isset($_POST['registrationOpen'])){  
       $registrationOpen = $_POST['registrationOpen'];
-      if ($current["registrationOpen"] != $registrationOpen){
-        $data["registrationOpen"] = $registrationOpen;
+      if ($current["RegistrationOpen"] != $registrationOpen){
+        $data["RegistrationOpen"] = $registrationOpen;
         $changes = True;
       }
     }
