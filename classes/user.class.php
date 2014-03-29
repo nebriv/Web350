@@ -108,14 +108,13 @@ class User {
 		$db = buildDBObject();
 		if (isset($_SESSION['user'])){
 			$session = $_SESSION['user'];
-			
 			$results = $db
 				->where('SessionContent', $session)
 				->where('IPAddress', $this->userIP)
 				->where('LoggedOut', '0')
 				->where('Type', 'Session')
 				->get('Sessions');
-			
+			print_r($results);
 			if (count($results) > 0){
 				$results = $results[0];
 				return $results['UserID'];
@@ -131,7 +130,7 @@ class User {
 				->where('LoggedOut', '0')
 				->where('Type', 'Cookie')
 				->get('Sessions');
-			
+			print_r($results);
 			if (count($results) > 0){
 				$results = $results[0];
 				return $results['UserID'];
