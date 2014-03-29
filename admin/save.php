@@ -61,30 +61,52 @@ if (isset($_POST['what'])){
 
   if ($_POST['what'] == "registration"){
     $db = buildDBObject();
+
+    $current = $db->get('Site_Settings');
+    $current = $info[0];
+    
+    $current["registrationOpen"];
+    $current["AdminApprovalRequired"];
+
+    $data = array();
+    $changes = False;
     if (isset($_POST['registrationRequired'])){   
       $registrationRequired = $_POST['registrationRequired'];
-      $data = array(
-        "registrationRequired" => $registrationRequired,
-      );
+      if ($current["registrationRequired"] != $registrationRequired){
+        $data = array(
+          "registrationRequired" => $registrationRequired,
+        );
+        $changes = True;
+      }
     }
     if (isset($_POST['registrationOpen'])){  
       $registrationOpen = $_POST['registrationOpen'];
-      $data["registrationOpen"] = $registrationOpen;
+      if ($current["registrationOpen"] != $registrationOpen){
+        $data["registrationOpen"] = $registrationOpen;
+        $changes = True;
+      }
     }
-    if (isset($_POST['AdminApprovalRequired'])){  
+    if (isset($_POST['AdminApprovalRequired'])){
+
       $AdminApprovalRequired = $_POST['AdminApprovalRequired'];
-      $data["AdminApprovalRequired"] = $AdminApprovalRequired;
+      if ($current["AdminApprovalRequired"] != $AdminApprovalRequired){
+        $data["AdminApprovalRequired"] = $AdminApprovalRequired;
+        $changes = True;
+      }
     }
 
     if (!empty($data)){
-
-      $db->where('ID', 1);
-      if($db->update('Site_Settings', $data)){
-        print_r($data);
-        echo '<div class="alert alert-success">Settings Saved!</div>';
+      if ($changes == True){
+        $db->where('ID', 1);
+        if($db->update('Site_Settings', $data)){
+          print_r($data);
+          echo '<div class="alert alert-success">Settings Saved!</div>';
+        }else{
+          print_r($data);
+          echo '<div class="alert alert-danger">The server encountered an error saving your changes!</div>';
+        }
       }else{
-        print_r($data);
-        echo '<div class="alert alert-danger">The server encountered an error saving your changes!</div>';
+        echo '<div class="alert alert-info">No changes were detected! Nothing was saved.</div>';
       }
     }
   }

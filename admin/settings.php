@@ -163,7 +163,7 @@ include('includes/header.php');
                   <label>
                     <?php
                       if ($site->registrationRequired()){
-                         echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="1"" checked>
+                         echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="1" checked>
                         Registration Required';
                       }else{
                           echo '<input type="checkbox" id="registrationRequired" name="registrationRequired" value="1">
