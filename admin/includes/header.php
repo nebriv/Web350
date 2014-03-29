@@ -78,11 +78,82 @@ if ($user->checkSession()){
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="index.php">Dashboard</a></li>
-            <li><a href="perms.php">Users and Groups</a></li>
-            <li><a href="products.php">Product Management</a></li>
-            <li><a href="farms.php">Farm Management</a></li>
-            <li><a href="theme.php">Look and Feel</a></li>
-            <li><a href="settings.php">Site Settings</a></li>
+
+          <?php
+          $current_page = $_SERVER['PHP_SELF'];
+
+          switch ($current_page){
+          	case "index.php":
+          		echo '
+	          		<li class="active"><a href="index.php">Dashboard</a></li>
+	            	<li><a href="perms.php">Users and Groups</a></li>
+	            	<li><a href="products.php">Product Management</a></li>
+	        	    <li><a href="farms.php">Farm Management</a></li>
+	        	    <li><a href="theme.php">Look and Feel</a></li>
+	        	    <li><a href="settings.php">Site Settings</a></li>
+        	    ';
+            	break;
+            case "perms.php":
+          		echo '
+	          		<li><a href="index.php">Dashboard</a></li>
+	            	<li class="active"><a href="perms.php">Users and Groups</a></li>
+	            	<li><a href="products.php">Product Management</a></li>
+	        	    <li><a href="farms.php">Farm Management</a></li>
+	        	    <li><a href="theme.php">Look and Feel</a></li>
+	        	    <li><a href="settings.php">Site Settings</a></li>
+        	    ';
+        	    break;
+            case "products.php":
+          		echo '
+	          		<li><a href="index.php">Dashboard</a></li>
+	            	<li"><a href="perms.php">Users and Groups</a></li>
+	            	<li class="active><a href="products.php">Product Management</a></li>
+	        	    <li><a href="farms.php">Farm Management</a></li>
+	        	    <li><a href="theme.php">Look and Feel</a></li>
+	        	    <li><a href="settings.php">Site Settings</a></li>
+        	    ';
+        	    break;
+            case "farms.php":
+          		echo '
+	          		<li><a href="index.php">Dashboard</a></li>
+	            	<li><a href="perms.php">Users and Groups</a></li>
+	            	<li><a href="products.php">Product Management</a></li>
+	        	    <li class="active"><a href="farms.php">Farm Management</a></li>
+	        	    <li><a href="theme.php">Look and Feel</a></li>
+	        	    <li><a href="settings.php">Site Settings</a></li>
+        	    ';
+        	    break;
+            case "theme.php":
+          		echo '
+	          		<li><a href="index.php">Dashboard</a></li>
+	            	<li><a href="perms.php">Users and Groups</a></li>
+	            	<li><a href="products.php">Product Management</a></li>
+	        	    <li><a href="farms.php">Farm Management</a></li>
+	        	    <li class="active"><a href="theme.php">Look and Feel</a></li>
+	        	    <li><a href="settings.php">Site Settings</a></li>
+        	    ';
+        	    break;  
+            case "settings.php":
+          		echo '
+	          		<li><a href="index.php">Dashboard</a></li>
+	            	<li><a href="perms.php">Users and Groups</a></li>
+	            	<li><a href="products.php">Product Management</a></li>
+	        	    <li><a href="farms.php">Farm Management</a></li>
+	        	    <li><a href="theme.php">Look and Feel</a></li>
+	        	    <li class="active"><a href="settings.php">Site Settings</a></li>
+        	    ';
+        	    break;
+          	default:
+          		echo '
+	          		<li><a href="index.php">Dashboard</a></li>
+	            	<li><a href="perms.php">Users and Groups</a></li>
+	            	<li><a href="products.php">Product Management</a></li>
+	        	    <li><a href="farms.php">Farm Management</a></li>
+	        	    <li><a href="theme.php">Look and Feel</a></li>
+	        	    <li><a href="settings.php">Site Settings</a></li>
+        	    ';
+            	break;  	
+          }
+          ?>
           </ul>
         </div>
