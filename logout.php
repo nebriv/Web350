@@ -9,9 +9,9 @@ if ($user->checkSession()){
 	$user->buildObject($user->checkSession());
 	$log->auth("logoutsuccess", $user);
 	$user->destroySession($type);
-	echo "You've been logged out.";
+	#echo "You've been logged out.";
 
-	#header( 'Location: http://csa.nebriv.com' ) ;
+	header( 'Location: http://csa.nebriv.com' ) ;
 }else{
   $log->auth("logoutfailure", $user);
   echo "You are not logged in";
