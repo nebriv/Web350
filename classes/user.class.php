@@ -188,11 +188,14 @@ class User {
 		$data = array (
 		    'LoggedOut' => '1'
 		);
-		$db->where('SessionContent', $_SESSION['user']);
-		if ($db->update('Sessions', $data)){
-			if ($type == "cookie"){
+		if ($type == "cookie"){
+			$db->where('SessionContent', $_COOKIE['CSA']);
+			if ($db->update('Sessions', $data)){
 				setcookie("CSA", "", time()-1000000, "/", "csa.nebriv.com");
-			}elseif ($type == "session"){
+			}
+		}elseif ($type == "session"){
+			$db->where('SessionContent', $_SESSION['user']);
+			if ($db->update('Sessions', $data)){
 				$_SESSION['user'] = Null;
 			}
 		}else{
