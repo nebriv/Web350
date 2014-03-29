@@ -94,6 +94,16 @@ class User {
 		$this->userID = $newid;
 	}
 
+	function sessionType(){
+		if (isset($_SESSION['user'])){
+			return "session";
+		}elseif(isset($_COOKIE['CSA'])){
+			return "cookie";
+		}else{
+			return False;
+		}
+	}
+
 	function checkSession(){
 		$db = buildDBObject();
 		if (isset($_SESSION['user'])){
@@ -173,14 +183,18 @@ class User {
 
 	}
 
-	function destroySession(){
+	function destroySession($type){
 		$db = buildDBObject();
 		$data = array (
 		    'LoggedOut' => '1'
 		);
 		$db->where('SessionContent', $_SESSION['user']);
 		if ($db->update('Sessions', $data)){
-			$_SESSION['user'] = Null;
+			if ($type == "cookie"){
+				setcookie("CSA", "", time()-1000000, "/", "csa.nebriv.com");
+			}elseif ($type == "session"){
+				$_SESSION['user'] = Null;
+			}
 		}else{
 			echo "Error logging you out";
 		}
