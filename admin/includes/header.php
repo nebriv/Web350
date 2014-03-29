@@ -83,7 +83,7 @@ if ($user->checkSession()){
           $current_page = $_SERVER['PHP_SELF'];
           echo $current_page;
           switch ($current_page){
-          	case "index.php":
+          	case "/admin/index.php":
           		echo '
 	          		<li class="active"><a href="index.php">Dashboard</a></li>
 	            	<li><a href="perms.php">Users and Groups</a></li>
@@ -93,7 +93,7 @@ if ($user->checkSession()){
 	        	    <li><a href="settings.php">Site Settings</a></li>
         	    ';
             	break;
-            case "perms.php":
+            case "/admin/perms.php":
           		echo '
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li class="active"><a href="perms.php">Users and Groups</a></li>
@@ -103,7 +103,7 @@ if ($user->checkSession()){
 	        	    <li><a href="settings.php">Site Settings</a></li>
         	    ';
         	    break;
-            case "products.php":
+            case "/admin/products.php":
           		echo '
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li"><a href="perms.php">Users and Groups</a></li>
@@ -113,7 +113,7 @@ if ($user->checkSession()){
 	        	    <li><a href="settings.php">Site Settings</a></li>
         	    ';
         	    break;
-            case "farms.php":
+            case "/admin/farms.php":
           		echo '
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li><a href="perms.php">Users and Groups</a></li>
@@ -123,7 +123,7 @@ if ($user->checkSession()){
 	        	    <li><a href="settings.php">Site Settings</a></li>
         	    ';
         	    break;
-            case "theme.php":
+            case "/admin/theme.php":
           		echo '
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li><a href="perms.php">Users and Groups</a></li>
@@ -133,7 +133,7 @@ if ($user->checkSession()){
 	        	    <li><a href="settings.php">Site Settings</a></li>
         	    ';
         	    break;  
-            case "settings.php":
+            case "/admin/settings.php":
           		echo '
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li><a href="perms.php">Users and Groups</a></li>
