@@ -81,7 +81,6 @@ if ($user->checkSession()){
 
           <?php
           $current_page = $_SERVER['PHP_SELF'];
-          echo $current_page;
           switch ($current_page){
           	case "/admin/index.php":
           		echo '
