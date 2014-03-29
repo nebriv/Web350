@@ -7,12 +7,12 @@ $site = new Site();
 if ($user->checkSession()){
 	$user->buildObject($user->checkSession());
 	if (!$user->checkPerms(2, false)){
-		echo $user->checkPerms(2, false);
-		#header( 'Location: http://csa.nebriv.com' );
+		#echo $user->checkPerms(2, false);
+		header( 'Location: http://csa.nebriv.com' );
 	}
 }else{
-	echo "last else";
-	#header( 'Location: http://csa.nebriv.com' );
+	#echo "last else";
+	header( 'Location: http://csa.nebriv.com' );
 }
 ?>
 
