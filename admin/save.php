@@ -96,15 +96,17 @@ if (isset($_POST['what'])){
       if ($changes == True){
         $db->where('ID', 1);
         if($db->update('Site_Settings', $data)){
-          print_r($data);
+          //print_r($data);
           echo '<div class="alert alert-success">Settings Saved!</div>';
         }else{
-          print_r($data);
+          //print_r($data);
           echo '<div class="alert alert-danger">The server encountered an error saving your changes!</div>';
         }
       }else{
         echo '<div class="alert alert-info">No changes were detected! Nothing was saved.</div>';
       }
+    }else{
+        echo '<div class="alert alert-info">No changes were detected! Nothing was saved.</div>';
     }
   }
 
