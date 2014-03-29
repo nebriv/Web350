@@ -14,7 +14,7 @@ if ($user->checkSession()){
     #header( 'Location: http://csa.nebriv.com' );
   }
 }else{
-  echo "last else";
+  echo $user->checkSession();
   #header( 'Location: http://csa.nebriv.com' );
 }
 
