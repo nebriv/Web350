@@ -8,9 +8,9 @@ if ($site->maintenanceEnabled()){
 	header( 'Location: http://csa.nebriv.com/maintenance.php' );
 }
 
-$this = $user->checkSession();
-if ($this){
-	$user->buildObject($this);
+$auser = $user->checkSession();
+if ($auser){
+	$user->buildObject($auser);
 }
 ?>
 
