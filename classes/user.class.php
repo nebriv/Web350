@@ -198,6 +198,7 @@ class User {
 			$db->where('SessionContent', $_SESSION['user']);
 			if ($db->update('Sessions', $data)){
 				$_SESSION['user'] = Null;
+				unset($_SESSION);
 			}
 		}else{
 			echo "Error logging you out";
