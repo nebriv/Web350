@@ -63,7 +63,7 @@ if (isset($_POST['what'])){
     $db = buildDBObject();
 
     $current = $db->get('Site_Settings');
-    $current = $info[0];
+    $current = $current[0];
     
     $current["registrationOpen"];
     $current["AdminApprovalRequired"];
