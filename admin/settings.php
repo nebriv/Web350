@@ -43,7 +43,6 @@ include('includes/header.php');
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     var data = "what=" + "maintenance" + "&maintenanceMode=" + maintenanceMode + "&maintenanceMessage=" + maintenanceMessage;
-    alert(data)
     xhr.open("POST", "http://csa.nebriv.com/admin/save.php", true); 
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
     xhr.send(data);
