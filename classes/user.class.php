@@ -115,7 +115,6 @@ class User {
 				->where('LoggedOut', '0')
 				->where('Type', 'Session')
 				->get('Sessions');
-			print_r($results);
 			if (count($results) > 0){
 				$results = $results[0];
 				return $results['UserID'];
@@ -125,14 +124,12 @@ class User {
 		}elseif(isset($_COOKIE['CSA'])){
 			echo "COOKIE!";
 			$session = $_COOKIE['CSA'];
-			
 			$results = $db
 				->where('SessionContent', $session)
 				->where('IPAddress', $this->userIP)
 				->where('LoggedOut', '0')
 				->where('Type', 'Cookie')
 				->get('Sessions');
-			print_r($results);
 			if (count($results) > 0){
 				$results = $results[0];
 				return $results['UserID'];
