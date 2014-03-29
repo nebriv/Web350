@@ -29,7 +29,12 @@ include('includes/header.php');
   }
 
   function saveMaintenance(){
-    var maintenanceMode = document.getElementById("maintenanceMode").value;
+
+    if (document.getElementById('maintenanceMode').checked) {
+      var maintenanceMode = 1;
+    }else{
+      var maintenanceMode = 0;
+    }
     var maintenanceMessage = document.getElementById("maintenanceMessage").value;
     var xhr;
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
@@ -79,7 +84,6 @@ include('includes/header.php');
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     var data = "what=" + "registration" +  "&registrationOpen=" + registrationOpen + "&registrationRequired=" + registrationRequired + "&AdminApprovalRequired=" + AdminApprovalRequired;
-    alert(data)
     xhr.open("POST", "http://csa.nebriv.com/admin/save.php", true); 
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
     xhr.send(data);
