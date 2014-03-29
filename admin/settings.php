@@ -38,6 +38,7 @@ include('includes/header.php');
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     var data = "what=" + "maintenance" + "&maintenanceMode=" + maintenanceMode + "&maintenanceMessage=" + maintenanceMessage;
+    alert(data)
     xhr.open("POST", "http://csa.nebriv.com/admin/save.php", true); 
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
     xhr.send(data);
@@ -55,10 +56,22 @@ include('includes/header.php');
   }
 
   function saveRegistration(){
-    var registrationRequired = document.getElementById("registrationRequired").value;
-    var registrationOpen = document.getElementById("registrationOpen").value;
-    var AdminApprovalRequired = document.getElementById("AdminApprovalRequired").value;
-    
+
+    if (document.getElementById('registrationRequired').checked) {
+      var registrationRequired = 1;
+    }else{
+      var registrationRequired = 0;
+    }
+    if (document.getElementById('registrationOpen').checked) {
+      var registrationOpen = 1;
+    }else{
+      var registrationOpen = 0;
+    }
+    if (document.getElementById('AdminApprovalRequired').checked) {
+      var AdminApprovalRequired = 1;
+    }else{
+      var AdminApprovalRequired = 0;
+    }    
     var xhr;
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
         xhr = new XMLHttpRequest();
