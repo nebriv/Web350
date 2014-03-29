@@ -107,7 +107,6 @@ class User {
 	function checkSession(){
 		$db = buildDBObject();
 		if (isset($_SESSION['user'])){
-			echo "SESSION!";
 			$session = $_SESSION['user'];
 			$results = $db
 				->where('SessionContent', $session)
@@ -122,7 +121,6 @@ class User {
 				return False;
 			}
 		}elseif(isset($_COOKIE['CSA'])){
-			echo "COOKIE!";
 			$session = $_COOKIE['CSA'];
 			$results = $db
 				->where('SessionContent', $session)
