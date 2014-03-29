@@ -5,16 +5,18 @@ require_once('../classes/main.class.php');
 
 //This is still insecure, unauthorized users (users without the correct role) could push updates to settings that they don't have permissions to.
 //Each setting below should have their own check instead of a global check.
-/*$site = new Site();
 $user = new User();
+$site = new Site();
 if ($user->checkSession()){
   $user->buildObject($user->checkSession());
   if (!$user->checkPerms(2, false)){
-    header( 'Location: http://csa.nebriv.com' );
+    echo $user->checkPerms(2, false);
+    #header( 'Location: http://csa.nebriv.com' );
   }
 }else{
-  header( 'Location: http://csa.nebriv.com' );
-}*/
+  echo "last else";
+  #header( 'Location: http://csa.nebriv.com' );
+}
 
 
 //Basic Settings Section of Site Settings
