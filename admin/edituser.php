@@ -11,7 +11,7 @@ $edituser->buildObject($_GET['username']);
 ?>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Users and Permissions</h1><?php echo $edituser->getUsername(); ?>
+          <h1 class="page-header">Users and Permissions</h1>
           <ol class="breadcrumb">
             <li><a href="index.php">Dashboard</a></li>
             <li><a href="perms.php">Users and Permissions</a></li>
@@ -23,7 +23,7 @@ $edituser->buildObject($_GET['username']);
               <div class="form-group">
                 <label for="username" class="col-sm-2 control-label">Username</label>
                 <div class="col-sm-10">
-                  <input type="username" class="form-control" id="username" value=<?php echo "'$edituser->getUsername()'"; ?>>
+                  <input type="username" class="form-control" id="username" value='<?php echo $edituser->getUsername(); ?>'>
                 </div>
               </div>
               <div class="form-group">
