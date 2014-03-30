@@ -76,7 +76,7 @@ class User {
 			return NULL;
 		}
 	}
-
+	
 	function setUsername($newusername){
 		$this->userName = $newusername;
 	}

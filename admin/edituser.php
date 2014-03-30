@@ -27,29 +27,22 @@ $edituser->buildObject($_GET['username']);
                 </div>
               </div>
               <div class="form-group">
-                <label for="username" class="col-sm-2 control-label">Email</label>
+                <label for="email" class="col-sm-2 control-label">Email</label>
                 <div class="col-sm-10">
-                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  <input type="email" class="form-control" id="email" value='<?php echo $edituser->getEmail(); ?>'>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <label for="inputPassword3" class="col-sm-2 control-label">New Password</label>
                 <div class="col-sm-10">
                   <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
                 </div>
+                <p class="help-block">Leaving this blank will not modify the user's password.</p>
               </div>
               <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"> Remember me
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default">Sign in</button>
+                <label for="inputPassword3" class="col-sm-2 control-label">New Password Again</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password Again">
                 </div>
               </div>
             </form>
