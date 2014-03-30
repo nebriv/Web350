@@ -21,27 +21,27 @@ $edituser->buildObject($_GET['username']);
           <h3 class="sub-header">User Profile</h3>
             <form class="form-horizontal" role="form">
               <div class="form-group">
-                <label for="username" class="col-sm-2 control-label">Username</label>
-                <div class="col-sm-10">
+                <label for="username" class="col-sm-4 control-label">Username</label>
+                <div class="col-sm-8">
                   <input type="username" class="form-control" id="username" value='<?php echo $edituser->getUsername(); ?>'>
                 </div>
               </div>
               <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
+                <label for="email" class="col-sm-4 control-label">Email</label>
+                <div class="col-sm-8">
                   <input type="email" class="form-control" id="email" value='<?php echo $edituser->getEmail(); ?>'>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputPassword3" class="col-sm-2 control-label">New Password</label>
-                <div class="col-sm-10">
+                <label for="inputPassword3" class="col-sm-4 control-label">New Password</label>
+                <div class="col-sm-8">
                   <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
                 </div>
                 <p class="help-block">Leaving this blank will not modify the user's password.</p>
               </div>
               <div class="form-group">
-                <label for="inputPassword3" class="col-sm-2 control-label">New Password Again</label>
-                <div class="col-sm-10">
+                <label for="inputPassword3" class="col-sm-4 control-label">New Password Again</label>
+                <div class="col-sm-8">
                   <input type="password" class="form-control" id="inputPassword3" placeholder="Password Again">
                 </div>
               </div>
