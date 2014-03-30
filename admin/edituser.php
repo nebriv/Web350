@@ -1,5 +1,11 @@
 <?php
 include('includes/header.php');
+
+
+
+$db = buildDBObject();
+$edituser = new User();
+$edituser->buildObject($_GET['username']);
 ?>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -13,7 +19,13 @@ include('includes/header.php');
           <h3 class="sub-header">User Profile</h3>
             <form class="form-horizontal" role="form">
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <label for="username" class="col-sm-2 control-label">Username</label>
+                <div class="col-sm-10">
+                  <input type="username" class="form-control" id="username" value=<?php echo "'$edituser->getUsername()'"; ?>>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="username" class="col-sm-2 control-label">Email</label>
                 <div class="col-sm-10">
                   <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
                 </div>
