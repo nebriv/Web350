@@ -31,7 +31,7 @@ include('includes/header.php');
                 <td>";echo $row->getFullName(); echo "</td>
                 <td>";echo $row->getEmail(); echo "</td>
                 <td>";echo $row->getRolesAsStrings(); echo "</td>
-                <td><a href='#''>Edit</a></td>
+                <td><a href='edituser.php?username=$user['UserID']>Edit</a></td>
               </tr>
                     ";
                   }
