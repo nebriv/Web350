@@ -103,7 +103,10 @@ include('includes/header.php');
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Site Settings</h1>
-
+<ol class="breadcrumb">
+  <li><a href="index.php">Dashboard</a></li>
+  <li class="active">Site Settings</li>
+</ol>
           <h3 class="sub-header">Basic Settings</h3>
           <div name="basicMessages" id="basicMessages"></div>
           <div class="row">

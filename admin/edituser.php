@@ -6,7 +6,8 @@ include('includes/header.php');
           <h1 class="page-header">Users and Permissions</h1>
 <ol class="breadcrumb">
   <li><a href="index.php">Dashboard</a></li>
-  <li class="active">Users and Permissions</li>
+  <li><a href="perms.php">Users and Permissions</a></li>
+  <li class="active">Editting User</li>
 </ol>
           <div class="row">
             <table class="table table-striped table-hover">
