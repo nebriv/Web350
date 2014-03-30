@@ -6,11 +6,12 @@ include('includes/header.php');
 $db = buildDBObject();
 $edituser = new User();
 $edituser->buildObject($_GET['username']);
-echo $edituser->getUsername();
+
+
 ?>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Users and Permissions</h1>
+          <h1 class="page-header">Users and Permissions</h1><?php echo $edituser->getUsername(); ?>
           <ol class="breadcrumb">
             <li><a href="index.php">Dashboard</a></li>
             <li><a href="perms.php">Users and Permissions</a></li>
