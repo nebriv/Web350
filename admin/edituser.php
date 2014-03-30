@@ -10,6 +10,7 @@ include('includes/header.php');
             <li class="active">Editting User</li>
           </ol>
           <div class="col-md-4 pull-left">
+          <h3 class="sub-header">User Profile</h3>
             <form class="form-horizontal" role="form">
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
@@ -40,6 +41,7 @@ include('includes/header.php');
             </form>
           </div>
           <div class="col-md-7 pull-left">
+            <h3 class="sub-header">User Sessions</h3>
             <form class="form-horizontal" role="form">
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
