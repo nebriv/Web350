@@ -9,7 +9,7 @@ include('includes/header.php');
             <li><a href="perms.php">Users and Permissions</a></li>
             <li class="active">Editting User</li>
           </ol>
-          <div class="col-md-6 pull-left">
+          <div class="col-md-3 pull-left">
             <form class="form-horizontal" role="form">
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
@@ -39,7 +39,7 @@ include('includes/header.php');
               </div>
             </form>
           </div>
-          <div class="col-md-6 pull-right">
+          <div class="col-md-6 pull-left">
             <form class="form-horizontal" role="form">
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
