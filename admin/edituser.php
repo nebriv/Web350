@@ -72,7 +72,7 @@ $edituser->buildObject($_GET['username']);
                 <div class="col-sm-8">
                   <input type="password" class="form-control" id="password" placeholder="New Password">
                 </div>
-                <p class="help-block">Leaving this blank will not modify the user's password.</p>
+                <p class="center-block help-block">Leaving this blank will not modify the user's password.</p>
               </div>
               <div class="form-group">
                 <label for="password2" class="col-sm-4 control-label">New Password</label>
