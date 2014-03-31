@@ -95,7 +95,7 @@ $edituser->buildObject($_GET['username']);
                     }
                   echo "
                     </select>
-                  ';
+                  ";
 
 
                   ?>
