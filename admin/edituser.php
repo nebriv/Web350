@@ -85,13 +85,13 @@ $edituser->buildObject($_GET['username']);
                 <div class="col-sm-8">
                 <?php
                   $roles = $edituser->getRolesArray();
-                  print_r($roles);
                   echo '
                     <select id="userrole" class="form-control">';
                     echo "<option selected value='".$edituser->getRolesAsStrings()."'>".$edituser->getRolesAsStrings()."</option>";
                     
                     foreach($roles as $role){
-                      echo "<option selected value='".$role["RoleName"]."'>".$edituser->getRolesAsStrings()."</option>";
+                      print_r($role);
+                      echo "<option selected value='".$role["RoleName"]."'>".$role["RoleName"]."</option>";
                     }
                   echo "
                     </select>
