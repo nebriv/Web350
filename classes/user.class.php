@@ -52,6 +52,10 @@ class User {
 		return $this->email;
 	}
 
+	function getRolesArray(){
+		$db = buildDBObject();
+	}
+
 	function getRolesAsStrings(){
 		$theroles = "";
 		foreach ($this->userRoles as $role){
@@ -76,7 +80,7 @@ class User {
 			return NULL;
 		}
 	}
-	
+
 	function setUsername($newusername){
 		$this->userName = $newusername;
 	}

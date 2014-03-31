@@ -10,6 +10,40 @@ $edituser->buildObject($_GET['username']);
 
 ?>
 
+<script>
+  function saveUser(){
+
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var password2 = document.getElementById('password2').value;
+    var fname = document.getElementById('fname').value;
+    var lname = document.getElementById('lname').value;
+
+    var xhr;
+    if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+        xhr = new XMLHttpRequest();
+    } else if (window.ActiveXObject) { // IE 8 and older
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    var data = "what=" + "userprofile" +  "&username=" + username + "&email=" + email + "&password=" + password + "&password2=" + password2 + "&fname=" + fname + "&lname=" + lname;
+    xhr.open("POST", "http://csa.nebriv.com/admin/save.php", true); 
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
+    xhr.send(data);
+
+    xhr.onreadystatechange = display_data;
+    function display_data() {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          document.getElementById("userMessages").innerHTML = xhr.responseText;
+        } else {
+          document.getElementById("userMessages").innerHTML = xhr.responseText;
+        }
+      }
+    }
+  }
+</script>
+
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Users and Permissions</h1>
           <ol class="breadcrumb">
@@ -19,6 +53,7 @@ $edituser->buildObject($_GET['username']);
           </ol>
           <div class="col-md-4 pull-left">
           <h3 class="sub-header">User Authentication</h3>
+          <div id='userMessages'></div>
             <form class="form-horizontal" role="form">
               <div class="form-group">
                 <label for="username" class="col-sm-4 control-label">Username</label>
@@ -33,16 +68,33 @@ $edituser->buildObject($_GET['username']);
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputPassword3" class="col-sm-4 control-label">New Password</label>
+                <label for="password" class="col-sm-4 control-label">New Password</label>
                 <div class="col-sm-8">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                  <input type="password" class="form-control" id="password" placeholder="New Password">
                 </div>
                 <p class="help-block">Leaving this blank will not modify the user's password.</p>
               </div>
               <div class="form-group">
-                <label for="inputPassword3" class="col-sm-4 control-label">New Password</label>
+                <label for="password2" class="col-sm-4 control-label">New Password</label>
                 <div class="col-sm-8">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password Again">
+                  <input type="password" class="form-control" id="password2" placeholder="New Password Again">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="role" class="col-sm-4 control-label">User Role</label>
+                <div class="col-sm-8">
+                <?php
+                  $roles = $edituser->getRoles();
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+
+
+                  ?>
                 </div>
               </div>
             <h3 class="sub-header">User Profile</h3>
@@ -58,8 +110,12 @@ $edituser->buildObject($_GET['username']);
                   <input type="lname" class="form-control" id="lname" value='<?php echo $edituser->getLastName(); ?>'>
                 </div>
               </div>
+              <br>
+              <button type="button" class="btn btn-primary btn-sm" onclick="saveUser()">Save Changes</button>
             </form>
           </div>
+
+
           <div class="col-md-7 pull-left">
             <h3 class="sub-header">User Sessions</h3>
             <form class="form-horizontal" role="form">
