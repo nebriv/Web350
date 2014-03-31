@@ -18,7 +18,7 @@ $edituser->buildObject($_GET['username']);
             <li class="active">Editting User</li>
           </ol>
           <div class="col-md-4 pull-left">
-          <h3 class="sub-header">User Profile</h3>
+          <h3 class="sub-header">User Authentication</h3>
             <form class="form-horizontal" role="form">
               <div class="form-group">
                 <label for="username" class="col-sm-4 control-label">Username</label>
@@ -40,9 +40,22 @@ $edituser->buildObject($_GET['username']);
                 <p class="help-block">Leaving this blank will not modify the user's password.</p>
               </div>
               <div class="form-group">
-                <label for="inputPassword3" class="col-sm-4 control-label">New Password Again</label>
+                <label for="inputPassword3" class="col-sm-4 control-label">New Password</label>
                 <div class="col-sm-8">
                   <input type="password" class="form-control" id="inputPassword3" placeholder="Password Again">
+                </div>
+              </div>
+            <h3 class="sub-header">User Profile</h3>
+              <div class="form-group">
+                <label for="fname" class="col-sm-4 control-label">First Name</label>
+                <div class="col-sm-8">
+                  <input type="fname" class="form-control" id="fname" value='<?php echo $edituser->getFirstName(); ?>'>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lname" class="col-sm-4 control-label">Last Name</label>
+                <div class="col-sm-8">
+                  <input type="lname" class="form-control" id="lname" value='<?php echo $edituser->getLastName(); ?>'>
                 </div>
               </div>
             </form>
