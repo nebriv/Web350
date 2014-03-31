@@ -84,7 +84,7 @@ $edituser->buildObject($_GET['username']);
                 <label for="role" class="col-sm-4 control-label">User Role</label>
                 <div class="col-sm-8">
                 <?php
-                  $roles = $edituser->getRoles();
+                  //$roles = $edituser->getRoles();
                   echo '
                     <select class="form-control">
                       <option>1</option>
