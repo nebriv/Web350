@@ -92,7 +92,7 @@ $edituser->buildObject($_GET['username']);
                     
                     foreach($roles as $role){
                       if ($current != trim($role["RoleName"])){
-                        echo "<option selected value='".$role["RoleName"]."'>".$role["RoleName"]."</option>";
+                        echo "<option value='".$role["RoleName"]."'>".$role["RoleName"]."</option>";
                       }
                     }
                   echo "
