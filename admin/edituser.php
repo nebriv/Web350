@@ -87,7 +87,7 @@ $edituser->buildObject($_GET['username']);
                   $roles = $edituser->getRolesArray();
                   echo '
                     <select id="userrole" class="form-control">';
-                    echo "<option value='".$edituser->getRolesAsStrings()."' selected>".$edituser->getRolesAsStrings()."</option>";
+                    echo "<option value='".$edituser->getRolesAsStrings()."' selected='selected'>".$edituser->getRolesAsStrings()."</option>";
                     $current = $edituser->getRolesAsStrings();
                     foreach($roles as $role){
                       if ($current != $role["RoleName"]){
