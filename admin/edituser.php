@@ -88,9 +88,10 @@ $edituser->buildObject($_GET['username']);
                   echo '
                     <select id="userrole" class="form-control">';
                     echo "<option value='".$edituser->getRolesAsStrings()."' selected='selected'>".$edituser->getRolesAsStrings()."</option>";
-                    $current = $edituser->getRolesAsStrings();
+                    $current = trim($edituser->getRolesAsStrings());
+                    
                     foreach($roles as $role){
-                      if ($current != $role["RoleName"]){
+                      if ($current != trim($role["RoleName"])){
                         echo "<option selected value='".$role["RoleName"]."'>".$role["RoleName"]."</option>";
                       }
                     }
