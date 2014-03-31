@@ -54,6 +54,9 @@ class User {
 
 	function getRolesArray(){
 		$db = buildDBObject();
+		$roles = $db->get('Roles'); //contains an array of all users
+		$roles = $roles[0];
+		return $roles;
 	}
 
 	function getRolesAsStrings(){
