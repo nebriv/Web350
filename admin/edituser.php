@@ -86,7 +86,8 @@ $edituser->buildObject($_GET['username']);
                 <?php
                   //$roles = $edituser->getRoles();
                   echo '
-                    <select class="form-control">
+                    <select class="form-control">';
+                    echo "<option selected value='".$edituser->getRolesAsStrings()."'>".$edituser->getRolesAsStrings()."</option>";
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
