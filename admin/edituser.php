@@ -91,7 +91,7 @@ $edituser->buildObject($_GET['username']);
                     echo "<option selected value='".$edituser->getRolesAsStrings()."'>".$edituser->getRolesAsStrings()."</option>";
                     
                     foreach($roles as $role){
-                      echo "<option selected value='".$role[."'>".$edituser->getRolesAsStrings()."</option>";
+                      echo "<option selected value='".$role["RoleName"]."'>".$edituser->getRolesAsStrings()."</option>";
                     }
                   echo "
                     </select>
