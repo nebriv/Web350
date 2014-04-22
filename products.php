@@ -5,14 +5,14 @@ $db = buildDBObject();
 $products = $db->get('Products');
 $farms = $db->get('Farms');
 print_r($products);
+?>
 
 
+<div class=\"jumbotron\">
+<form method=\"post\">
 
-echo "<div class=\"jumbotron\">
-<form method=\"post\">";
-
-
-while($farms as $farm){
+<?php
+foreach($farms as $farm){
 	echo "<div class=\"columb\">
   <div class=\"col-sm-6 col-md-4\">
     <div class=\"thumbnail\">
