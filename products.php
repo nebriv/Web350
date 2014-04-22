@@ -1,5 +1,4 @@
 <?php
-$total = 0;
 include('includes/header.php');
 $db = buildDBObject();
 $farms = $db->get('Farms');
@@ -11,6 +10,7 @@ $farms = $db->get('Farms');
 
 <?php
 foreach($farms as $farm){
+	$total = 0;
 	echo "<div class=\"columb\">
   <div class=\"col-sm-6 col-md-4\">
     <div class=\"thumbnail\">
