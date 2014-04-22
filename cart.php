@@ -8,7 +8,7 @@ $db = buildDBObject();
 
 <?php
 $CartFarms = $_SESSION['Farms'];
-$totals = $_SESSION['totals'];
+$totals = $_SESSION['total'];
 $subtotal = 0;
 foreach($totals as $total){
   $subtotal+=$total;
