@@ -1,5 +1,6 @@
 <?php
   $farm_id = $_POST['FarmID'];
+  echo $farm_id;
   $total = $_POST['total'];
   session_start();
   if(isset($_SESSION['Farms'])){
