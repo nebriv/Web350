@@ -25,10 +25,11 @@ foreach($CartFarms as $CartFarm){
           foreach($products as $product){
           	echo $product['Name']." $".$product['Price']."<br />";
           }
-          echo "Total: $".$subtotal;
+          
           echo "</div>";
   }
 }
+echo "Total: $".$subtotal;
 include('includes/footer.php');
 
 ?>
