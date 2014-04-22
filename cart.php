@@ -33,7 +33,7 @@ echo "Total: $".$subtotal;
 echo "<br /><a href=\"cartClear.php\">Clear Cart</a>
 <form name=\"_xclick\" action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\">
 <input type=\"hidden\" name=\"cmd\" value=\"_xclick\">
-<input type=\"hidden\" name=\"business\" value=\"me@mybusiness.com\">
+<input type=\"hidden\" name=\"business\" value=\"test@test.com\">
 <input type=\"hidden\" name=\"currency_code\" value=\"USD\">
 <input type=\"hidden\" name=\"item_name\" value=\"Shopping Cart\">
 <input type=\"hidden\" name=\"amount\" value=\"".$subtotal."\">
