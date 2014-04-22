@@ -3,16 +3,16 @@
   $total = $_GET['total'];
   session_start();
   if(isset($_SESSION['Farms'])){
-    array_push($_SESSION['Farms'], $farm_id)
+    array_push($_SESSION['Farms'], $farm_id);
   }else{
     $_SESSION['Farms'] = new Array();
-    array_push($_SESSION['Farms'], $farm_id)
+    array_push($_SESSION['Farms'], $farm_id);
   }
   if(isset($_SESSION['total'])){
-    array_push($_SESSION['total'], $total)
+    array_push($_SESSION['total'], $total);
   }else{
     $_SESSION['total'] = new Array();
-    array_push($_SESSION['total'], $total)
+    array_push($_SESSION['total'], $total);
   }
   header(Location: "cart.php");
 ?>
