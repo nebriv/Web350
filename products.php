@@ -4,7 +4,7 @@ include('includes/header.php');
 $db = buildDBObject();
 $products = $db->get('Products');
 $farms = $db->get('Farms');
-print_r($products);
+
 ?>
 
 
@@ -18,7 +18,15 @@ foreach($farms as $farm){
     <div class=\"thumbnail\">
     <img src=\"".$farm['Image']."\">
     <div class=\"caption\">
-        <h3>".$farm['Name']."</h3>";
+        <h3>".$farm['Name']."</h3>
+        <p>";
+        
+        echo "</p>
+        <p><a href=\"#\" onclick=\"calc()\" class=\"btn btn-primary\" role=\"button\">Add Cart</a></p>
+        </div>
+       </div>
+      </div>
+     </div>";
 }
 ?>
 <!--
