@@ -22,7 +22,7 @@ foreach($farms as $farm){
         $db->where('FarmID', $farm['FarmID']);
         $products = $db->get('Products');
         foreach($products as $product){
-        	echo $product{'name']."<br />";
+        	echo $product['name']."<br />";
         }
         echo "</p>
         <p><a href=\"#\" onclick=\"calc()\" class=\"btn btn-primary\" role=\"button\">Add Cart</a></p>
