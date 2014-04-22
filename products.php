@@ -126,7 +126,7 @@ foreach($farms as $farm){
         </div>
       </div>-->
 </form>
-</div>
+
 <?php
 
 include('includes/footer.php');
