@@ -23,7 +23,7 @@ class Product {
 		$db = buildDBObject();
 		$db->where("ProductID", $id);
 		$product = $db->get("Products", 1);
-		if (!empty($user)){
+		if (!empty($product)){
 			//$product = $product[0];
 			$this->ProductID = $product["ProductID"];
 			$this->SKU = $product["SKU"];
@@ -32,7 +32,6 @@ class Product {
 			$this->Price = $product["Price"];
 			$this->QuantityAvailable = $product["QuantityAvailable"];
 			$this->FarmID = $product["FarmID"];
-			print_r($this);
 			return True;
 		}else{
 			return False;
