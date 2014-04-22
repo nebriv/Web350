@@ -7,12 +7,14 @@
   }else{
     $_SESSION['Farms'] = array();
     array_push($_SESSION['Farms'], $farm_id);
+    echo "frms";
   }
   if(isset($_SESSION['total'])){
     array_push($_SESSION['total'], $total);
   }else{
     $_SESSION['total'] = array();
     array_push($_SESSION['total'], $total);
+    echo "test";
   }
   header('Location: cart.php');
 ?>
