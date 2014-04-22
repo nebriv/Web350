@@ -3,19 +3,26 @@
 include('includes/header.php');
 $db = buildDBObject();
 $products = $db->get('Products');
+$farms = $db->get('Farms');
 print_r($products);
 ?>
 
 
       <div class="jumbotron">
-<form method="post">        
-        <div class="columb">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="https://www.ebfarm.com/sites/default/files/FarmStandSignPanorama_300x200.jpg" alt="Earthbound Farms Organic">
-      <div class="caption">
-        <h3>Earthbound Farms Organic</h3>
-        <p>
+<form method="post">
+
+<?php
+
+while($farms as $farm){
+	echo "<div class=\"columb\">
+  <div class=\"col-sm-6 col-md-4\">
+    <div class=\"thumbnail\">
+    <img src=\"".$farm['Image']."\">
+    <div class="caption">
+        <h3>".$farm['Name']."</h3>";
+}
+?>
+<!--
             <label class="checkbox-inline">
                 <input type="checkbox" onclick="total += 5" id="EFOCheckbox1" value="5"> Corn ($5)
             </label>
@@ -30,11 +37,7 @@ print_r($products);
         </p>
 
         <p><a href="#" onclick="calc()" class="btn btn-primary" role="button">Add Cart</a></p>
-      </div>
-    </div>
-  </div>
-</div>
-
+-->
         <div class="columb">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
