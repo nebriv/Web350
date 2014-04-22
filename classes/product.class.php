@@ -24,7 +24,7 @@ class Product {
 		$db->where("ProductID", $id);
 		$product = $db->get("Products", 1);
 		if (!empty($user)){
-			$product = $product[0];
+			//$product = $product[0];
 			$this->ProductID = $product["ProductID"];
 			$this->SKU = $product["SKU"];
 			$this->Name = $product["Name"];
