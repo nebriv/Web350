@@ -20,7 +20,7 @@ include('includes/header.php');
               </tr>
               <?php
                 $db = buildDBObject();
-                $userIDs = [];
+
                 $users = $db->rawQuery('SELECT UserID from Users');
                 foreach ($users as $user){
                   if ($user['UserID'] != 0){

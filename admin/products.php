@@ -20,7 +20,6 @@ include('includes/header.php');
               </tr>
               <?php
                 $db = buildDBObject();
-                $Products = [];
 
                 $ProductIDs = $db->rawQuery('SELECT ProductID from Products');
                 foreach ($ProductIDs as $product){
