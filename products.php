@@ -2,7 +2,7 @@
 
 include('includes/header.php');
 $db = buildDBObject();
-$products = $db->get('Products');
+$products = $db->get('products');
 print_r($products);
 ?>
 
