@@ -71,7 +71,9 @@ class Product {
 		$db->where("FarmID", $this->FarmID);
 		$farm = $db->get("Farms", 1);
 
-		return $farm[0]["Name"];
+		$farm = $farm[0];
+
+		return $farm["Name"];
 	}
 
 	function setID($newid){
