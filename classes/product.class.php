@@ -68,10 +68,8 @@ class Product {
 
 	function getFarmName(){
 		$db = buildDBObject();
-		print $this->FarmID;
-		$db->where("FarmID", $this->FarmID);
+		$db->where("FarmID", $this->getFarmID());
 		$farm = $db->get("Farms", 1);
-		print_r($farm);
 		$farm = $farm[0];
 
 		return $farm["Name"];
