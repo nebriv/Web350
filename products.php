@@ -1,5 +1,5 @@
 <?php
-
+$total = 0;
 include('includes/header.php');
 $db = buildDBObject();
 $farms = $db->get('Farms');
@@ -22,8 +22,10 @@ foreach($farms as $farm){
         $db->where('FarmID', $farm['FarmID']);
         $products = $db->get('Products');
         foreach($products as $product){
+        $total += $product['Price'];
         	echo $product['Name']." $".$product['Price']."<br />";
         }
+        echo "Total: $".$total;
         echo "</p>
         <p><a href=\"#\" onclick=\"calc()\" class=\"btn btn-primary\" role=\"button\">Add Cart</a></p>
         </div>
