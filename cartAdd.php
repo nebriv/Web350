@@ -18,5 +18,5 @@
     array_push($_SESSION['total'], $total);
     echo "test";
   }
-  header('Location: cart.php');
+  //header('Location: cart.php');
 ?>
