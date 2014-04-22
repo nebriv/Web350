@@ -1,6 +1,6 @@
 <?php
-  $farm_id = $_GET['FarmID'];
-  $total = $_GET['total'];
+  $farm_id = $_POST['FarmID'];
+  $total = $_POST['total'];
   session_start();
   if(isset($_SESSION['Farms'])){
     array_push($_SESSION['Farms'], $farm_id);
