@@ -1,7 +1,7 @@
 <?php
   $farm_id = $_GET['FarmID'];
   $total = $_GET['total'];
-  session_start()
+  session_start();
   if(isset($_SESSION['Farms'])){
     array_push($_SESSION['Farms'], $farm_id)
   }else{
