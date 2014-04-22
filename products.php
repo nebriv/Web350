@@ -1,7 +1,9 @@
 <?php
 $total += 0;
 include('includes/header.php');
-
+$db = buildDBObject();
+$products = $db->get('Products');
+print_r($products);
 ?>
 
 <script>
