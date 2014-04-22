@@ -24,7 +24,8 @@ include('includes/header.php');
                 $ProductIDs = $db->rawQuery('SELECT ProductID from Products');
                 foreach ($ProductIDs as $productID){
                     $row = new Product();
-                    $row->buildObject($productID);
+                    echo $productID;
+                    //$row->buildObject($productID);
 
                     echo "
               <tr>
