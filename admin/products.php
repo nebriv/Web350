@@ -16,7 +16,7 @@ include('includes/header.php');
                 <th>Description</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th>Farm123</th>
+                <th>Farm</th>
               </tr>
               <?php
                 $db = buildDBObject();
@@ -27,7 +27,7 @@ include('includes/header.php');
                 foreach ($ProductIDs as $productID){
                     $row = new Product();
                     
-                    //$row->buildObject($productID);
+                    $row->buildObject($productID);
 
                     echo "
               <tr>
