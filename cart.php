@@ -14,7 +14,7 @@ foreach($totals as $total){
   $subtotal+=$total;
 }
 foreach($CartFarms as $CartFarm){
-  $db->get('FarmID', $CartFarm)
+  $db->where('FarmID', $CartFarm)
   $farms = $db->get('Farms');
   foreach($farms as $farm){
   	echo "<div class=\"caption\">
