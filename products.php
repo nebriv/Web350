@@ -2,7 +2,6 @@
 
 include('includes/header.php');
 $db = buildDBObject();
-$products = $db->get('Products');
 $farms = $db->get('Farms');
 
 ?>
@@ -20,7 +19,11 @@ foreach($farms as $farm){
     <div class=\"caption\">
         <h3>".$farm['Name']."</h3>
         <p>";
-        
+        $db->where('FarmID', $farm['FarmID']);
+        $products = $db->get('Products');
+        foreach($products as $product){
+        	echo $product{'name']."<br />";
+        }
         echo "</p>
         <p><a href=\"#\" onclick=\"calc()\" class=\"btn btn-primary\" role=\"button\">Add Cart</a></p>
         </div>
