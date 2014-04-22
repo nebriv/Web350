@@ -26,7 +26,7 @@ include('includes/header.php');
 
                 foreach ($ProductIDs as $productID){
                     $row = new Product();
-                    echo str($productID);
+                    echo $productID;
                     //$row->buildObject($productID);
 
                     echo "
