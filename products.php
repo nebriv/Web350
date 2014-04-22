@@ -32,7 +32,8 @@ foreach($farms as $farm){
         </div>
        </div>
       </div>
-     </div>";
+     </div>
+    </form>";
 }
 ?>
 <!--
