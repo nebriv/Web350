@@ -38,7 +38,7 @@ echo "<br /><a href=\"cartClear.php\">Clear Cart</a>
 <input type=\"hidden\" name=\"item_name\" value=\"Teddy Bear\">
 <input type=\"hidden\" name=\"amount\" value=\"12.99\">
 <input type=\"image\" src=\"http://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif\" border=\"0\" name=\"submit\" alt=\"Make payments with PayPal - it's fast, free and secure!\">
-</form>
+</form>";
 include('includes/footer.php');
 
 ?>
