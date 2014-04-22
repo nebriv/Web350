@@ -70,7 +70,7 @@ class Product {
 		$db = buildDBObject();
 		$db->where("FarmID", $this->FarmID);
 		$farm = $db->get("Farms", 1);
-
+		print_r($farm);
 		$farm = $farm[0];
 
 		return $farm["Name"];
