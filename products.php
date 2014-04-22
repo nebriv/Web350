@@ -17,7 +17,7 @@ foreach($farms as $farm){
   <div class=\"col-sm-6 col-md-4\">
     <div class=\"thumbnail\">
     <img src=\"".$farm['Image']."\">
-    <div class="caption">
+    <div class=\"caption\">
         <h3>".$farm['Name']."</h3>";
 }
 ?>
