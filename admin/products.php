@@ -17,6 +17,7 @@ include('includes/header.php');
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Farm</th>
+                <th>Edit</th>
               </tr>
               <?php
                 $db = buildDBObject();
