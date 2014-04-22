@@ -107,7 +107,7 @@ if ($user->checkSession()){
             case "/admin/products.php":
           		echo '
 	          		<li><a href="index.php">Dashboard</a></li>
-	            	<li"><a href="perms.php">Users and Groups</a></li>
+	            	<li><a href="perms.php">Users and Groups</a></li>
 	            	<li class="active><a href="products.php">Product Management</a></li>
 	        	    <li><a href="farms.php">Farm Management</a></li>
 	        	    <li><a href="theme.php">Look and Feel</a></li>
