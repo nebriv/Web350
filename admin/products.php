@@ -37,7 +37,6 @@ include('includes/header.php');
                 <td><a href='editproduct.php?product=".$row->getID()."'>Edit</a></td>
               </tr>
                     ";
-                  }
                   
                 }
 
