@@ -8,7 +8,6 @@ $farms = $db->get('Farms');
 
 
 <div class=\"jumbotron\">
-<form method=\"post\">
 
 <?php
 foreach($farms as $farm){
@@ -17,6 +16,7 @@ foreach($farms as $farm){
     <div class=\"thumbnail\">
     <img src=\"".$farm['Image']."\">
     <div class=\"caption\">
+    	<form method=\"POST\" action=\"cartAdd.php\">
         <h3>".$farm['Name']."</h3>
         <p>";
         $db->where('FarmID', $farm['FarmID']);
@@ -26,8 +26,9 @@ foreach($farms as $farm){
         	echo $product['Name']." $".$product['Price']."<br />";
         }
         echo "Total: $".$total;
-        echo "</p>
-        <p><a href=\"#\" onclick=\"calc()\" class=\"btn btn-primary\" role=\"button\">Add Cart</a></p>
+        echo "<input type=\"hidden\" name=\"FarmID\" value=\"".$farm['FarmID']."\">
+        <input type=\"hidden\" name=\"total\" value=\"".$total."\"></p>
+        <p><input type=\"submit\" value=\"Add To Cart\"></p>
         </div>
        </div>
       </div>
@@ -130,7 +131,6 @@ foreach($farms as $farm){
           <p><a class="btn btn-primary" href="../contact_us.php" role="button">Contact Us! &raquo;</a></p>
         </div>
       </div>-->
-</form>
 
 <?php
 
