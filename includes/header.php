@@ -42,7 +42,7 @@ if ($auser){
 		<ul class="nav nav-justified">
 			<li class="active"><a href="#">Home</a></li>
 			<li><a href="products.php">Produce/Shop</a></li>
-			<li><a href="#">Contact Us</a></li>
+			<li><a href="contact_us.php">Contact Us</a></li>
 			<li><a href='cart.php'>My Cart</a></li>
 			<?php
 
