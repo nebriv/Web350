@@ -32,6 +32,7 @@ class Product {
 			$this->Price = $product["Price"];
 			$this->QuantityAvailable = $product["QuantityAvailable"];
 			$this->FarmID = $product["FarmID"];
+			print_r($this);
 			return True;
 		}else{
 			return False;
