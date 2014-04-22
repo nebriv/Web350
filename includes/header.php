@@ -43,7 +43,7 @@ if ($auser){
 			<li class="active"><a href="#">Home</a></li>
 			<li><a href="products.php">Produce/Shop</a></li>
 			<li><a href="#">Contact Us</a></li>
-			<li><a href='#'>My Cart</a></li>
+			<li><a href='cart.php'>My Cart</a></li>
 			<?php
 
 			if ($user->checkSession()){
