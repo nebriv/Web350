@@ -4,7 +4,7 @@
   session_start();
   if(isset($_SESSION['Farms'])){
     array_push($_SESSION['Farms'], $farm_id);
-    echo $_SESSION['Farms'];
+    print_r($_SESSION['Farms']);
   }else{
     $_SESSION['Farms'] = array();
     array_push($_SESSION['Farms'], $farm_id);
