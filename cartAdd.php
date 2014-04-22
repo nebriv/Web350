@@ -1,6 +1,5 @@
 <?php
   $farm_id = $_POST['FarmID'];
-  echo $farm_id;
   $total = $_POST['total'];
   session_start();
   if(isset($_SESSION['Farms'])){
@@ -15,5 +14,5 @@
     $_SESSION['total'] = array();
     array_push($_SESSION['total'], $total);
   }
-  //header('Location: cart.php');
+  header('Location: cart.php');
 ?>
