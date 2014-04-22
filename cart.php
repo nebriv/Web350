@@ -30,7 +30,7 @@ foreach($CartFarms as $CartFarm){
   }
 }
 echo "Total: $".$subtotal;
-echo "<br /><a href=\"clearCart.php\">Clear Cart</a>";
+echo "<br /><a href=\"cartClear.php\">Clear Cart</a>";
 include('includes/footer.php');
 
 ?>
