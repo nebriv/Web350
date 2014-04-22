@@ -44,7 +44,7 @@ foreach($farms as $farm){
         </p>
 
         <p><a href="#" onclick="calc()" class="btn btn-primary" role="button">Add Cart</a></p>
--->
+
         <div class="columb">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
@@ -124,8 +124,9 @@ foreach($farms as $farm){
           <p>If you are a local farmer and would like to contribute to this CSA please send us an email!</p>
           <p><a class="btn btn-primary" href="../contact_us.php" role="button">Contact Us! &raquo;</a></p>
         </div>
-      </div>
-</form>	  
+      </div>-->
+</form>
+</div>
 <?php
 
 include('includes/footer.php');
