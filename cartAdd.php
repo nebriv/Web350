@@ -14,5 +14,5 @@
     $_SESSION['total'] = array();
     array_push($_SESSION['total'], $total);
   }
-  header(Location: "cart.php");
+  header('Location: cart.php');
 ?>
