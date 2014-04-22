@@ -26,8 +26,8 @@ include('includes/header.php');
                 foreach ($ProductIDs as $product){
                     $row = new Product();
                     print_r($product);
-                    echo $product["ProductID"];
-                    $row->buildObject($product);
+                    $id = $product["ProductID"];
+                    $row->buildObject($id);
 
                     echo "
               <tr>
