@@ -41,7 +41,7 @@ if ($auser){
 		<h3 class="text-muted"><a href="index.php"><?php echo $site->siteName(); ?></a></h3>
 		<ul class="nav nav-justified">
 			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Produce/Shop</a></li>
+			<li><a href="products.php">Produce/Shop</a></li>
 			<li><a href="#">Contact Us</a></li>
 			<li><a href='#'>My Cart <span class="badge">0 items</span></a></li>
 			<?php
