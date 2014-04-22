@@ -1,36 +1,11 @@
 <?php
-$total += 0;
+
 include('includes/header.php');
 $db = buildDBObject();
 $products = $db->get('Products');
 print_r($products);
 ?>
 
-<script>
-    function calc(number)
-        {
-            alert("hello world");
-        }
-</script>
-
-
-             <script>
-            //   Function selected()
-            //   {
-            //         for(i = 1; i < 8; i++)
-            //         {
-            //             if(document.getElementById('NVFCheckbox' + i).checked == "true")
-            //                 {
-            //                     document.write(document.getElementById('NVFCheckbox' + i).value);
-            //                 }
-            //             else
-            //                 {
-            //                     alert("Not Checked");
-            //                 }
-               
-            //         }
-            //     }
-            // </script>
 
       <div class="jumbotron">
 <form method="post">        
