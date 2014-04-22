@@ -8,7 +8,7 @@ $log = new logger();
       <div class="jumbotron">
         <h1><?php echo $site->siteName(); ?> Welcomes You</h1>
         <p class="lead">From this website you will be able to sign up to receive your very own share of locally grown crops!</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <p><a class="btn btn-lg btn-success" href="register.php" role="button">Sign up today</a></p>
       </div>
 
       <div class="row">
@@ -23,7 +23,7 @@ $log = new logger();
         <div class="col-lg-4">
           <h2>How can I contribute?</h2>
           <p>If you are a local farmer and would like to contribute to this CSA please send us an email!</p>
-          <p><a class="btn btn-primary" href="#" role="button">Contact Us! &raquo;</a></p>
+          <p><a class="btn btn-primary" href="contact_us.php" role="button">Contact Us! &raquo;</a></p>
         </div>
       </div>
 	  
