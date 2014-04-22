@@ -14,6 +14,7 @@ foreach($totals as $total){
   $subtotal+=$total;
 }
 foreach($CartFarms as $CartFarm){
+  echo $CartFarm;
   $db->where('FarmID', $CartFarm);
   $farms = $db->get('Farms');
   foreach($farms as $farm){
