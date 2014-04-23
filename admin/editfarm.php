@@ -45,18 +45,18 @@ $editfarm->buildObject($_GET['farm']);
 </script>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">farm Management</h1>
+          <h1 class="page-header">Farm Management</h1>
           <ol class="breadcrumb">
             <li><a href="index.php">Dashboard</a></li>
-            <li><a href="farms.php">farm Management</a></li>
-            <li class="active">Editting farm</li>
+            <li><a href="farms.php">Farm Management</a></li>
+            <li class="active">Editting Farm</li>
           </ol>
           <div class="col-md-4 pull-left">
           <h3 class="sub-header">Farm Details</h3>
           <div id='userMessages'></div>
             <form class="form-horizontal" role="form">
               <div class="form-group">
-                <label for="username" class="col-sm-4 control-label">farm Name</label>
+                <label for="username" class="col-sm-4 control-label">Farm Name</label>
                 <div class="col-sm-8">
                   <input type="username" class="form-control" id="username" value='<?php echo $editfarm->getName(); ?>'>
                 </div>
