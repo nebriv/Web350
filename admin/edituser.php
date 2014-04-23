@@ -121,7 +121,7 @@ $edituser->buildObject($_GET['username']);
             </form>
           </div>
 
-
+<!-- 
           <div class="col-md-7 pull-left">
             <h3 class="sub-header">User Sessions</h3>
             <form class="form-horizontal" role="form">
@@ -152,7 +152,7 @@ $edituser->buildObject($_GET['username']);
                 </div>
               </div>
             </form>
-          </div>
+          </div> -->
 
 
         </div>
