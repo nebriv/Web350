@@ -3,10 +3,10 @@ include('includes/header.php');
 ?>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Product Management</h1>
+          <h1 class="page-header">Farm Management</h1>
 <ol class="breadcrumb">
   <li><a href="index.php">Dashboard</a></li>
-  <li class="active">Product Overview</li>
+  <li class="active">Farm Overview</li>
 </ol>
           <div class="row">
             <table class="table table-striped table-hover">
