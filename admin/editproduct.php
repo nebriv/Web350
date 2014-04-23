@@ -5,8 +5,9 @@ include('includes/header.php');
 
 $db = buildDBObject();
 $editproduct = new Product();
-$editproduct->buildObject($_GET['product']);
-
+if (isset($_GET['product'])){
+  $editproduct->buildObject($_GET['product']);
+}
 
 ?>
 
