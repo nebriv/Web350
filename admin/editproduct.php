@@ -52,7 +52,7 @@ $editproduct->buildObject($_GET['product']);
             <li class="active">Editting Product</li>
           </ol>
           <div class="col-md-4 pull-left">
-          <h3 class="sub-header">User Authentication</h3>
+          <h3 class="sub-header">Product Details</h3>
           <div id='userMessages'></div>
             <form class="form-horizontal" role="form">
               <div class="form-group">
@@ -70,7 +70,7 @@ $editproduct->buildObject($_GET['product']);
               <div class="form-group">
                 <label for="password2" class="col-sm-4 control-label">Price</label>
                 <div class="col-sm-8">
-                  <input class="form-control" id="password2" value='<?php echo $editproduct->getPrice(); ?>'>
+                  <input class="form-control" id="password2" value='$<?php echo $editproduct->getPrice(); ?>'>
                 </div>
               </div>
               <div class="form-group">
