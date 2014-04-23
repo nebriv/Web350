@@ -52,7 +52,7 @@ $editfarm->buildObject($_GET['farm']);
             <li class="active">Editting farm</li>
           </ol>
           <div class="col-md-4 pull-left">
-          <h3 class="sub-header">farm Details</h3>
+          <h3 class="sub-header">Farm Details</h3>
           <div id='userMessages'></div>
             <form class="form-horizontal" role="form">
               <div class="form-group">
@@ -62,45 +62,18 @@ $editfarm->buildObject($_GET['farm']);
                 </div>
               </div>
               <div class="form-group">
-                <label for="email" class="col-sm-4 control-label">Description</label>
+                <label for="email" class="col-sm-4 control-label">Address</label>
                 <div class="col-sm-8">
-                  <input type="email" class="form-control" id="email" value='<?php echo $editfarm->getDescription(); ?>'>
+                  <input type="email" class="form-control" id="email" value='<?php echo $editfarm->getAddress(); ?>'>
                 </div>
               </div>
               <div class="form-group">
-                <label for="password2" class="col-sm-4 control-label">Price</label>
+                <label for="password2" class="col-sm-4 control-label">Image</label>
                 <div class="col-sm-8">
-                  <input class="form-control" id="password2" value='$<?php echo $editfarm->getPrice(); ?>'>
+                  <input class="form-control" id="password2" value='$<?php echo $editfarm->getImage(); ?>'>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="password2" class="col-sm-4 control-label">Quantity</label>
-                <div class="col-sm-8">
-                  <input class="form-control" id="password2" value='<?php echo $editfarm->getQuantity(); ?>'>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="role" class="col-sm-4 control-label">Farm</label>
-                <div class="col-sm-8">
-                <?php
-                  $farms = $editfarm->getFarmsArray();
-                  echo '
-                    <select id="userrole" class="form-control">';
-                    echo "<option value='".$editfarm->getFarmName()."' selected='selected'>".$editfarm->getFarmName()."</option>";
-                    $current = trim($editfarm->getFarmName());
-                    
-                    foreach($farms as $farm){
-                      if ($current != trim($farm["Name"])){
-                        echo "<option value='".$farm["Name"]."'>".$farm["Name"]."</option>";
-                      }
-                    }
-                  echo "
-                    </select>
-                  ";
-
-
-                  ?>
-                </div>
+              
               </div>
               <br>
               <button type="button" class="btn btn-primary btn-sm" onclick="saveUser()">Save Changes</button>

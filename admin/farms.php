@@ -41,7 +41,7 @@ include('includes/header.php');
               ?>
             </table>
           </div>
-
+          <a href="editfarm.php"><button type="button" class="btn btn-default">Add Farm</button></a>
 
         </div>
 
