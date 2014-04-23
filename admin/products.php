@@ -46,6 +46,8 @@ include('includes/header.php');
             </table>
           </div>
 
+          <a href="edditproduct.php"><button type="button" class="btn btn-default">Add Product</button></a>
+
 
         </div>
 
