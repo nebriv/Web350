@@ -31,7 +31,7 @@ include('includes/header.php');
                 <td><input type='checkbox' value=''></td>
                 <td>";echo $row->getName(); echo "</td>
                 <td>";echo $row->getAddress(); echo "</td>
-                <td><img src='";echo $row->getImage(); echo "'></td>
+                <td><img height='100' width='100' src='";echo $row->getImage(); echo "'></td>
                 <td><a href='editfarm.php?farm=".$row->getID()."'>Edit</a></td>
               </tr>
                     ";
