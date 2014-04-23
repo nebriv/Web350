@@ -66,6 +66,12 @@ class Product {
 		return $this->FarmID;
 	}
 
+	function getFarmsArray(){
+		$db = buildDBObject();
+		$farms = $db->get('Farms'); //contains an array of all users
+		return $farms;
+	}
+
 	function getFarmName(){
 		$db = buildDBObject();
 		$db->where("FarmID", $this->getFarmID());
