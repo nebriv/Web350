@@ -18,7 +18,7 @@ $log = new logger();
         </div>
         <div class="col-lg-4">
           <h2>What is this management system?</h2>
-          <p>This management system allows us to quickly and easily update what produce we have available on a weekly basis, and also allows you to modify your orders whenever you would like. By utilizing this system we are able to efficiently and accurately build out your order and get it to you within reasonable time!</p>
+          <p>This management system allows us to quickly and easily update what produce we have available on a weekly basis, and also allows you to modify your orders whenever you would like. By utilizing this system we are able to efficiently and <a href="commits.png">accurately build out your order and get it to you within reasonable time!</a></p>
        </div>
         <div class="col-lg-4">
           <h2>How can I contribute?</h2>
