@@ -70,7 +70,7 @@ $editfarm->buildObject($_GET['farm']);
               <div class="form-group">
                 <label for="password2" class="col-sm-4 control-label">Image</label>
                 <div class="col-sm-8">
-                  <input class="form-control" id="password2" value='$<?php echo $editfarm->getImage(); ?>'>
+                  <input class="form-control" id="password2" value='<?php echo $editfarm->getImage(); ?>'>
                 </div>
               </div>
               
