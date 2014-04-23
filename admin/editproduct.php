@@ -48,7 +48,7 @@ $editproduct->buildObject($_GET['product']);
           <h1 class="page-header">Product Management</h1>
           <ol class="breadcrumb">
             <li><a href="index.php">Dashboard</a></li>
-            <li><a href="perms.php">Product Management</a></li>
+            <li><a href="products.php">Product Management</a></li>
             <li class="active">Editting Product</li>
           </ol>
           <div class="col-md-4 pull-left">
