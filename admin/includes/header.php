@@ -89,6 +89,7 @@ if ($user->checkSession()){
 	          		<li class="active"><a href="index.php">Dashboard</a></li>
 	            	<li><a href="perms.php">Users and Groups</a></li>
 	            	<li><a href="products.php">Product Management</a></li>
+                <li><a href="orders.php">Order Management</a></li>
 	        	    <li><a href="farms.php">Farm Management</a></li>
 	        	    <li><a href="theme.php">Look and Feel</a></li>
 	        	    <li><a href="settings.php">Site Settings</a></li>
@@ -99,6 +100,7 @@ if ($user->checkSession()){
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li class="active"><a href="perms.php">Users and Groups</a></li>
 	            	<li><a href="products.php">Product Management</a></li>
+                <li><a href="orders.php">Order Management</a></li>
 	        	    <li><a href="farms.php">Farm Management</a></li>
 	        	    <li><a href="theme.php">Look and Feel</a></li>
 	        	    <li><a href="settings.php">Site Settings</a></li>
@@ -109,6 +111,7 @@ if ($user->checkSession()){
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li><a href="perms.php">Users and Groups</a></li>
 	            	<li class="active"><a href="products.php">Product Management</a></li>
+                <li><a href="orders.php">Order Management</a></li>
 	        	    <li><a href="farms.php">Farm Management</a></li>
 	        	    <li><a href="theme.php">Look and Feel</a></li>
 	        	    <li><a href="settings.php">Site Settings</a></li>
@@ -119,6 +122,7 @@ if ($user->checkSession()){
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li><a href="perms.php">Users and Groups</a></li>
 	            	<li><a href="products.php">Product Management</a></li>
+                <li><a href="orders.php">Order Management</a></li>
 	        	    <li class="active"><a href="farms.php">Farm Management</a></li>
 	        	    <li><a href="theme.php">Look and Feel</a></li>
 	        	    <li><a href="settings.php">Site Settings</a></li>
@@ -129,6 +133,7 @@ if ($user->checkSession()){
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li><a href="perms.php">Users and Groups</a></li>
 	            	<li><a href="products.php">Product Management</a></li>
+                <li><a href="orders.php">Order Management</a></li>
 	        	    <li><a href="farms.php">Farm Management</a></li>
 	        	    <li class="active"><a href="theme.php">Look and Feel</a></li>
 	        	    <li><a href="settings.php">Site Settings</a></li>
@@ -139,16 +144,29 @@ if ($user->checkSession()){
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li><a href="perms.php">Users and Groups</a></li>
 	            	<li><a href="products.php">Product Management</a></li>
+                <li><a href="orders.php">Order Management</a></li>
 	        	    <li><a href="farms.php">Farm Management</a></li>
 	        	    <li><a href="theme.php">Look and Feel</a></li>
 	        	    <li class="active"><a href="settings.php">Site Settings</a></li>
         	    ';
         	    break;
+            case "/admin/orders.php":
+              echo '
+                <li><a href="index.php">Dashboard</a></li>
+                <li><a href="perms.php">Users and Groups</a></li>
+                <li><a href="products.php">Product Management</a></li>
+                <li class="active"><a href="orders.php">Order Management</a></li>
+                <li><a href="farms.php">Farm Management</a></li>
+                <li><a href="theme.php">Look and Feel</a></li>
+                <li><a href="settings.php">Site Settings</a></li>
+              ';
+              break;
           	default:
           		echo '
 	          		<li><a href="index.php">Dashboard</a></li>
 	            	<li><a href="perms.php">Users and Groups</a></li>
 	            	<li><a href="products.php">Product Management</a></li>
+                <li><a href="orders.php">Order Management</a></li>
 	        	    <li><a href="farms.php">Farm Management</a></li>
 	        	    <li><a href="theme.php">Look and Feel</a></li>
 	        	    <li><a href="settings.php">Site Settings</a></li>
